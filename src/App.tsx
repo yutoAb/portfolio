@@ -1,6 +1,5 @@
 import React from 'react';
 import logo from './logo.svg';
-import './App.css';
 import { Top } from './Top/Top';
 import { Button } from "@mui/material";
 
