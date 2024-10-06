@@ -4,7 +4,7 @@ import { Top } from "./Top/Top";
 import { Project } from "./Project/Project";
 import { Education } from "./Education/Education";
 import { Contact } from "./Contact/Contact";
-import { Tabs, Tab, Box, Button } from "@mui/material";
+import { Tabs, Tab, Box, Button, Stack } from "@mui/material";
 
 const App = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -53,7 +53,7 @@ const App = () => {
   }, []);
 
   return (
-    <Box sx={{ display: "flex" }}>
+    <Stack >
       <Box
         sx={{
           position: "fixed",
@@ -94,7 +94,7 @@ const App = () => {
         </Tabs>
       </Box>
 
-      <Box sx={{ marginLeft: "200px", padding: 2, width: "100%" }}>
+      <Box sx={{ marginLeft: "180px", padding: 2, width: "100%" }}>
         <div ref={topRef}>
           <Top />
         </div>
@@ -109,7 +109,7 @@ const App = () => {
         </div>
         <Button onClick={() => handleScroll(topRef, 0)}>トップへ</Button>
       </Box>
-    </Box>
+    </Stack>
   );
 };
 
