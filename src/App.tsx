@@ -12,7 +12,6 @@ const App = () => {
   const educationRef = useRef<HTMLDivElement | null>(null);
   const contactRef = useRef<HTMLDivElement | null>(null);
 
-
   const handleScroll = (ref: React.RefObject<HTMLDivElement>) => {
     if (ref.current) {
       window.scrollTo({
@@ -34,12 +33,22 @@ const App = () => {
           borderRight: 1,
           borderColor: "divider",
           bgcolor: "background.paper",
+          justifyContent: "center",
+          alignItems: "center",
         }}
       >
         <Tabs
           orientation="vertical"
           variant="scrollable"
-          sx={{ borderRight: 1, borderColor: "divider", width: "200px" }}
+          sx={{
+            borderRight: 1,
+            borderColor: "divider",
+            width: "200px",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
         >
           <Tab label="Top" onClick={() => handleScroll(topRef)} />
           <Tab label="Project" onClick={() => handleScroll(projectRef)} />
@@ -61,7 +70,7 @@ const App = () => {
         <div ref={contactRef}>
           <Contact />
         </div>
-        <Button>text</Button>
+        <Button onClick={() => handleScroll(topRef)}>トップへ</Button>
       </Box>
     </Box>
   );
