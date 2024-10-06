@@ -64,6 +64,8 @@ const App = () => {
           borderRight: 1,
           borderColor: "divider",
           bgcolor: "background.paper",
+          display: "flex",
+          flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
         }}
