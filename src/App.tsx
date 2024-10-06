@@ -1,4 +1,4 @@
-import Reac, { useRef } from "react";
+import React, { useRef } from "react";
 import logo from "./logo.svg";
 import { Top } from "./Top/Top";
 import { Project } from "./Project/Project";
