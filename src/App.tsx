@@ -2,11 +2,16 @@ import Reac, { useRef } from "react";
 import logo from "./logo.svg";
 import { Top } from "./Top/Top";
 import { Project } from "./Project/Project";
+import { Education } from "./Education/Education";
+import { Contact } from "./Contact/Contact";
 import { Tabs, Tab, Box, Button } from "@mui/material";
 
 const App = () => {
   const topRef = useRef<HTMLDivElement | null>(null);
   const projectRef = useRef<HTMLDivElement | null>(null);
+  const educationRef = useRef<HTMLDivElement | null>(null);
+  const contactRef = useRef<HTMLDivElement | null>(null);
+
 
   const handleScroll = (ref: React.RefObject<HTMLDivElement>) => {
     if (ref.current) {
@@ -38,6 +43,8 @@ const App = () => {
         >
           <Tab label="Top" onClick={() => handleScroll(topRef)} />
           <Tab label="Project" onClick={() => handleScroll(projectRef)} />
+          <Tab label="Education" onClick={() => handleScroll(projectRef)} />
+          <Tab label="Contact" onClick={() => handleScroll(projectRef)} />
         </Tabs>
       </Box>
 
@@ -47,6 +54,12 @@ const App = () => {
         </div>
         <div ref={projectRef}>
           <Project />
+        </div>
+        <div ref={educationRef}>
+          <Education />
+        </div>
+        <div ref={contactRef}>
+          <Contact />
         </div>
         <Button>text</Button>
       </Box>
