@@ -1,5 +1,65 @@
 import { Typography } from "@mui/material";
 
 export const Education = () => {
-  return <Typography variant="h3">Education</Typography>;
+  return (
+    <>
+      <Typography variant="h3">Education</Typography>
+      <div>私は阿部です私は阿部です</div>
+      <div>私は阿部です私は阿部です</div>
+      <div>私は阿部です私は阿部です</div>
+      <div>私は阿部です私は阿部です</div>
+      <div>私は阿部です私は阿部です</div>
+      <div>私は阿部です私は阿部です</div>
+      <div>私は阿部です私は阿部です</div>
+      <div>私は阿部です私は阿部です</div>
+      <div>私は阿部です私は阿部です</div>
+      <div>私は阿部です私は阿部です</div>
+      <div>私は阿部です私は阿部です</div>
+      <div>私は阿部です私は阿部です</div>
+      <div>私は阿部です私は阿部です</div>
+      <div>私は阿部です私は阿部です</div>
+      <div>私は阿部です私は阿部です</div>
+      <div>私は阿部です私は阿部です</div>
+      <div>私は阿部です私は阿部です</div>
+      <div>私は阿部です私は阿部です</div>
+      <div>私は阿部です私は阿部です</div>
+      <div>私は阿部です私は阿部です</div>
+      <div>私は阿部です私は阿部です</div>
+      <div>私は阿部です私は阿部です</div>
+      <div>私は阿部です私は阿部です</div>
+      <div>私は阿部です私は阿部です</div>
+      <div>私は阿部です私は阿部です</div>
+      <div>私は阿部です私は阿部です</div>
+      <div>私は阿部です私は阿部です</div>
+      <div>私は阿部です私は阿部です</div>
+      <div>私は阿部です私は阿部です</div>
+      <div>私は阿部です私は阿部です</div>
+      <div>私は阿部です私は阿部です</div>
+      <div>私は阿部です私は阿部です</div>
+      <div>私は阿部です私は阿部です</div>
+      <div>私は阿部です私は阿部です</div>
+      <div>私は阿部です私は阿部です</div>
+      <div>私は阿部です私は阿部です</div>
+      <div>私は阿部です私は阿部です</div>
+      <div>私は阿部です私は阿部です</div>
+      <div>私は阿部です私は阿部です</div>
+      <div>私は阿部です私は阿部です</div>
+      <div>私は阿部です私は阿部です</div>
+      <div>私は阿部です私は阿部です</div>
+      <div>私は阿部です私は阿部です</div>
+      <div>私は阿部です私は阿部です</div>
+      <div>私は阿部です私は阿部です</div>
+      <div>私は阿部です私は阿部です</div>
+      <div>私は阿部です私は阿部です</div>
+      <div>私は阿部です私は阿部です</div>
+      <div>私は阿部です私は阿部です</div>
+      <div>私は阿部です私は阿部です</div>
+      <div>私は阿部です私は阿部です</div>
+      <div>私は阿部です私は阿部です</div>
+      <div>私は阿部です私は阿部です</div>
+      <div>私は阿部です私は阿部です</div>
+      <div>私は阿部です私は阿部です</div>
+      <div>私は阿部です私は阿部です</div>
+    </>
+  );
 };

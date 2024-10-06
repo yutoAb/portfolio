@@ -1,5 +1,65 @@
 import { Typography } from "@mui/material";
 
 export const Contact = () => {
-  return <Typography variant="h3">Contact</Typography>;
+    return (
+        <>
+        <Typography variant="h3">Contact</Typography>
+        <div>私は阿部です私は阿部です</div>
+        <div>私は阿部です私は阿部です</div>
+        <div>私は阿部です私は阿部です</div>
+        <div>私は阿部です私は阿部です</div>
+        <div>私は阿部です私は阿部です</div>
+        <div>私は阿部です私は阿部です</div>
+        <div>私は阿部です私は阿部です</div>
+        <div>私は阿部です私は阿部です</div>
+        <div>私は阿部です私は阿部です</div>
+        <div>私は阿部です私は阿部です</div>
+        <div>私は阿部です私は阿部です</div>
+        <div>私は阿部です私は阿部です</div>
+        <div>私は阿部です私は阿部です</div>
+        <div>私は阿部です私は阿部です</div>
+        <div>私は阿部です私は阿部です</div>
+        <div>私は阿部です私は阿部です</div>
+        <div>私は阿部です私は阿部です</div>
+        <div>私は阿部です私は阿部です</div>
+        <div>私は阿部です私は阿部です</div>
+        <div>私は阿部です私は阿部です</div>
+        <div>私は阿部です私は阿部です</div>
+        <div>私は阿部です私は阿部です</div>
+        <div>私は阿部です私は阿部です</div>
+        <div>私は阿部です私は阿部です</div>
+        <div>私は阿部です私は阿部です</div>
+        <div>私は阿部です私は阿部です</div>
+        <div>私は阿部です私は阿部です</div>
+        <div>私は阿部です私は阿部です</div>
+        <div>私は阿部です私は阿部です</div>
+        <div>私は阿部です私は阿部です</div>
+        <div>私は阿部です私は阿部です</div>
+        <div>私は阿部です私は阿部です</div>
+        <div>私は阿部です私は阿部です</div>
+        <div>私は阿部です私は阿部です</div>
+        <div>私は阿部です私は阿部です</div>
+        <div>私は阿部です私は阿部です</div>
+        <div>私は阿部です私は阿部です</div>
+        <div>私は阿部です私は阿部です</div>
+        <div>私は阿部です私は阿部です</div>
+        <div>私は阿部です私は阿部です</div>
+        <div>私は阿部です私は阿部です</div>
+        <div>私は阿部です私は阿部です</div>
+        <div>私は阿部です私は阿部です</div>
+        <div>私は阿部です私は阿部です</div>
+        <div>私は阿部です私は阿部です</div>
+        <div>私は阿部です私は阿部です</div>
+        <div>私は阿部です私は阿部です</div>
+        <div>私は阿部です私は阿部です</div>
+        <div>私は阿部です私は阿部です</div>
+        <div>私は阿部です私は阿部です</div>
+        <div>私は阿部です私は阿部です</div>
+        <div>私は阿部です私は阿部です</div>
+        <div>私は阿部です私は阿部です</div>
+        <div>私は阿部です私は阿部です</div>
+        <div>私は阿部です私は阿部です</div>
+        <div>私は阿部です私は阿部です</div>
+  </>
+    );
 };

@@ -43,8 +43,8 @@ const App = () => {
         >
           <Tab label="Top" onClick={() => handleScroll(topRef)} />
           <Tab label="Project" onClick={() => handleScroll(projectRef)} />
-          <Tab label="Education" onClick={() => handleScroll(projectRef)} />
-          <Tab label="Contact" onClick={() => handleScroll(projectRef)} />
+          <Tab label="Education" onClick={() => handleScroll(educationRef)} />
+          <Tab label="Contact" onClick={() => handleScroll(contactRef)} />
         </Tabs>
       </Box>
 
