@@ -1,10 +1,11 @@
 import { Typography, Box } from "@mui/material";
+import { blue } from "../Constants";
 
 export const Project = () => {
   return (
     <Box
       sx={{
-        backgroundColor: "rgb(80, 82, 181)",
+        backgroundColor: blue,
         padding: "20px",
         color: "white",
       }}
