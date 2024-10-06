@@ -10,7 +10,7 @@ export const Top = () => {
         color: "white",
       }}
     >
-      <Typography variant="h2"> Yuto Abe / 阿部 雄斗</Typography>
+      <Typography variant="h2" sx={{ paddingTop: "100px" }}> Yuto Abe / 阿部 雄斗</Typography>
       <div>私は阿部です私は阿部です</div>
       <div>私は阿部です私は阿部です</div>
       <div>私は阿部です私は阿部です</div>

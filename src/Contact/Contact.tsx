@@ -10,55 +10,7 @@ export const Contact = () => {
         color: "white",
       }}
     >
-      <Typography variant="h3">Contact</Typography>
-      <div>私は阿部です私は阿部です</div>
-      <div>私は阿部です私は阿部です</div>
-      <div>私は阿部です私は阿部です</div>
-      <div>私は阿部です私は阿部です</div>
-      <div>私は阿部です私は阿部です</div>
-      <div>私は阿部です私は阿部です</div>
-      <div>私は阿部です私は阿部です</div>
-      <div>私は阿部です私は阿部です</div>
-      <div>私は阿部です私は阿部です</div>
-      <div>私は阿部です私は阿部です</div>
-      <div>私は阿部です私は阿部です</div>
-      <div>私は阿部です私は阿部です</div>
-      <div>私は阿部です私は阿部です</div>
-      <div>私は阿部です私は阿部です</div>
-      <div>私は阿部です私は阿部です</div>
-      <div>私は阿部です私は阿部です</div>
-      <div>私は阿部です私は阿部です</div>
-      <div>私は阿部です私は阿部です</div>
-      <div>私は阿部です私は阿部です</div>
-      <div>私は阿部です私は阿部です</div>
-      <div>私は阿部です私は阿部です</div>
-      <div>私は阿部です私は阿部です</div>
-      <div>私は阿部です私は阿部です</div>
-      <div>私は阿部です私は阿部です</div>
-      <div>私は阿部です私は阿部です</div>
-      <div>私は阿部です私は阿部です</div>
-      <div>私は阿部です私は阿部です</div>
-      <div>私は阿部です私は阿部です</div>
-      <div>私は阿部です私は阿部です</div>
-      <div>私は阿部です私は阿部です</div>
-      <div>私は阿部です私は阿部です</div>
-      <div>私は阿部です私は阿部です</div>
-      <div>私は阿部です私は阿部です</div>
-      <div>私は阿部です私は阿部です</div>
-      <div>私は阿部です私は阿部です</div>
-      <div>私は阿部です私は阿部です</div>
-      <div>私は阿部です私は阿部です</div>
-      <div>私は阿部です私は阿部です</div>
-      <div>私は阿部です私は阿部です</div>
-      <div>私は阿部です私は阿部です</div>
-      <div>私は阿部です私は阿部です</div>
-      <div>私は阿部です私は阿部です</div>
-      <div>私は阿部です私は阿部です</div>
-      <div>私は阿部です私は阿部です</div>
-      <div>私は阿部です私は阿部です</div>
-      <div>私は阿部です私は阿部です</div>
-      <div>私は阿部です私は阿部です</div>
-      <div>私は阿部です私は阿部です</div>
+      <Typography variant="h3" sx={{ paddingTop: "100px" }}>Contact</Typography>
       <div>私は阿部です私は阿部です</div>
       <div>私は阿部です私は阿部です</div>
       <div>私は阿部です私は阿部です</div>

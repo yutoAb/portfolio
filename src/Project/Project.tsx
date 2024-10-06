@@ -10,21 +10,7 @@ export const Project = () => {
         color: "white",
       }}
     >
-      <Typography variant="h3">Projects</Typography>
-      <div>私は阿部です私は阿部です</div>
-      <div>私は阿部です私は阿部です</div>
-      <div>私は阿部です私は阿部です</div>
-      <div>私は阿部です私は阿部です</div>
-      <div>私は阿部です私は阿部です</div>
-      <div>私は阿部です私は阿部です</div>
-      <div>私は阿部です私は阿部です</div>
-      <div>私は阿部です私は阿部です</div>
-      <div>私は阿部です私は阿部です</div>
-      <div>私は阿部です私は阿部です</div>
-      <div>私は阿部です私は阿部です</div>
-      <div>私は阿部です私は阿部です</div>
-      <div>私は阿部です私は阿部です</div>
-      <div>私は阿部です私は阿部です</div>
+      <Typography variant="h3" sx={{ paddingTop: "100px" }}>Projects</Typography>
       <div>私は阿部です私は阿部です</div>
       <div>私は阿部です私は阿部です</div>
       <div>私は阿部です私は阿部です</div>
