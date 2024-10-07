@@ -7,8 +7,11 @@ export const Top = () => {
     <Box
       sx={{
         backgroundColor: purple,
-        padding: "20px",
         color: "white",
+        minHeight: "100vh", 
+        display: "flex",
+        alignItems: "center", 
+        // justifyContent: "center", 
       }}
     >
       <Stack direction="row" spacing={2}>
@@ -26,24 +29,6 @@ export const Top = () => {
           <Typography variant="h2" sx={{ paddingTop: "100px" }}>
             Yuto Abe / 阿部 雄斗
           </Typography>
-          <div>私は阿部です私は阿部です</div>
-          <div>私は阿部です私は阿部です</div>
-          <div>私は阿部です私は阿部です</div>
-          <div>私は阿部です私は阿部です</div>
-          <div>私は阿部です私は阿部です</div>
-          <div>私は阿部です私は阿部です</div>
-          <div>私は阿部です私は阿部です</div>
-          <div>私は阿部です私は阿部です</div>
-          <div>私は阿部です私は阿部です</div>
-          <div>私は阿部です私は阿部です</div>
-          <div>私は阿部です私は阿部です</div>
-          <div>私は阿部です私は阿部です</div>
-          <div>私は阿部です私は阿部です</div>
-          <div>私は阿部です私は阿部です</div>
-          <div>私は阿部です私は阿部です</div>
-          <div>私は阿部です私は阿部です</div>
-          <div>私は阿部です私は阿部です</div>
-          <div>私は阿部です私は阿部です</div>
           <div>私は阿部です私は阿部です</div>
           <div>私は阿部です私は阿部です</div>
           <div>私は阿部です私は阿部です</div>
