@@ -16,7 +16,7 @@ export const Education = () => {
       <Box sx={{ width: "80%" }}>
         <Typography
           variant="h3"
-          sx={{ paddingTop: "100px", marginBottom: "60px" }}
+          sx={{ paddingTop: "100px", marginBottom: "30px" }}
         >
           Education
         </Typography>
@@ -49,7 +49,7 @@ export const Education = () => {
               <div>　ツール : ESPnet</div>
               <div>資格</div>
               <div>　簿記3級</div>
-              <div>　TOEIC: 770点</div>
+              <div>　TOEIC : 770点</div>
             </Box>
           </Box>
           <Divider
@@ -79,14 +79,14 @@ export const Education = () => {
                 サークル
               </Typography>
               <div>パディゴルフクラブ[ゴルフサークル]</div>
-              <div>　ゴルフ歴4年(2020～)</div>
+              <div>　ゴルフ歴4年(2020年～)</div>
               <div>　ベストスコア : 94</div>
               <div>理工展連絡会[学園祭実行サークル]</div>
               <div>　情報局 WEB班所属</div>
               <div>　理工展連絡会のホームページの制作を行う</div>
               <div>　フロント : HTML CSS JavaScript</div>
               <div>La Neige[テニスサークル]</div>
-              <div>　テニス歴5年(2019～)</div>
+              <div>　テニス歴5年(2019年～)</div>
               <div>早稲田うたおう会[バンドサークル]</div>
               <div>　ギター歴3年</div>
             </Box>
