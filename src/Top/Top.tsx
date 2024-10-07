@@ -8,10 +8,10 @@ export const Top = () => {
       sx={{
         backgroundColor: purple,
         color: "white",
-        minHeight: "100vh", 
+        minHeight: "100vh",
         display: "flex",
-        alignItems: "center", 
-        // justifyContent: "center", 
+        alignItems: "center",
+        // justifyContent: "center",
       }}
     >
       <Stack direction="row" spacing={10}>
@@ -25,25 +25,27 @@ export const Top = () => {
             objectFit: "contain",
           }}
         />
-        <Box>
+        <Stack spacing={2}>
           <Typography variant="h2" sx={{ paddingTop: "100px" }}>
             Yuto Abe / 阿部 雄斗
           </Typography>
-          <div>私は阿部です私は阿部です</div>
-          <div>私は阿部です私は阿部です</div>
-          <div>私は阿部です私は阿部です</div>
-          <div>私は阿部です私は阿部です</div>
-          <div>私は阿部です私は阿部です</div>
-          <div>私は阿部です私は阿部です</div>
-          <div>私は阿部です私は阿部です</div>
-          <div>私は阿部です私は阿部です</div>
-          <div>私は阿部です私は阿部です</div>
-          <div>私は阿部です私は阿部です</div>
-          <div>私は阿部です私は阿部です</div>
-          <div>私は阿部です私は阿部です</div>
-          <div>私は阿部です私は阿部です</div>
-          <div>私は阿部です私は阿部です</div>
-        </Box>
+          <Box>
+            <div>私は阿部です私は阿部です</div>
+            <div>私は阿部です私は阿部です</div>
+            <div>私は阿部です私は阿部です</div>
+            <div>私は阿部です私は阿部です</div>
+            <div>私は阿部です私は阿部です</div>
+            <div>私は阿部です私は阿部です</div>
+            <div>私は阿部です私は阿部です</div>
+            <div>私は阿部です私は阿部です</div>
+            <div>私は阿部です私は阿部です</div>
+            <div>私は阿部です私は阿部です</div>
+            <div>私は阿部です私は阿部です</div>
+            <div>私は阿部です私は阿部です</div>
+            <div>私は阿部です私は阿部です</div>
+            <div>私は阿部です私は阿部です</div>
+          </Box>
+        </Stack>
       </Stack>
     </Box>
   );
