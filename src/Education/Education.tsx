@@ -23,7 +23,10 @@ export const Education = () => {
         <Stack direction="row" spacing={10}>
           <Box>
             <Box sx={{ marginBottom: "20px" }}>
-              <Typography variant="h5" sx={{ fontWeight: "bold" }}>
+              <Typography
+                variant="h5"
+                sx={{ fontWeight: "bold", marginBottom: "10px" }}
+              >
                 学歴
               </Typography>
               <div>早稲田大学</div>
@@ -32,7 +35,10 @@ export const Education = () => {
             </Box>
             <Divider sx={{ backgroundColor: "white", marginY: "20px" }} />
             <Box>
-              <Typography variant="h5" sx={{ fontWeight: "bold" }}>
+              <Typography
+                variant="h5"
+                sx={{ fontWeight: "bold", marginBottom: "10px" }}
+              >
                 スキル
               </Typography>
               <div>WEBアプリケーション制作</div>
@@ -52,11 +58,38 @@ export const Education = () => {
             sx={{ backgroundColor: "white" }}
           />
           <Box>
-            <Typography variant="h5" sx={{ fontWeight: "bold" }}>
-              職歴
-            </Typography>
-            <div>2022年10月～2023年1月　|　キャロットソフトウェア株式会社</div>
-            <div>2023年2月～現在　|　日本ユースウェアシステム株式会社</div>
+            <Box>
+              <Typography
+                variant="h5"
+                sx={{ fontWeight: "bold", marginBottom: "10px" }}
+              >
+                職歴
+              </Typography>
+              <div>
+                2022年10月～2023年1月　|　キャロットソフトウェア株式会社
+              </div>
+              <div>2023年2月～現在　|　日本ユースウェアシステム株式会社</div>
+            </Box>
+            <Divider sx={{ backgroundColor: "white", marginY: "20px" }} />
+            <Box>
+              <Typography
+                variant="h5"
+                sx={{ fontWeight: "bold", marginBottom: "10px" }}
+              >
+                サークル
+              </Typography>
+              <div>パディゴルフクラブ[ゴルフサークル]</div>
+              <div>　ゴルフ歴4年(2020～)</div>
+              <div>　ベストスコア : 94</div>
+              <div>理工展連絡会[学園祭実行サークル]</div>
+              <div>　情報局 WEB班所属</div>
+              <div>　理工展連絡会のホームページの制作を行う</div>
+              <div>　フロント : HTML CSS JavaScript</div>
+              <div>La Neige[テニスサークル]</div>
+              <div>　テニス歴5年(2019～)</div>
+              <div>早稲田うたおう会[バンドサークル]</div>
+              <div>　ギター歴3年</div>
+            </Box>
           </Box>
         </Stack>
       </Box>
