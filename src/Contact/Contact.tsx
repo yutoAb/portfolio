@@ -8,6 +8,7 @@ export const Contact = () => {
         backgroundColor:purple,
         padding: "20px",
         color: "white",
+        minHeight: "100vh", 
       }}
     >
       <Typography variant="h3" sx={{ paddingTop: "100px" }}>Contact</Typography>
