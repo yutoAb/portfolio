@@ -1,5 +1,4 @@
 import React, { useRef, useState, useEffect } from "react";
-import logo from "./logo.svg";
 import { Top } from "./Top/Top";
 import { Project } from "./Project/Project";
 import { Education } from "./Education/Education";
@@ -53,7 +52,8 @@ const App = () => {
   }, []);
 
   return (
-    <Stack >
+    <Stack direction="row">
+      {/* 左側のタブ */}
       <Box
         sx={{
           position: "fixed",
@@ -77,11 +77,7 @@ const App = () => {
           sx={{
             borderRight: 1,
             borderColor: "divider",
-            width: "200px",
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
+            width: "100%",
           }}
         >
           <Tab label="Top" onClick={() => handleScroll(topRef, 0)} />
@@ -94,17 +90,24 @@ const App = () => {
         </Tabs>
       </Box>
 
-      <Box sx={{ marginLeft: "180px", padding: 2, width: "100%" }}>
-        <div ref={topRef}>
+      {/* 右側のコンテンツ */}
+      <Box
+        sx={{
+          marginLeft: "200px", // 左のタブの幅分をマージンに設定
+          padding: 2,
+          width: "calc(100% - 200px)", // タブの幅を引いたサイズに調整
+        }}
+      >
+        <div ref={topRef} style={{ minHeight: "100vh" }}>
           <Top />
         </div>
-        <div ref={projectRef}>
+        <div ref={projectRef} style={{ minHeight: "100vh" }}>
           <Project />
         </div>
-        <div ref={educationRef}>
+        <div ref={educationRef} style={{ minHeight: "100vh" }}>
           <Education />
         </div>
-        <div ref={contactRef}>
+        <div ref={contactRef} style={{ minHeight: "100vh" }}>
           <Contact />
         </div>
         <Button onClick={() => handleScroll(topRef, 0)}>トップへ</Button>
