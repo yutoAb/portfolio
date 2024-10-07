@@ -14,13 +14,13 @@ export const Top = () => {
         // justifyContent: "center", 
       }}
     >
-      <Stack direction="row" spacing={2}>
+      <Stack direction="row" spacing={10}>
         <Box
           component="img"
           src={penguin}
           alt="penguin"
           sx={{
-            width: "200px",
+            width: "400px",
             height: "auto",
             objectFit: "contain",
           }}
