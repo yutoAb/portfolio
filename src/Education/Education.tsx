@@ -1,4 +1,4 @@
-import { Typography, Box, Stack } from "@mui/material";
+import { Typography, Box, Stack, Divider } from "@mui/material";
 import { red } from "@mui/material/colors";
 import { pink } from "../Constants";
 
@@ -17,14 +17,19 @@ export const Education = () => {
       </Typography>
       <Stack direction="row" spacing={10}>
         <Box>
-          <Box>
-            <div>学歴</div>
+          <Box sx={{ marginBottom: "20px" }}>
+            <Typography variant="h5" sx={{ fontWeight: "bold" }}>
+              学歴
+            </Typography>
             <div>早稲田大学</div>
             <div>2021年4月～現在　|　基幹理工学部 情報通信学科</div>
             <div>2024年4月～現在　|　小林・小川研究室</div>
           </Box>
+          <Divider sx={{ backgroundColor: "white", marginY: "20px" }} />
           <Box>
-            <div>スキル</div>
+            <Typography variant="h5" sx={{ fontWeight: "bold" }}>
+              スキル
+            </Typography>
             <div>WEBアプリケーション制作</div>
             <div>フロント : React × TypeScript</div>
             <div>バック : Scala</div>
@@ -33,8 +38,15 @@ export const Education = () => {
             <div>ツール : ESPnet</div>
           </Box>
         </Box>
+        <Divider
+          orientation="vertical"
+          flexItem
+          sx={{ backgroundColor: "white" }}
+        />
         <Box>
-          <div>職歴</div>
+          <Typography variant="h5" sx={{ fontWeight: "bold" }}>
+            職歴
+          </Typography>
           <div>2022年10月～2023年1月　|　キャロットソフトウェア株式会社</div>
           <div>2023年2月～現在　|　日本ユースウェアシステム株式会社</div>
         </Box>
