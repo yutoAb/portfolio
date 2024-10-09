@@ -11,15 +11,9 @@ export const Contact = () => {
         minHeight: "100vh", 
       }}
     >
-      <Typography variant="h3" sx={{ paddingTop: "100px" }}>Contact</Typography>
-      <div>私は阿部です私は阿部です</div>
-      <div>私は阿部です私は阿部です</div>
-      <div>私は阿部です私は阿部です</div>
-      <div>私は阿部です私は阿部です</div>
-      <div>私は阿部です私は阿部です</div>
-      <div>私は阿部です私は阿部です</div>
-      <div>私は阿部です私は阿部です</div>
-      <div>私は阿部です私は阿部です</div>
+      <Typography variant="h3" sx={{ paddingTop: "100px", marginBottom: "30px" }}>Contact</Typography>
+      <div>Email : abe@pcl.waseda.ac.jp</div>
+      <div>Instagram : @yuto_abe_</div>
     </Box>
   );
 };
