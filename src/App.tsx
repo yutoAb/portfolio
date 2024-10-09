@@ -3,10 +3,12 @@ import { Top } from "./Top/Top";
 import { Project } from "./Project/Project";
 import { Education } from "./Education/Education";
 import { Contact } from "./Contact/Contact";
-import { Tabs, Tab, Box, Button, Stack } from "@mui/material";
+import { Tabs, Tab, Box, Button, Stack, IconButton } from "@mui/material";
+import { ChevronLeft, ChevronRight } from "@mui/icons-material";
 
 const App = () => {
   const [activeTab, setActiveTab] = useState(0);
+  const [isTabsMinimized, setIsTabsMinimized] = useState(false);
   const topRef = useRef<HTMLDivElement | null>(null);
   const projectRef = useRef<HTMLDivElement | null>(null);
   const educationRef = useRef<HTMLDivElement | null>(null);
@@ -60,7 +62,7 @@ const App = () => {
           top: 0,
           left: 0,
           height: "100vh",
-          width: "200px",
+          width: isTabsMinimized ? "10px" : "200px",
           borderRight: 1,
           borderColor: "divider",
           bgcolor: "background.paper",
@@ -68,34 +70,44 @@ const App = () => {
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
+          transition: "width 0.3s",
         }}
       >
-        <Tabs
-          orientation="vertical"
-          variant="scrollable"
-          value={activeTab}
-          sx={{
-            borderRight: 1,
-            borderColor: "divider",
-            width: "100%",
-          }}
+        <IconButton
+          onClick={() => setIsTabsMinimized(!isTabsMinimized)}
+          sx={{ position: "absolute", top: 10, right: -25 }}
         >
-          <Tab label="Top" onClick={() => handleScroll(topRef, 0)} />
-          <Tab label="Project" onClick={() => handleScroll(projectRef, 1)} />
-          <Tab
-            label="Education"
-            onClick={() => handleScroll(educationRef, 2)}
-          />
-          <Tab label="Contact" onClick={() => handleScroll(contactRef, 3)} />
-        </Tabs>
+          {isTabsMinimized ? <ChevronRight /> : <ChevronLeft />}
+        </IconButton>
+        {!isTabsMinimized && (
+          <Tabs
+            orientation="vertical"
+            variant="scrollable"
+            value={activeTab}
+            sx={{
+              borderRight: 1,
+              borderColor: "divider",
+              width: "100%",
+            }}
+          >
+            <Tab label="Top" onClick={() => handleScroll(topRef, 0)} />
+            <Tab label="Project" onClick={() => handleScroll(projectRef, 1)} />
+            <Tab
+              label="Education"
+              onClick={() => handleScroll(educationRef, 2)}
+            />
+            <Tab label="Contact" onClick={() => handleScroll(contactRef, 3)} />
+          </Tabs>
+        )}
       </Box>
 
       {/* 右側のコンテンツ */}
       <Box
         sx={{
-          marginLeft: "200px", // 左のタブの幅分をマージンに設定
+          marginLeft: isTabsMinimized ? "50px" : "200px", // タブの幅分をマージンに設定
           padding: 2,
-          width: "calc(100% - 200px)", // タブの幅を引いたサイズに調整
+          width: isTabsMinimized ? "calc(100% - 50px)" : "calc(100% - 200px)", // タブの幅を引いたサイズに調整
+          transition: "margin-left 0.3s, width 0.3s",
         }}
       >
         <div ref={topRef} style={{ minHeight: "100vh" }}>
