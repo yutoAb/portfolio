@@ -1,4 +1,4 @@
-import { Typography, Box } from "@mui/material";
+import { Typography, Box,Stack } from "@mui/material";
 import { blue } from "../Constants";
 
 export const Project = () => {
@@ -11,8 +11,10 @@ export const Project = () => {
         minHeight: "100vh", 
       }}
     >
+      <Stack spacing={5}>
       <Typography variant="h3" sx={{ paddingTop: "100px" }}>Projects</Typography>
-      <div>未記入です</div>
+        <div>未記入です</div>
+        </Stack>
     </Box>
   );
 };
