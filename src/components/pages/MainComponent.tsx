@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import MobileContents from "./mobile/MobileContents";
-import PcContents from "../../PcContents";
+import PcContents from "./pc/PcContents";
 import { useMediaQueryContext } from "../../Provider/MediaQueryProvider";
 
 const MainComponent: FC = () => {
