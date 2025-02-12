@@ -1,5 +1,5 @@
-import { Typography, Box,Stack } from "@mui/material";
-import { blue } from "../Constants";
+import { Typography, Box, Stack } from "@mui/material";
+import { blue } from "../components/pages/common/Constants";
 
 export const Project = () => {
   return (
@@ -8,13 +8,15 @@ export const Project = () => {
         backgroundColor: blue,
         padding: "20px",
         color: "white",
-        minHeight: "100vh", 
+        minHeight: "100vh",
       }}
     >
       <Stack spacing={5}>
-      <Typography variant="h3" sx={{ paddingTop: "100px" }}>Projects</Typography>
+        <Typography variant="h3" sx={{ paddingTop: "100px" }}>
+          Projects
+        </Typography>
         <div>未記入です</div>
-        </Stack>
+      </Stack>
     </Box>
   );
 };

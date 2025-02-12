@@ -1,5 +1,5 @@
 import { Typography, Box, Stack } from "@mui/material";
-import { purple } from "../Constants";
+import { purple } from "../components/pages/common/Constants";
 import penguin from "../assets/penguin.png";
 
 export const Top = () => {
@@ -31,14 +31,15 @@ export const Top = () => {
           </Typography>
           <Box>
             <div>皆さん初めまして．阿部 雄斗（アベ ユウト）と申します．</div>
-            <br/>
+            <br />
             <div>
-              早稲田大学 情報通信学科の小林・小川研究室に所属させていただいている修士１年生です．
+              早稲田大学
+              情報通信学科の小林・小川研究室に所属させていただいている修士１年生です．
             </div>
             <div>
               研究内容としては，機械学習を用いた音声認識モデルの精度向上を目指して取り組んでいます．
             </div>
-            <br/>
+            <br />
             <div>
               また長期インターンでは日本ユースウェアシステム株式会社で，WEBアプリの開発をさせていただいています．
             </div>
@@ -47,7 +48,9 @@ export const Top = () => {
             </div>
             <br />
             <div>趣味はマンガとゴルフです．</div>
-            <div>不格好なホームページですが，人となりを知っていただければ幸いです．</div>
+            <div>
+              不格好なホームページですが，人となりを知っていただければ幸いです．
+            </div>
           </Box>
         </Stack>
       </Stack>

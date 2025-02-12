@@ -1,6 +1,6 @@
 import { Typography, Box, Stack, Divider } from "@mui/material";
 import { red } from "@mui/material/colors";
-import { pink } from "../Constants";
+import { pink } from "../components/pages/common/Constants";
 
 export const Education = () => {
   return (
