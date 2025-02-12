@@ -12,26 +12,7 @@ export const Project = () => {
       }}
     >
       <Typography variant="h3" sx={{ paddingTop: "100px" }}>Projects</Typography>
-      <div>私は阿部です私は阿部です</div>
-      <div>私は阿部です私は阿部です</div>
-      <div>私は阿部です私は阿部です</div>
-      <div>私は阿部です私は阿部です</div>
-      <div>私は阿部です私は阿部です</div>
-      <div>私は阿部です私は阿部です</div>
-      <div>私は阿部です私は阿部です</div>
-      <div>私は阿部です私は阿部です</div>
-      <div>私は阿部です私は阿部です</div>
-      <div>私は阿部です私は阿部です</div>
-      <div>私は阿部です私は阿部です</div>
-      <div>私は阿部です私は阿部です</div>
-      <div>私は阿部です私は阿部です</div>
-      <div>私は阿部です私は阿部です</div>
-      <div>私は阿部です私は阿部です</div>
-      <div>私は阿部です私は阿部です</div>
-      <div>私は阿部です私は阿部です</div>
-      <div>私は阿部です私は阿部です</div>
-      <div>私は阿部です私は阿部です</div>
-      <div>私は阿部です私は阿部です</div>
+      <div>未記入です</div>
     </Box>
   );
 };
