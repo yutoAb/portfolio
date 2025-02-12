@@ -1,7 +1,7 @@
-import React, { FC } from 'react';
-import MobileContents from '../../MobileContents';
-import PcContents from '../../PcContents';
-import { useMediaQueryContext } from '../../Provider/MediaQueryProvider';
+import React, { FC } from "react";
+import MobileContents from "./mobile/MobileContents";
+import PcContents from "../../PcContents";
+import { useMediaQueryContext } from "../../Provider/MediaQueryProvider";
 
 const MainComponent: FC = () => {
   const { isMobileSite, isTabletSite, isPcSite } = useMediaQueryContext();
