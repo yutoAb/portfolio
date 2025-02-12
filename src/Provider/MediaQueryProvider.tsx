@@ -1,6 +1,8 @@
 import React, { createContext, FC, useContext, useMemo } from 'react';
 import useMedia from 'use-media';
 
+// https://qiita.com/ZuNo/items/5ad6314bab4fe0ddbbe4 を参照
+
 type Props = {
   children: React.ReactNode;
 };
