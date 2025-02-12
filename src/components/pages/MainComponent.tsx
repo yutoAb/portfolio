@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+import MobileContents from '../../MobileContents';
 import PcContents from '../../PcContents';
 import { useMediaQueryContext } from '../../Provider/MediaQueryProvider';
 
@@ -7,7 +8,7 @@ const MainComponent: FC = () => {
 
   return (
     <>
-      {/* {isMobileSite && <MobileContents />} */}
+      {isMobileSite && <MobileContents />}
       {/* {isTabletSite && <TabletContents />} */}
       {isPcSite && <PcContents />}
     </>
