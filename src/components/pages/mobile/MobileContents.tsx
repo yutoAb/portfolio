@@ -54,7 +54,7 @@ const MobileContents = () => {
   }, []);
 
   return (
-    <Box>
+    <Box sx={{ width: "100%", margin: 0, padding: 0, overflowX: "hidden" }}>
       <div ref={topRef} style={{ minHeight: "100vh" }}>
         <Top />
       </div>
