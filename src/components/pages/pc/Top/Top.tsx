@@ -1,6 +1,6 @@
 import { Typography, Box, Stack } from "@mui/material";
-import { purple } from "../components/pages/common/Constants";
-import penguin from "../assets/penguin.png";
+import { purple } from "../../common/Constants";
+import penguin from "../../../../assets/penguin.png";
 
 export const Top = () => {
   return (
