@@ -55,10 +55,10 @@ const MobileContents = () => {
 
   return (
     <Box sx={{ width: "100%", margin: 0, padding: 0, overflowX: "hidden" }}>
-      <div ref={topRef} style={{ minHeight: "100vh" }}>
+      <div ref={topRef} >
         <Top />
       </div>
-      <div ref={projectRef} style={{ minHeight: "100vh" }}>
+      <div ref={projectRef} >
         <Project />
       </div>
       <div ref={educationRef} style={{ minHeight: "100vh" }}>
