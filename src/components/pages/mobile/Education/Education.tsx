@@ -23,8 +23,8 @@ export const Education = () => {
               学歴
             </Typography>
             <div>早稲田大学</div>
-            <div>2021年4月～現在　|　基幹理工学部 情報通信学科</div>
-            <div>2024年4月～現在　|　小林・小川研究室</div>
+            <div>2021年4月～現在 | 基幹理工学部 情報通信学科</div>
+            <div>2024年4月～現在 | 小林・小川研究室</div>
           </Box>
           <Divider sx={{ backgroundColor: "white", marginY: "20px" }} />
           <Box>
@@ -56,9 +56,9 @@ export const Education = () => {
                 職歴
               </Typography>
               <div>
-                2022年10月～2023年1月　|　キャロットソフトウェア株式会社
+                2022年10月～2023年1月 | キャロットソフトウェア株式会社
               </div>
-              <div>2023年2月～現在　|　日本ユースウェアシステム株式会社</div>
+              <div>2023年2月～現在 | 日本ユースウェアシステム株式会社</div>
             </Box>
             <Divider sx={{ backgroundColor: "white", marginY: "20px" }} />
             <Box>
