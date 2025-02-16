@@ -12,7 +12,7 @@ export const Education = () => {
         justifyContent: "center",
       }}
     >
-      <Box sx={{ width: "80%" }}>
+      <Box sx={{ width: "80%", marginY: "30px" }}>
         <Typography variant="h3">Education</Typography>
         <Stack>
           <Box>

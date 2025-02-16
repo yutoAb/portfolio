@@ -6,16 +6,19 @@ export const Project = () => {
     <Box
       sx={{
         backgroundColor: blue,
-        padding: "20px",
         color: "white",
+        display: "flex",
+        justifyContent: "center",
       }}
     >
-      <Stack spacing={5}>
-        <Typography variant="h3" sx={{ paddingTop: "10px" }}>
-          Projects
-        </Typography>
-        <div>未記入です</div>
-      </Stack>
+      <Box sx={{ width: "80%", marginY: "30px" }}>
+        <Stack spacing={5}>
+          <Typography variant="h3" sx={{ paddingTop: "10px" }}>
+            Projects
+          </Typography>
+          <div>未記入です</div>
+        </Stack>
+      </Box>
     </Box>
   );
 };
