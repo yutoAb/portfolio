@@ -14,7 +14,7 @@ export const Top = () => {
         // justifyContent: "center",
       }}
     >
-      <Stack spacing={4} sx={{alignItems:"center"}}>
+      <Stack spacing={4} sx={{ alignItems: "center" }}>
         <Stack direction="row" spacing={3}>
           <Box
             component="img"
