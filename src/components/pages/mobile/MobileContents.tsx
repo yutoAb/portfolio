@@ -2,7 +2,7 @@ import React, { useRef, useState, useEffect } from "react";
 import { Top } from "./Top/Top";
 import { Project } from "./Project/Project";
 import { Education } from "../../../Education/Education";
-import { Contact } from "../common/Contact/Contact";
+import { Contact } from "./Contact/Contact";
 import { Tabs, Tab, Box, Button, Stack, IconButton } from "@mui/material";
 import { ChevronLeft, ChevronRight } from "@mui/icons-material";
 
@@ -61,10 +61,10 @@ const MobileContents = () => {
       <div ref={projectRef}>
         <Project />
       </div>
-      <div ref={educationRef} style={{ minHeight: "100vh" }}>
+      <div ref={educationRef}>
         <Education />
       </div>
-      <div ref={contactRef} style={{ minHeight: "100vh" }}>
+      <div ref={contactRef}>
         <Contact />
       </div>
       <Button onClick={() => handleScroll(topRef, 0)}>トップへ</Button>
