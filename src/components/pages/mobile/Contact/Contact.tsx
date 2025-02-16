@@ -8,15 +8,9 @@ export const Contact = () => {
         backgroundColor: purple,
         padding: "20px",
         color: "white",
-        minHeight: "100vh",
       }}
     >
-      <Typography
-        variant="h3"
-        sx={{ paddingTop: "100px", marginBottom: "30px" }}
-      >
-        Contact
-      </Typography>
+      <Typography variant="h3">Contact</Typography>
       <div>Email : abe@pcl.waseda.ac.jp</div>
       <div>Instagram : @yuto_abe_</div>
     </Box>
