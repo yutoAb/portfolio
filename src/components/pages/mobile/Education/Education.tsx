@@ -15,7 +15,7 @@ export const Education = () => {
       <Box sx={{ width: "80%" }}>
         <Typography variant="h3">Education</Typography>
         <Stack>
-          <Box sx={{ marginBottom: "20px" }}>
+          <Box>
             <Typography
               variant="h5"
               sx={{ fontWeight: "bold", marginBottom: "10px" }}
@@ -55,9 +55,7 @@ export const Education = () => {
               >
                 職歴
               </Typography>
-              <div>
-                2022年10月～2023年1月 | キャロットソフトウェア株式会社
-              </div>
+              <div>2022年10月～2023年1月 | キャロットソフトウェア株式会社</div>
               <div>2023年2月～現在 | 日本ユースウェアシステム株式会社</div>
             </Box>
             <Divider sx={{ backgroundColor: "white", marginY: "20px" }} />
