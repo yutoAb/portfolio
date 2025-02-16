@@ -1,5 +1,5 @@
 import { Typography, Box } from "@mui/material";
-import { purple } from "../components/pages/common/Constants";
+import { purple } from "../Constants";
 
 export const Contact = () => {
   return (
