@@ -6,13 +6,16 @@ export const Contact = () => {
     <Box
       sx={{
         backgroundColor: purple,
-        padding: "20px",
         color: "white",
+        display: "flex",
+        justifyContent: "center",
       }}
     >
-      <Typography variant="h3">Contact</Typography>
-      <div>Email : abe@pcl.waseda.ac.jp</div>
-      <div>Instagram : @yuto_abe_</div>
+      <Box sx={{ width: "80%", marginY: "30px" }}>
+        <Typography variant="h3">Contact</Typography>
+        <div>Email : abe@pcl.waseda.ac.jp</div>
+        <div>Instagram : @yuto_abe_</div>
+      </Box>
     </Box>
   );
 };
