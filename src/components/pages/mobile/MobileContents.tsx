@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
 import { Top } from "./Top/Top";
-import { Project } from "../common/Project/Project";
+import { Project } from "../pc/Project/Project";
 import { Education } from "../../../Education/Education";
 import { Contact } from "../common/Contact/Contact";
 import { Tabs, Tab, Box, Button, Stack, IconButton } from "@mui/material";
@@ -55,10 +55,10 @@ const MobileContents = () => {
 
   return (
     <Box sx={{ width: "100%", margin: 0, padding: 0, overflowX: "hidden" }}>
-      <div ref={topRef} >
+      <div ref={topRef}>
         <Top />
       </div>
-      <div ref={projectRef} >
+      <div ref={projectRef}>
         <Project />
       </div>
       <div ref={educationRef} style={{ minHeight: "100vh" }}>

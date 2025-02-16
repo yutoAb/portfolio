@@ -1,5 +1,5 @@
 import { Typography, Box, Stack } from "@mui/material";
-import { blue } from "../Constants";
+import { blue } from "../../common/Constants";
 
 export const Project = () => {
   return (
