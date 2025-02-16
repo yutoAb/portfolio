@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from "react";
 import { Top } from "./Top/Top";
 import { Project } from "./Project/Project";
-import { Education } from "../../../Education/Education";
+import { Education } from "./Education/Education";
 import { Contact } from "./Contact/Contact";
 import { Tabs, Tab, Box, Button, Stack, IconButton } from "@mui/material";
 import { ChevronLeft, ChevronRight } from "@mui/icons-material";
