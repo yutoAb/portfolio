@@ -8,57 +8,45 @@ export const Education = () => {
       sx={{
         backgroundColor: pink,
         color: "white",
-
         display: "flex",
         justifyContent: "center",
       }}
     >
       <Box sx={{ width: "80%" }}>
-        <Typography
-          variant="h3"
-          sx={{ paddingTop: "100px", marginBottom: "30px" }}
-        >
-          Education
-        </Typography>
-        <Stack direction="row" spacing={10}>
-          <Box>
-            <Box sx={{ marginBottom: "20px" }}>
-              <Typography
-                variant="h5"
-                sx={{ fontWeight: "bold", marginBottom: "10px" }}
-              >
-                学歴
-              </Typography>
-              <div>早稲田大学</div>
-              <div>2021年4月～現在　|　基幹理工学部 情報通信学科</div>
-              <div>2024年4月～現在　|　小林・小川研究室</div>
-            </Box>
-            <Divider sx={{ backgroundColor: "white", marginY: "20px" }} />
-            <Box>
-              <Typography
-                variant="h5"
-                sx={{ fontWeight: "bold", marginBottom: "10px" }}
-              >
-                スキル
-              </Typography>
-              <div>WEBアプリケーション制作</div>
-              <div>　フロント : React × TypeScript</div>
-              <div>　バック : Scala</div>
-              <div>機械学習</div>
-              <div>　Python</div>
-              <div>　ツール : ESPnet</div>
-              <div>資格</div>
-              <div>　簿記3級</div>
-              <div>　TOEIC : 770点</div>
-              <div>WEB3分野</div>
-              <div>　Smart Contract</div>
-            </Box>
+        <Typography variant="h3">Education</Typography>
+        <Stack>
+          <Box sx={{ marginBottom: "20px" }}>
+            <Typography
+              variant="h5"
+              sx={{ fontWeight: "bold", marginBottom: "10px" }}
+            >
+              学歴
+            </Typography>
+            <div>早稲田大学</div>
+            <div>2021年4月～現在　|　基幹理工学部 情報通信学科</div>
+            <div>2024年4月～現在　|　小林・小川研究室</div>
           </Box>
-          <Divider
-            orientation="vertical"
-            flexItem
-            sx={{ backgroundColor: "white" }}
-          />
+          <Divider sx={{ backgroundColor: "white", marginY: "20px" }} />
+          <Box>
+            <Typography
+              variant="h5"
+              sx={{ fontWeight: "bold", marginBottom: "10px" }}
+            >
+              スキル
+            </Typography>
+            <div>WEBアプリケーション制作</div>
+            <div>　フロント : React × TypeScript</div>
+            <div>　バック : Scala</div>
+            <div>機械学習</div>
+            <div>　Python</div>
+            <div>　ツール : ESPnet</div>
+            <div>資格</div>
+            <div>　簿記3級</div>
+            <div>　TOEIC : 770点</div>
+            <div>WEB3分野</div>
+            <div>　Smart Contract</div>
+          </Box>
+          <Divider sx={{ backgroundColor: "white", marginY: "20px" }} />
           <Box>
             <Box>
               <Typography
