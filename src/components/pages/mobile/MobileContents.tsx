@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from "react";
-import { Top } from "../pc/Top/Top";
+import { Top } from "./Top/Top";
 import { Project } from "../common/Project/Project";
 import { Education } from "../../../Education/Education";
 import { Contact } from "../common/Contact/Contact";
