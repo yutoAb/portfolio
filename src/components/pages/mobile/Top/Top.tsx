@@ -14,7 +14,7 @@ export const Top = () => {
         // justifyContent: "center",
       }}
     >
-      <Stack spacing={6}>
+      <Stack spacing={4} sx={{alignItems:"center"}}>
         <Stack direction="row" spacing={3}>
           <Box
             component="img"
@@ -30,7 +30,13 @@ export const Top = () => {
             Yuto Abe <br /> 阿部 雄斗
           </Typography>
         </Stack>
-        <Box>
+        <Box
+          sx={{
+            maxWidth: "350px", // 最大幅を指定
+            width: "100%", // レスポンシブ対応
+            mx: "auto", // 左右のマージンを均等に
+          }}
+        >
           <div>皆さん初めまして．阿部 雄斗（アベ ユウト）と申します．</div>
           <br />
           <div>
