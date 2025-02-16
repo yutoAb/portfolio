@@ -8,11 +8,10 @@ export const Project = () => {
         backgroundColor: blue,
         padding: "20px",
         color: "white",
-        minHeight: "100vh",
       }}
     >
       <Stack spacing={5}>
-        <Typography variant="h3" sx={{ paddingTop: "100px" }}>
+        <Typography variant="h3" sx={{ paddingTop: "10px" }}>
           Projects
         </Typography>
         <div>未記入です</div>

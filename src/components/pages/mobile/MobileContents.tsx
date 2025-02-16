@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
 import { Top } from "./Top/Top";
-import { Project } from "../pc/Project/Project";
+import { Project } from "./Project/Project";
 import { Education } from "../../../Education/Education";
 import { Contact } from "../common/Contact/Contact";
 import { Tabs, Tab, Box, Button, Stack, IconButton } from "@mui/material";
