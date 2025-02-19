@@ -10,6 +10,7 @@ const MainComponent: FC = () => {
     <>
       {isMobileSite && <MobileContents />}
       {/* {isTabletSite && <TabletContents />} */}
+      {isTabletSite && <PcContents />}
       {isPcSite && <PcContents />}
     </>
   );
