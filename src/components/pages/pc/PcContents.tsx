@@ -122,7 +122,6 @@ const PcContents = () => {
         <div ref={contactRef} style={{ minHeight: "100vh" }}>
           <Contact />
         </div>
-        <Button onClick={() => handleScroll(topRef, 0)}>トップへ</Button>
       </Box>
     </Stack>
   );
