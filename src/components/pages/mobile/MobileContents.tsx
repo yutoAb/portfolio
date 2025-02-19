@@ -67,7 +67,23 @@ const MobileContents = () => {
       <div ref={contactRef}>
         <Contact />
       </div>
-      <Button onClick={() => handleScroll(topRef, 0)}>トップへ</Button>
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
+        <Box
+          sx={{
+            width: "80%",
+            marginY: "10px",
+          }}
+        >
+          <Button variant="contained" onClick={() => handleScroll(topRef, 0)}>
+            トップへ
+          </Button>
+        </Box>
+      </Box>
     </Box>
   );
 };
