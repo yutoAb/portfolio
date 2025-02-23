@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, Stack, TextField } from "@mui/material";
+import { Box, Button, Stack, TextField, Typography } from "@mui/material";
 
 const Movie: React.FC = () => {
   const [query, setQuery] = useState("");
@@ -22,23 +22,31 @@ const Movie: React.FC = () => {
   };
 
   return (
-    <Stack spacing={2} direction="row">
-      <TextField
-        id="outlined-basic"
-        label="Outlined"
-        variant="outlined"
-        onChange={handleInputChange}
-      />
-      <Button onClick={fetchVideo}>Search</Button>
-      {videoUrl && (
-        <div>
-          <video width="600" controls>
-            <source src={videoUrl} type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        </div>
-      )}
-    </Stack>
+    <Box width={"80%"} margin={"auto"}>
+      <Typography
+        variant="h3"
+        sx={{ paddingTop: "30px", paddingBottom: "30px" }}
+      >
+        動画生成ページ
+      </Typography>
+      <Stack spacing={2} direction="row">
+        <TextField
+          id="outlined-basic"
+          label="Outlined"
+          variant="outlined"
+          onChange={handleInputChange}
+        />
+        <Button onClick={fetchVideo}>Search</Button>
+        {videoUrl && (
+          <div>
+            <video width="600" controls>
+              <source src={videoUrl} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        )}
+      </Stack>
+    </Box>
   );
 };
 
