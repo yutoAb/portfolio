@@ -6,7 +6,7 @@ export function NotFound() {
     <>
       <Container sx={{ mt: 2 }}>
         <Alert severity="warning" icon={<ErrorOutlineIcon />}>
-          見つかりません．
+          ページが見つかりません．
         </Alert>
       </Container>
     </>
