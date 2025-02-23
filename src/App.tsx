@@ -8,14 +8,14 @@ import Movie from "./components/pages/pc/Movie/Movie";
 /**
  * サーバーサイドのコンテキストパス
  */
-export const ENDPOINT_BASE_PATH = `/portfolio`;
+export const ENDPOINT_BASE_PATH = ``;
 
 export default function App() {
   return (
     <BrowserRouter basename={`${ENDPOINT_BASE_PATH}`}>
       <MediaQueryProvider>
         <Routes>
-          <Route path="app">
+          <Route path="">
             <Route index element={<MainComponent />} />
             <Route path="movie" element={<Movie />} />
             <Route path="*" element={<NotFound />} />
