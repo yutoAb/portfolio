@@ -10,7 +10,6 @@ import Movie from "./components/pages/pc/Movie/Movie";
  * サーバーサイドのコンテキストパス
  */
 export const ENDPOINT_BASE_PATH = ``;
-
 export default function App() {
   return (
     <BrowserRouter basename={`${ENDPOINT_BASE_PATH}`}>
