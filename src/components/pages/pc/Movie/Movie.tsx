@@ -32,7 +32,7 @@ const Movie: React.FC = () => {
       <Stack spacing={2} direction="row">
         <TextField
           id="outlined-basic"
-          label="Outlined"
+          label="Describe your video..."
           variant="outlined"
           onChange={handleInputChange}
         />
