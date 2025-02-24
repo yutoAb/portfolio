@@ -11,6 +11,11 @@ const MainComponent: FC = () => {
     <>
       <Helmet>
         <title>yutoAb</title>
+        <link
+          rel="icon"
+          type="image/png"
+          href="/assets/yutoAb.png"
+        />
       </Helmet>
       {isMobileSite && <MobileContents />}
       {/* {isTabletSite && <TabletContents />} */}
