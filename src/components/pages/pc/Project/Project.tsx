@@ -23,10 +23,12 @@ export const Project = () => {
               variant="contained"
               size="large"
               component={Link}
-              to=""
+              to="movie"
+              target="_blank"
+              rel="noopener noreferrer"
               color={"info"}
             >
-              sample
+              動画生成ページ
             </Button>
           </Grid>
           <Grid size={2}>

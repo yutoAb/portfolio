@@ -4,6 +4,7 @@ import { MediaQueryProvider } from "./components/pages/common/Provider/MediaQuer
 import MainComponent from "./components/pages/MainComponent";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { NotFound } from "./components/pages/NotFound";
+import Movie from "./components/pages/pc/Movie/Movie";
 
 /**
  * サーバーサイドのコンテキストパス
@@ -17,6 +18,7 @@ export default function App() {
           <Routes>
             <Route path="">
               <Route index element={<MainComponent />} />
+              <Route path="movie" element={<Movie />} />
               <Route path="*" element={<NotFound />} />
             </Route>
           </Routes>
