@@ -1,4 +1,5 @@
 import React from "react";
+import { HelmetProvider } from "react-helmet-async";
 import { MediaQueryProvider } from "./components/pages/common/Provider/MediaQueryProvider";
 import MainComponent from "./components/pages/MainComponent";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -13,15 +14,17 @@ export const ENDPOINT_BASE_PATH = ``;
 export default function App() {
   return (
     <BrowserRouter basename={`${ENDPOINT_BASE_PATH}`}>
-      <MediaQueryProvider>
-        <Routes>
-          <Route path="">
-            <Route index element={<MainComponent />} />
-            <Route path="movie" element={<Movie />} />
-            <Route path="*" element={<NotFound />} />
-          </Route>
-        </Routes>
-      </MediaQueryProvider>
+      <HelmetProvider>
+        <MediaQueryProvider>
+          <Routes>
+            <Route path="">
+              <Route index element={<MainComponent />} />
+              <Route path="movie" element={<Movie />} />
+              <Route path="*" element={<NotFound />} />
+            </Route>
+          </Routes>
+        </MediaQueryProvider>
+      </HelmetProvider>
     </BrowserRouter>
   );
 }
