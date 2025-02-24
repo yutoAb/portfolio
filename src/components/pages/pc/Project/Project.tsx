@@ -24,6 +24,8 @@ export const Project = () => {
               size="large"
               component={Link}
               to="movie"
+              target="_blank"
+              rel="noopener noreferrer"
               color={"info"}
             >
               動画生成ページ
