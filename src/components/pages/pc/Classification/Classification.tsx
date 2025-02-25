@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Box, Button, Stack, TextField, Typography } from "@mui/material";
-import { Class } from "@mui/icons-material";
 
 const Classification: React.FC = () => {
   const [query, setQuery] = useState("");
