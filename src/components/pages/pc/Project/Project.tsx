@@ -34,10 +34,12 @@ export const Project = () => {
               variant="contained"
               size="large"
               component={Link}
-              to=""
+              to="classification"
+              target="_blank"
+              rel="noopener noreferrer"
               color={"info"}
             >
-              sample
+              文章分類ページ
             </Button>
           </Grid>
           <Grid size={2}>
