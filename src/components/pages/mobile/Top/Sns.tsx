@@ -1,6 +1,6 @@
 import { Stack, Box } from "@mui/material";
 
-import instagram from "../../../../assets/Instagram_Glyph_Gradient.png";
+import instagram from "../../../../assets/Instagram_Glyph_White.png";
 import x from "../../../../assets/logo-white.png";
 import github from "../../../../assets/github-mark-white.png";
 
