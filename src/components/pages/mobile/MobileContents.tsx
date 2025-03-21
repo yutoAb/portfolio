@@ -41,6 +41,7 @@ const MobileContents = () => {
         sx={{
           display: "flex",
           justifyContent: "center",
+          backgroundColor: "gainsboro",
         }}
       >
         <Box
