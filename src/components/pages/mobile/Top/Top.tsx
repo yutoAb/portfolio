@@ -1,6 +1,7 @@
 import { Typography, Box, Stack } from "@mui/material";
 import { purple } from "../../common/Constants";
 import penguin from "../../../../assets/penguin.png";
+import { Sns } from "./Sns";
 
 export const Top = () => {
   return (
@@ -26,9 +27,12 @@ export const Top = () => {
               objectFit: "contain",
             }}
           />
-          <Typography variant="h3">
-            Yuto Abe <br /> 阿部 雄斗
-          </Typography>
+          <Stack spacing={3}>
+            <Typography variant="h3">
+              Yuto Abe <br /> 阿部 雄斗
+            </Typography>
+            <Sns />
+          </Stack>
         </Stack>
         <Box
           sx={{
