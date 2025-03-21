@@ -8,15 +8,23 @@ export const Sns = () => {
   return (
     <Stack spacing={2} direction={"row"}>
       <Box
-        component="img"
-        src={instagram}
-        alt="instagram"
-        sx={{
-          width: "18%",
-          height: "auto",
-          objectFit: "contain",
-        }}
-      />
+        component="a"
+        href="https://www.instagram.com/yuto_abe_" // ← Instagramのリンクに差し替えてね
+        target="_blank"
+        rel="noopener noreferrer"
+        sx={{ width: "18%" }}
+      >
+        <Box
+          component="img"
+          src={instagram}
+          alt="instagram"
+          sx={{
+            width: "100%",
+            height: "auto",
+            objectFit: "contain",
+          }}
+        />
+      </Box>
       <Box
         component="img"
         src={x}
