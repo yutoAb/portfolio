@@ -1,9 +1,9 @@
 import { Stack, Box } from "@mui/material";
 
-import instagram from "../../../../assets/Instagram_Glyph_White.png";
-import x from "../../../../assets/logo-white.png";
-import github from "../../../../assets/github-mark-white.png";
-import linkin from "../../../../assets/InBug-White.png";
+import instagram from "../../../assets/Instagram_Glyph_White.png";
+import x from "../../../assets/logo-white.png";
+import github from "../../../assets/github-mark-white.png";
+import linkin from "../../../assets/InBug-White.png";
 export const Sns = () => {
   return (
     <Stack spacing={2} direction={"row"} alignItems={"center"}>

@@ -1,7 +1,7 @@
 import { Typography, Box, Stack } from "@mui/material";
 import { purple } from "../../common/Constants";
 import penguin from "../../../../assets/penguin.png";
-import { Sns } from "./Sns";
+import { Sns } from "../../common/Sns";
 
 export const Top = () => {
   return (
