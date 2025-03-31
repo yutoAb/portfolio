@@ -2,18 +2,7 @@ import { Typography, Box, Stack } from "@mui/material";
 import { purple } from "../../common/Constants";
 import penguin from "../../../../assets/penguin.png";
 import { Sns } from "../../common/Sns";
-import { keyframes } from "@emotion/react";
-
-const slideFadeIn = keyframes`
-  from {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-`;
+import { slideFadeIn } from "../../common/Keyframs";
 
 export const Top = () => {
   return (
