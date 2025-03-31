@@ -1,8 +1,14 @@
 import { Typography, Box, Stack, Divider } from "@mui/material";
-import { red } from "@mui/material/colors";
 import { pink } from "../../common/Constants";
+import { slideFadeIn } from "../../common/Keyframs";
+import { useInView } from "react-intersection-observer";
 
 export const Education = () => {
+  const { ref, inView } = useInView({
+    triggerOnce: true, // 一度だけ発火させる
+    threshold: 0.1, // 10% が見えたら発火
+  });
+
   return (
     <Box
       sx={{
@@ -13,7 +19,16 @@ export const Education = () => {
         justifyContent: "center",
       }}
     >
-      <Box sx={{ width: "80%" }}>
+      <Box
+        ref={ref}
+        sx={{
+          width: "80%",
+          opacity: inView ? 1 : 0,
+          transform: inView ? "translateY(0)" : "translateY(50px)",
+          animation: inView ? `${slideFadeIn} 1s ease-out` : "none",
+          transition: "all 0.5s ease-out",
+        }}
+      >
         <Typography
           variant="h3"
           sx={{ paddingTop: "100px", marginBottom: "30px" }}
