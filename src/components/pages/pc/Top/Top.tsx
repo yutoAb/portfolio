@@ -1,6 +1,7 @@
 import { Typography, Box, Stack } from "@mui/material";
 import { purple } from "../../common/Constants";
 import penguin from "../../../../assets/penguin.png";
+import { Sns } from "../../mobile/Top/Sns";
 
 export const Top = () => {
   return (
@@ -29,6 +30,15 @@ export const Top = () => {
           <Typography variant="h2" sx={{ paddingTop: "100px" }}>
             Yuto Abe / 阿部 雄斗
           </Typography>
+          <Box
+            sx={{
+              width: "300px",
+              height: "auto",
+              objectFit: "contain",
+            }}
+          >
+            <Sns />
+          </Box>
           <Box>
             <div>皆さん初めまして．阿部 雄斗（アベ ユウト）と申します．</div>
             <br />
