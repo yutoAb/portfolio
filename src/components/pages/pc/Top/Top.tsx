@@ -2,6 +2,18 @@ import { Typography, Box, Stack } from "@mui/material";
 import { purple } from "../../common/Constants";
 import penguin from "../../../../assets/penguin.png";
 import { Sns } from "../../common/Sns";
+import { keyframes } from "@emotion/react";
+
+const slideFadeIn = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
 
 export const Top = () => {
   return (
@@ -26,8 +38,18 @@ export const Top = () => {
             objectFit: "contain",
           }}
         />
-        <Stack spacing={5}>
-          <Typography variant="h2" sx={{ paddingTop: "100px" }}>
+        <Stack
+          spacing={5}
+          sx={{
+            animation: `${slideFadeIn} 1s ease-out`,
+          }}
+        >
+          <Typography
+            variant="h2"
+            sx={{
+              paddingTop: "100px",
+            }}
+          >
             Yuto Abe / 阿部 雄斗
           </Typography>
           <Box
