@@ -28,7 +28,7 @@ export const Top = () => {
             }}
           />
           <Stack spacing={3}>
-            <Typography variant="h3">
+            <Typography variant="h4">
               Yuto Abe <br /> 阿部 雄斗
             </Typography>
             <Sns />
