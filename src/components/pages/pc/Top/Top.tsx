@@ -1,10 +1,14 @@
-import { Typography, Box, Stack } from "@mui/material";
+import { Typography, Box, Stack, useMediaQuery } from "@mui/material";
+import { useTheme } from "@mui/material/styles";
 import { purple } from "../../common/Constants";
 import yutoAb from "../../../../assets/2024_阿部雄斗.png";
 import { Sns } from "../../common/Sns";
 import { slideFadeIn } from "../../common/Keyframs";
 
 export const Top = () => {
+  const theme = useTheme();
+  const isXs = useMediaQuery(theme.breakpoints.down("md"));
+
   return (
     <Box
       sx={{
@@ -22,7 +26,7 @@ export const Top = () => {
           src={yutoAb}
           alt="yutoAb"
           sx={{
-            width: "400px",
+            width: "300px",
             height: "auto",
             objectFit: "contain",
           }}
@@ -33,12 +37,7 @@ export const Top = () => {
             animation: `${slideFadeIn} 1s ease-out`,
           }}
         >
-          <Typography
-            variant="h2"
-            sx={{
-              paddingTop: "100px",
-            }}
-          >
+          <Typography variant={isXs ? "h4" : "h2"}>
             Yuto Abe / 阿部 雄斗
           </Typography>
           <Box
