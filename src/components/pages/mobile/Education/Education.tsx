@@ -1,5 +1,4 @@
 import { Typography, Box, Stack, Divider } from "@mui/material";
-import { red } from "@mui/material/colors";
 import { pink } from "../../common/Constants";
 
 export const Education = () => {
@@ -23,7 +22,8 @@ export const Education = () => {
               学歴
             </Typography>
             <div>早稲田大学</div>
-            <div>2021年4月～現在 | 基幹理工学部 情報通信学科</div>
+            <div>2021年4月～2025年3月 | 基幹理工学部 情報通信学科</div>
+            <div>2025年4月～現在 | 基幹理工学研究科 情報通信専攻</div>
             <div>2024年4月～現在 | 小林・小川研究室</div>
           </Box>
           <Divider sx={{ backgroundColor: "white", marginY: "20px" }} />
