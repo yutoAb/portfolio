@@ -1,8 +1,14 @@
 import { Typography, Box, Stack, Divider } from "@mui/material";
-import { red } from "@mui/material/colors";
 import { pink } from "../../common/Constants";
+import { slideFadeIn } from "../../common/Keyframs";
+import { useInView } from "react-intersection-observer";
 
 export const Education = () => {
+  const { ref, inView } = useInView({
+    triggerOnce: true, // 一度だけ発火させる
+    threshold: 0.1, // 10% が見えたら発火
+  });
+
   return (
     <Box
       sx={{
@@ -13,7 +19,16 @@ export const Education = () => {
         justifyContent: "center",
       }}
     >
-      <Box sx={{ width: "80%" }}>
+      <Box
+        ref={ref}
+        sx={{
+          width: "80%",
+          opacity: inView ? 1 : 0,
+          transform: inView ? "translateY(0)" : "translateY(50px)",
+          animation: inView ? `${slideFadeIn} 1s ease-out` : "none",
+          transition: "all 0.5s ease-out",
+        }}
+      >
         <Typography
           variant="h3"
           sx={{ paddingTop: "100px", marginBottom: "30px" }}
@@ -30,8 +45,9 @@ export const Education = () => {
                 学歴
               </Typography>
               <div>早稲田大学</div>
-              <div>2021年4月～現在　|　基幹理工学部 情報通信学科</div>
-              <div>2024年4月～現在　|　小林・小川研究室</div>
+              <div>2021年4月～2025年3月 | 基幹理工学部 情報通信学科</div>
+              <div>2025年4月～現在 | 基幹理工学研究科 情報通信専攻</div>
+              <div>2024年4月～現在 | 小林・小川研究室</div>
             </Box>
             <Divider sx={{ backgroundColor: "white", marginY: "20px" }} />
             <Box>
