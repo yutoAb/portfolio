@@ -1,8 +1,14 @@
-import { Typography, Box, Stack } from "@mui/material";
+import { Typography, Box, Stack, useMediaQuery } from "@mui/material";
+import { useTheme } from "@mui/material/styles";
 import { purple } from "../../common/Constants";
-import penguin from "../../../../assets/penguin.png";
+import yutoAb from "../../../../assets/2024_阿部雄斗.png";
+import { Sns } from "../../common/Sns";
+import { slideFadeIn } from "../../common/Keyframs";
 
 export const Top = () => {
+  const theme = useTheme();
+  const isXs = useMediaQuery(theme.breakpoints.down("md"));
+
   return (
     <Box
       sx={{
@@ -17,18 +23,32 @@ export const Top = () => {
       <Stack direction="row" spacing={10}>
         <Box
           component="img"
-          src={penguin}
-          alt="penguin"
+          src={yutoAb}
+          alt="yutoAb"
           sx={{
-            width: "400px",
+            width: "300px",
             height: "auto",
             objectFit: "contain",
           }}
         />
-        <Stack spacing={5}>
-          <Typography variant="h2" sx={{ paddingTop: "100px" }}>
+        <Stack
+          spacing={5}
+          sx={{
+            animation: `${slideFadeIn} 1s ease-out`,
+          }}
+        >
+          <Typography variant={isXs ? "h4" : "h2"}>
             Yuto Abe / 阿部 雄斗
           </Typography>
+          <Box
+            sx={{
+              width: "300px",
+              height: "auto",
+              objectFit: "contain",
+            }}
+          >
+            <Sns />
+          </Box>
           <Box>
             <div>皆さん初めまして．阿部 雄斗（アベ ユウト）と申します．</div>
             <br />

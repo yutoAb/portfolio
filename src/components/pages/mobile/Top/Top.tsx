@@ -1,7 +1,7 @@
 import { Typography, Box, Stack } from "@mui/material";
 import { purple } from "../../common/Constants";
-import penguin from "../../../../assets/penguin.png";
-import { Sns } from "./Sns";
+import yutoAb from "../../../../assets/2024_阿部雄斗.png";
+import { Sns } from "../../common/Sns";
 
 export const Top = () => {
   return (
@@ -19,8 +19,8 @@ export const Top = () => {
         <Stack direction="row" spacing={3}>
           <Box
             component="img"
-            src={penguin}
-            alt="penguin"
+            src={yutoAb}
+            alt="yutoAb"
             sx={{
               width: "40%",
               height: "auto",
@@ -28,7 +28,7 @@ export const Top = () => {
             }}
           />
           <Stack spacing={3}>
-            <Typography variant="h3">
+            <Typography variant="h4">
               Yuto Abe <br /> 阿部 雄斗
             </Typography>
             <Sns />

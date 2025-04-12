@@ -3,7 +3,7 @@ import { Top } from "./Top/Top";
 import { Project } from "./Project/Project";
 import { Education } from "./Education/Education";
 import { Contact } from "./Contact/Contact";
-import { Tabs, Tab, Box, Button, Stack, IconButton } from "@mui/material";
+import { Tabs, Tab, Box, Stack, IconButton } from "@mui/material";
 import { ChevronLeft, ChevronRight } from "@mui/icons-material";
 
 const PcContents = () => {
@@ -28,7 +28,6 @@ const PcContents = () => {
   };
 
   const handleScrollEvent = () => {
-    const topPosition = topRef.current?.offsetTop || 0;
     const projectPosition = projectRef.current?.offsetTop || 0;
     const educationPosition = educationRef.current?.offsetTop || 0;
     const contactPosition = contactRef.current?.offsetTop || 0;
@@ -63,8 +62,6 @@ const PcContents = () => {
           left: 0,
           height: "100vh",
           width: isTabsMinimized ? "10px" : "200px",
-          borderRight: 1,
-          borderColor: "divider",
           bgcolor: "background.paper",
           display: "flex",
           flexDirection: "column",
@@ -104,9 +101,9 @@ const PcContents = () => {
       {/* 右側のコンテンツ */}
       <Box
         sx={{
-          marginLeft: isTabsMinimized ? "50px" : "200px", // タブの幅分をマージンに設定
+          marginLeft: isTabsMinimized ? "5px" : "200px", // タブの幅分をマージンに設定
           padding: 2,
-          width: isTabsMinimized ? "calc(100% - 50px)" : "calc(100% - 200px)", // タブの幅を引いたサイズに調整
+          width: isTabsMinimized ? "calc(100% - 5px)" : "calc(100% - 200px)", // タブの幅を引いたサイズに調整
           transition: "margin-left 0.3s, width 0.3s",
         }}
       >
