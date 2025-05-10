@@ -33,7 +33,12 @@ export const Project = () => {
           <Typography variant="h3" sx={{ paddingTop: "100px" }}>
             Projects
           </Typography>
-          <div>未記入です</div>
+          <Typography
+            variant="h5"
+            sx={{ fontWeight: "bold", marginBottom: "10px" }}
+          >
+            卒業論文
+          </Typography>
           <video src={movie} controls style={{ width: "60%" }} />
         </Stack>
       </Box>
