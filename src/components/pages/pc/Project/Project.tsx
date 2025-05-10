@@ -2,6 +2,7 @@ import { Typography, Box, Stack } from "@mui/material";
 import { blue } from "../../common/Constants";
 import { slideFadeIn } from "../../common/Keyframs";
 import { useInView } from "react-intersection-observer";
+import movie from "../../../../assets/卒業論文研究紹介動画.mp4";
 
 export const Project = () => {
   const { ref, inView } = useInView({
@@ -32,7 +33,13 @@ export const Project = () => {
           <Typography variant="h3" sx={{ paddingTop: "100px" }}>
             Projects
           </Typography>
-          <div>未記入です</div>
+          <Typography
+            variant="h5"
+            sx={{ fontWeight: "bold", marginBottom: "10px" }}
+          >
+            卒業論文
+          </Typography>
+          <video src={movie} controls style={{ width: "60%" }} />
         </Stack>
       </Box>
     </Box>
