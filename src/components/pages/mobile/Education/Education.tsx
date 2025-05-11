@@ -42,7 +42,6 @@ export const Education = () => {
               <div>　Python</div>
               <div>　ツール : ESPnet</div>
               <div>資格</div>
-              <div>　簿記3級</div>
               <div>　TOEIC : 770点</div>
               <div>WEB3分野</div>
               <div>　Smart Contract</div>
