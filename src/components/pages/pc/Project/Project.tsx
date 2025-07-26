@@ -3,12 +3,19 @@ import { blue } from "../../common/Constants";
 import { slideFadeIn } from "../../common/Keyframs";
 import { useInView } from "react-intersection-observer";
 import movie from "../../../../assets/卒業論文研究紹介動画.mp4";
+import { SimpleDialog } from "./SimpleDialog";
+import { useState } from "react";
 
 export const Project = () => {
   const { ref, inView } = useInView({
     triggerOnce: true, // 一度だけ発火させる
     threshold: 0.1, // 10% が見えたら発火
   });
+
+  const [open, setOpen] = useState(false);
+
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
 
   return (
     <Box
@@ -33,15 +40,33 @@ export const Project = () => {
           <Typography variant="h3" sx={{ paddingTop: "100px" }}>
             Projects
           </Typography>
-          <Typography
-            variant="h5"
-            sx={{ fontWeight: "bold", marginBottom: "10px" }}
-          >
-            卒業論文
-          </Typography>
-          <video src={movie} controls style={{ width: "60%" }} />
+          <Stack direction={"row"} spacing={5}>
+            <Box sx={{ width: "50%", boxSizing: "border-box" }}>
+              <Typography
+                variant="h5"
+                sx={{ fontWeight: "bold", marginBottom: "10px" }}
+              >
+                卒業論文
+              </Typography>
+              <video src={movie} controls style={{ width: "100%" }} />
+            </Box>
+            <Box
+              onClick={handleOpen}
+              sx={{ width: "50%", cursor: "pointer", boxSizing: "border-box" }}
+            >
+              <Typography
+                variant="h5"
+                sx={{ fontWeight: "bold", marginBottom: "10px" }}
+              >
+                ポートフォリオ
+              </Typography>
+              <Box>To Do アプリ</Box>
+            </Box>
+          </Stack>
         </Stack>
       </Box>
+
+      <SimpleDialog open={open} handleClose={handleClose} />
     </Box>
   );
 };
