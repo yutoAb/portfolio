@@ -10,25 +10,21 @@ import {
 export interface SimpleDialogProps {
   open: boolean;
   handleClose: () => void;
+  title: string;
+  content: string;
+  link: string;
 }
 
 export function SimpleDialog(props: SimpleDialogProps) {
   return (
     <Dialog open={props.open} onClose={props.handleClose}>
-      <DialogTitle>To Do アプリ</DialogTitle>
+      <DialogTitle>{props.title}</DialogTitle>
       <DialogContent dividers>
-        <Typography gutterBottom>
-          ReactとTypeScriptで作成したタスク管理アプリです。App Engine の /tmp
-          に保存しているので，一定時間後にToDo データはすべて消えてしまいます。
-        </Typography>
+        <Typography gutterBottom>{props.content}</Typography>
         <Typography>
           アプリリンク：
-          <a
-            href="https://karu-web-taupe.vercel.app/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            https://karu-web-taupe.vercel.app/
+          <a href={props.link} target="_blank" rel="noopener noreferrer">
+            {props.link}
           </a>
         </Typography>
       </DialogContent>

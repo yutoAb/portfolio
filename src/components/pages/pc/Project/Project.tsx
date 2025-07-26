@@ -5,6 +5,7 @@ import { useInView } from "react-intersection-observer";
 import movie from "../../../../assets/卒業論文研究紹介動画.mp4";
 import { SimpleDialog } from "./SimpleDialog";
 import { useState } from "react";
+import { interactiveBoxStyle } from "./style";
 
 export const Project = () => {
   const { ref, inView } = useInView({
@@ -57,31 +58,31 @@ export const Project = () => {
               >
                 ポートフォリオ
               </Typography>
-              <Box
-                onClick={handleOpen}
-                sx={{
-                  width: "50%",
-                  cursor: "pointer",
-                  boxSizing: "border-box",
-                  border: "2px solid white",
-                  borderRadius: "8px",
-                  padding: "20px",
-                  textAlign: "center",
-                  transition: "transform 0.2s, box-shadow 0.2s",
-                  "&:hover": {
-                    transform: "translateY(-5px)",
-                    boxShadow: "0 6px 12px rgba(0,0,0,0.3)",
-                  },
-                }}
-              >
-                To Do アプリ
-              </Box>
+              <Stack spacing={2}>
+                <Box onClick={handleOpen} sx={interactiveBoxStyle}>
+                  To Do アプリ(App Engineでデプロイ)
+                </Box>
+                <Box onClick={handleOpen} sx={interactiveBoxStyle}>
+                  父の会社のホームページ
+                </Box>
+                <Box onClick={handleOpen} sx={interactiveBoxStyle}>
+                  To Do アプリ(Cloud Run + Cloud SQLでデプロイ)
+                </Box>
+              </Stack>
             </Box>
           </Stack>
         </Stack>
       </Box>
 
-      <SimpleDialog open={open} handleClose={handleClose} />
+      <SimpleDialog
+        open={open}
+        handleClose={handleClose}
+        title={"To Do アプリ"}
+        content={
+          "ReactとTypeScriptで作成したタスク管理アプリです。App Engine の /tmp に保存しているので，一定時間後にToDo データはすべて消えてしまいます。"
+        }
+        link={"https://karu-web-taupe.vercel.app/"}
+      />
     </Box>
   );
 };
