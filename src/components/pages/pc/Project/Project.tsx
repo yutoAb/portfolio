@@ -50,17 +50,32 @@ export const Project = () => {
               </Typography>
               <video src={movie} controls style={{ width: "100%" }} />
             </Box>
-            <Box
-              onClick={handleOpen}
-              sx={{ width: "50%", cursor: "pointer", boxSizing: "border-box" }}
-            >
+            <Box sx={{ width: "50%", boxSizing: "border-box" }}>
               <Typography
                 variant="h5"
                 sx={{ fontWeight: "bold", marginBottom: "10px" }}
               >
                 ポートフォリオ
               </Typography>
-              <Box>To Do アプリ</Box>
+              <Box
+                onClick={handleOpen}
+                sx={{
+                  width: "50%",
+                  cursor: "pointer",
+                  boxSizing: "border-box",
+                  border: "2px solid white",
+                  borderRadius: "8px",
+                  padding: "20px",
+                  textAlign: "center",
+                  transition: "transform 0.2s, box-shadow 0.2s",
+                  "&:hover": {
+                    transform: "translateY(-5px)",
+                    boxShadow: "0 6px 12px rgba(0,0,0,0.3)",
+                  },
+                }}
+              >
+                To Do アプリ
+              </Box>
             </Box>
           </Stack>
         </Stack>
