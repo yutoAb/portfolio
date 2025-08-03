@@ -6,6 +6,8 @@ import { Contact } from "./Contact/Contact";
 import { Tabs, Tab, Box, Stack, IconButton } from "@mui/material";
 import { ChevronLeft, ChevronRight } from "@mui/icons-material";
 
+import Footer from "../common/Footer";
+
 const PcContents = () => {
   const [activeTab, setActiveTab] = useState(0);
   const [isTabsMinimized, setIsTabsMinimized] = useState(false);
@@ -119,6 +121,8 @@ const PcContents = () => {
         <div ref={contactRef} style={{ minHeight: "100vh" }}>
           <Contact />
         </div>
+
+        <Footer />
       </Box>
     </Stack>
   );
