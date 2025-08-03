@@ -4,6 +4,7 @@ import { Project } from "./Project/Project";
 import { Education } from "./Education/Education";
 import { Contact } from "./Contact/Contact";
 import { Box, Button } from "@mui/material";
+import Footer from "../common/Footer";
 
 const MobileContents = () => {
   const topRef = useRef<HTMLDivElement | null>(null);
@@ -41,7 +42,7 @@ const MobileContents = () => {
         sx={{
           display: "flex",
           justifyContent: "center",
-          backgroundColor: "gainsboro",
+          backgroundColor: "#f5f5f5",
         }}
       >
         <Box
@@ -53,6 +54,8 @@ const MobileContents = () => {
           <Button variant="contained" onClick={() => handleScroll(topRef, 0)}>
             トップへ
           </Button>
+
+          <Footer />
         </Box>
       </Box>
     </Box>

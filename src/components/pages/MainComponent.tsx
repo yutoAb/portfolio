@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import MobileContents from "./mobile/MobileContents";
 import PcContents from "./pc/PcContents";
 import { useMediaQueryContext } from "./common/Provider/MediaQueryProvider";
@@ -11,11 +11,7 @@ const MainComponent: FC = () => {
     <>
       <Helmet>
         <title>yutoAb</title>
-        <link
-          rel="icon"
-          type="image/png"
-          href="/assets/yutoAb.png"
-        />
+        <link rel="icon" type="image/png" href="/assets/yutoAb.png" />
       </Helmet>
       {isMobileSite && <MobileContents />}
       {/* {isTabletSite && <TabletContents />} */}
