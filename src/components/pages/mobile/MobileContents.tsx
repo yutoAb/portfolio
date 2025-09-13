@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import { Top } from "./Top/Top";
 import { Project } from "./Project/Project";
 import { Education } from "./Education/Education";
-import { Contact } from "../pc/Contact/Contact";
+import { Contact } from "../common/Contact/Contact";
 import { Box, Button } from "@mui/material";
 import Footer from "../common/Footer";
 

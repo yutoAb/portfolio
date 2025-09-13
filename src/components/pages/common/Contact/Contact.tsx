@@ -1,6 +1,6 @@
 import { Typography, Box, Stack, TextField, Button } from "@mui/material";
-import { purple } from "../../common/Constants";
-import { slideFadeIn } from "../../common/Keyframs";
+import { purple } from "../Constants";
+import { slideFadeIn } from "../Keyframs";
 import { useInView } from "react-intersection-observer";
 import { useState } from "react";
 import { WhiteTextField } from "./WhiteTextField";
