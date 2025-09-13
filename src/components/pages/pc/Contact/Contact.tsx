@@ -46,7 +46,7 @@ export const Contact = () => {
       <Box
         ref={ref}
         sx={{
-          width: "80%",
+          width: { xs: "100%", md: "80%" },
           opacity: inView ? 1 : 0,
           transform: inView ? "translateY(0)" : "translateY(50px)",
           animation: inView ? `${slideFadeIn} 1s ease-out` : "none",
@@ -60,7 +60,14 @@ export const Contact = () => {
           Contact
         </Typography>
 
-        <Stack spacing={3} maxWidth={600} width="100%">
+        <Stack
+          spacing={3}
+          maxWidth={600}
+          width="100%"
+          sx={{
+            mx: { xs: "auto", md: 0 },
+          }}
+        >
           <WhiteTextField
             label="お名前"
             value={form.name}
