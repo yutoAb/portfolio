@@ -1,5 +1,11 @@
 import { Typography, Box, Stack, Divider } from "@mui/material";
 import { pink } from "../../common/Constants";
+import Timeline from "@mui/lab/Timeline";
+import TimelineItem, { timelineItemClasses } from "@mui/lab/TimelineItem";
+import TimelineSeparator from "@mui/lab/TimelineSeparator";
+import TimelineConnector from "@mui/lab/TimelineConnector";
+import TimelineContent from "@mui/lab/TimelineContent";
+import TimelineDot from "@mui/lab/TimelineDot";
 
 export const Education = () => {
   return (
@@ -22,12 +28,56 @@ export const Education = () => {
               >
                 学歴
               </Typography>
-              <div>早稲田大学</div>
-              <div>2021年4月～2025年3月 | 基幹理工学部 情報通信学科</div>
-              <div>2025年4月～現在 | 基幹理工学研究科 情報通信専攻</div>
-              <div>2024年4月～現在 | 小林・小川研究室</div>
+              <Timeline
+                sx={{
+                  [`& .${timelineItemClasses.root}:before`]: {
+                    flex: 0,
+                    padding: 0,
+                  },
+                }}
+              >
+                <TimelineItem>
+                  <TimelineSeparator>
+                    <TimelineDot />
+                    <TimelineConnector />
+                  </TimelineSeparator>
+                  <TimelineContent>
+                    <Typography variant="h6" component="span">
+                      2027年3月
+                    </Typography>
+                    <Typography>
+                      早稲田大学 基幹理工学術院 <br />
+                      博士前期課程
+                    </Typography>
+                    <Typography>情報理工・情報通信専攻</Typography>
+                  </TimelineContent>
+                </TimelineItem>
+
+                <TimelineItem>
+                  <TimelineSeparator>
+                    <TimelineDot />
+                    <TimelineConnector />
+                  </TimelineSeparator>
+                  <TimelineContent>
+                    <Typography variant="h6" component="span">
+                      2025年3月
+                    </Typography>
+                    <Typography>
+                      早稲田大学 基幹理工学部 <br />
+                      学士課程
+                    </Typography>
+                    <Typography>情報通信学科</Typography>
+                  </TimelineContent>
+                </TimelineItem>
+                <TimelineItem>
+                  <TimelineSeparator>
+                    <TimelineDot />
+                  </TimelineSeparator>
+                  <TimelineContent variant="h6">2021年4月</TimelineContent>
+                </TimelineItem>
+              </Timeline>
             </Box>
-            <Divider sx={{ backgroundColor: "white", marginY: "20px" }} />
+            {/* <Divider sx={{ backgroundColor: "white", marginY: "20px" }} />
             <Box>
               <Typography
                 variant="h5"
@@ -45,19 +95,88 @@ export const Education = () => {
               <div>　TOEIC : 770点</div>
               <div>WEB3分野</div>
               <div>　Smart Contract</div>
-            </Box>
+            </Box> */}
             <Divider sx={{ backgroundColor: "white", marginY: "20px" }} />
             <Box>
               <Typography
                 variant="h5"
                 sx={{ fontWeight: "bold", marginBottom: "10px" }}
               >
-                職歴
+                経歴
               </Typography>
-              <div>2022年10月～2023年1月 | キャロットソフトウェア株式会社</div>
-              <div>2023年2月～現在 | 日本ユースウェアシステム株式会社</div>
+              <Timeline
+                sx={{
+                  [`& .${timelineItemClasses.root}:before`]: {
+                    flex: 0,
+                    padding: 0,
+                  },
+                }}
+              >
+                <TimelineItem>
+                  <TimelineSeparator>
+                    <TimelineDot />
+                    <TimelineConnector />
+                  </TimelineSeparator>
+                  <TimelineContent>
+                    <Typography variant="h6" component="span">
+                      2025年8月25日～9月5日
+                    </Typography>
+                    <Typography>日立製作所 研究開発グループ</Typography>
+                    <Typography>短期インターンシップ</Typography>
+                  </TimelineContent>
+                </TimelineItem>
+
+                <TimelineItem>
+                  <TimelineSeparator>
+                    <TimelineDot />
+                    <TimelineConnector />
+                  </TimelineSeparator>
+                  <TimelineContent>
+                    <Typography variant="h6" component="span">
+                      2025年2月26日～28日
+                    </Typography>
+                    <Typography>PR TIMES HACKATHON 2025</Typography>
+                    <Typography>ハッカソン</Typography>
+                  </TimelineContent>
+                </TimelineItem>
+
+                <TimelineItem>
+                  <TimelineSeparator>
+                    <TimelineDot />
+                    <TimelineConnector />
+                  </TimelineSeparator>
+                  <TimelineContent>
+                    <Typography variant="h6" component="span">
+                      2023年2月～現在
+                    </Typography>
+                    <Typography>
+                      日本ユースウェアシステム
+                      <br />
+                      株式会社
+                    </Typography>
+                    <Typography>長期アルバイト</Typography>
+                  </TimelineContent>
+                </TimelineItem>
+
+                <TimelineItem>
+                  <TimelineSeparator>
+                    <TimelineDot />
+                  </TimelineSeparator>
+                  <TimelineContent>
+                    <Typography variant="h6" component="span">
+                      2022年10月～2023年1月
+                    </Typography>
+                    <Typography>
+                      キャロットソフトウェア
+                      <br />
+                      株式会社
+                    </Typography>
+                    <Typography>短期アルバイト</Typography>
+                  </TimelineContent>
+                </TimelineItem>
+              </Timeline>
             </Box>
-            <Divider sx={{ backgroundColor: "white", marginY: "20px" }} />
+            {/* <Divider sx={{ backgroundColor: "white", marginY: "20px" }} />
             <Box>
               <Typography
                 variant="h5"
@@ -76,7 +195,7 @@ export const Education = () => {
               <div>　テニス歴5年(2019年～)</div>
               <div>早稲田うたおう会[バンドサークル]</div>
               <div>　ギター歴3年</div>
-            </Box>
+            </Box> */}
           </Stack>
         </Stack>
       </Box>
