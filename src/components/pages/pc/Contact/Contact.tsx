@@ -1,13 +1,43 @@
-import { Typography, Box } from "@mui/material";
+import { Typography, Box, Stack, TextField, Button } from "@mui/material";
 import { purple } from "../../common/Constants";
 import { slideFadeIn } from "../../common/Keyframs";
 import { useInView } from "react-intersection-observer";
+import { useState } from "react";
 
 export const Contact = () => {
   const { ref, inView } = useInView({
     triggerOnce: true, // 一度だけ発火させる
     threshold: 0.1, // 10% が見えたら発火
   });
+
+  const [form, setForm] = useState({
+    company: "",
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+
+  const handleChange =
+    (field: string) => (e: React.ChangeEvent<HTMLInputElement>) => {
+      setForm({ ...form, [field]: e.target.value });
+    };
+
+  const handleSubmit = () => {
+    const { name, email, subject, message, company } = form;
+
+    const user = "yuto27abe";
+    const domain = "gmail.com";
+    const to = `${user}@${domain}`;
+
+    const mailtoLink = `mailto:${to}?subject=${encodeURIComponent(
+      `[お問い合わせ] ${subject}`
+    )}&body=${encodeURIComponent(
+      `会社名：${company}\nお名前：${name}\nメールアドレス：${email}\n\nお問い合わせ内容：\n${message}`
+    )}`;
+
+    window.location.href = mailtoLink;
+  };
 
   return (
     <Box
@@ -34,9 +64,48 @@ export const Contact = () => {
         >
           Contact
         </Typography>
-        <div>Email : abe@pcl.waseda.ac.jp</div>
-        <div>Instagram : @yuto_abe_</div>
       </Box>
+
+      <Stack spacing={3} maxWidth={600} width="100%">
+        <TextField
+          label="お名前 ※"
+          variant="outlined"
+          required
+          fullWidth
+          value={form.name}
+          onChange={handleChange("name")}
+        />
+
+        <TextField
+          label="メールアドレス ※"
+          variant="outlined"
+          required
+          fullWidth
+          type="email"
+          value={form.email}
+          onChange={handleChange("email")}
+        />
+
+        <TextField
+          label="お問い合わせ内容 ※"
+          variant="outlined"
+          required
+          fullWidth
+          multiline
+          rows={5}
+          value={form.message}
+          onChange={handleChange("message")}
+        />
+        <Button
+          variant="contained"
+          color="primary"
+          onClick={handleSubmit}
+          sx={{ width: "150px", alignSelf: "center" }}
+        >
+          送信
+        </Button>
+      </Stack>
+      <Box textAlign="center" mt={2}></Box>
     </Box>
   );
 };
