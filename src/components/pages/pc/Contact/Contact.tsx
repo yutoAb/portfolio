@@ -3,6 +3,7 @@ import { purple } from "../../common/Constants";
 import { slideFadeIn } from "../../common/Keyframs";
 import { useInView } from "react-intersection-observer";
 import { useState } from "react";
+import { WhiteTextField } from "./WhiteTextField";
 
 export const Contact = () => {
   const { ref, inView } = useInView({
@@ -11,29 +12,23 @@ export const Contact = () => {
   });
 
   const [form, setForm] = useState({
-    company: "",
     name: "",
     email: "",
     subject: "",
     message: "",
   });
 
-  const handleChange =
-    (field: string) => (e: React.ChangeEvent<HTMLInputElement>) => {
-      setForm({ ...form, [field]: e.target.value });
-    };
-
   const handleSubmit = () => {
-    const { name, email, subject, message, company } = form;
+    const { name, email, subject, message } = form;
 
     const user = "yuto27abe";
     const domain = "gmail.com";
     const to = `${user}@${domain}`;
 
     const mailtoLink = `mailto:${to}?subject=${encodeURIComponent(
-      `[お問い合わせ] ${subject}`
+      `${subject}`
     )}&body=${encodeURIComponent(
-      `会社名：${company}\nお名前：${name}\nメールアドレス：${email}\n\nお問い合わせ内容：\n${message}`
+      `お名前：${name}\nメールアドレス：${email}\n\nお問い合わせ内容：\n${message}`
     )}`;
 
     window.location.href = mailtoLink;
@@ -64,48 +59,50 @@ export const Contact = () => {
         >
           Contact
         </Typography>
+
+        <Stack spacing={3} maxWidth={600} width="100%">
+          <WhiteTextField
+            label="お名前"
+            value={form.name}
+            field="name"
+            onChange={(field, value) => setForm({ ...form, [field]: value })}
+          />
+
+          <WhiteTextField
+            label="メールアドレス"
+            field="email"
+            type="email"
+            value={form.email}
+            onChange={(field, value) => setForm({ ...form, [field]: value })}
+          />
+
+          <WhiteTextField
+            label="件名"
+            field="subject"
+            type="subject"
+            value={form.subject}
+            onChange={(field, value) => setForm({ ...form, [field]: value })}
+          />
+
+          <WhiteTextField
+            label="お問い合わせ内容"
+            field="message"
+            multiline
+            rows={5}
+            value={form.message}
+            onChange={(field, value) => setForm({ ...form, [field]: value })}
+          />
+          <Button
+            variant="contained"
+            color="primary"
+            onClick={handleSubmit}
+            sx={{ width: "150px", alignSelf: "center" }}
+          >
+            送信
+          </Button>
+        </Stack>
+        <Box textAlign="center" mt={2}></Box>
       </Box>
-
-      <Stack spacing={3} maxWidth={600} width="100%">
-        <TextField
-          label="お名前 ※"
-          variant="outlined"
-          required
-          fullWidth
-          value={form.name}
-          onChange={handleChange("name")}
-        />
-
-        <TextField
-          label="メールアドレス ※"
-          variant="outlined"
-          required
-          fullWidth
-          type="email"
-          value={form.email}
-          onChange={handleChange("email")}
-        />
-
-        <TextField
-          label="お問い合わせ内容 ※"
-          variant="outlined"
-          required
-          fullWidth
-          multiline
-          rows={5}
-          value={form.message}
-          onChange={handleChange("message")}
-        />
-        <Button
-          variant="contained"
-          color="primary"
-          onClick={handleSubmit}
-          sx={{ width: "150px", alignSelf: "center" }}
-        >
-          送信
-        </Button>
-      </Stack>
-      <Box textAlign="center" mt={2}></Box>
     </Box>
   );
 };
