@@ -86,7 +86,7 @@ export const Education = () => {
                     <Typography variant="h6">
                       早稲田大学 基幹理工学部 学士課程
                     </Typography>
-                    <Typography variant="h6">情報通信学科</Typography>
+                    <Typography>情報通信学科</Typography>
                   </TimelineContent>
                 </TimelineItem>
                 <TimelineItem>
