@@ -1,4 +1,4 @@
-import { Typography, Box, Stack } from "@mui/material";
+import { Typography, Box, Stack, Divider } from "@mui/material";
 import { blue } from "../../common/Constants";
 import { slideFadeIn } from "../../common/Keyframs";
 import { useInView } from "react-intersection-observer";
@@ -45,7 +45,7 @@ export const Project = () => {
           <Typography variant="h3" sx={{ paddingTop: "100px" }}>
             Projects
           </Typography>
-          <Stack direction={"row"} spacing={5}>
+          <Stack direction={"row"} spacing={10}>
             <Box sx={{ width: "50%", boxSizing: "border-box" }}>
               <Typography
                 variant="h5"
@@ -55,6 +55,13 @@ export const Project = () => {
               </Typography>
               <video src={movie} controls style={{ width: "100%" }} />
             </Box>
+
+            <Divider
+              orientation="vertical"
+              flexItem
+              sx={{ backgroundColor: "white" }}
+            />
+
             <Box sx={{ width: "50%", boxSizing: "border-box" }}>
               <Typography
                 variant="h5"
