@@ -11,23 +11,26 @@ export default function Hero() {
           className="w-48 md:w-72 rounded-lg shadow-lg object-contain"
         />
         <div className="animate-[slide-fade-in_1s_ease-out]">
-          <h1 className="text-3xl md:text-5xl font-bold mb-6">
-            Yuto Abe / 阿部 雄斗
+          <h1 className="text-3xl md:text-5xl font-bold mb-2">
+            Yuto Abe
           </h1>
+          <p className="text-lg text-white/70 mb-6">阿部 雄斗</p>
           <div className="mb-6">
             <SnsLinks />
           </div>
           <div className="space-y-3 leading-relaxed text-white/90">
-            <p>皆さん初めまして。阿部 雄斗（アベ ユウト）と申します。</p>
             <p>
-              早稲田大学 情報通信学科の小林・小川研究室に所属させていただいている修士１年生です。
-              研究内容としては、機械学習を用いた音声認識モデル・音声対話モデルの構築に取り組んでいます。
+              早稲田大学 基幹理工学術院 修士1年。小林・小川研究室にて、
+              全二重音声対話システムの研究に取り組んでいます。
             </p>
             <p>
-              また長期インターンでは日本ユースウェアシステム株式会社で、WEBアプリの開発をさせていただいています。
-              フロントでは React×TypeScript、バックでは Scala を触っています。
+              国立情報学研究所 (NII) にてリサーチエンジニアとして、
+              7Bパラメータの日本語全二重音声対話モデル <span className="font-semibold">LLM-jp-Moshi-v1</span> を筆頭開発。
+              IWSDS 2026 にて筆頭著者として発表予定。
             </p>
-            <p>趣味はマンガとゴルフです。</p>
+            <p>
+              研究とエンジニアリングの両面から、人とAIの自然な音声コミュニケーションの実現を目指しています。
+            </p>
           </div>
         </div>
       </div>

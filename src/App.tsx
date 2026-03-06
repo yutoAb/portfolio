@@ -1,6 +1,9 @@
 import { useRef } from 'react'
 import Nav from './components/Nav'
 import Hero from './components/Hero'
+import Skills from './components/Skills'
+import Experience from './components/Experience'
+import Research from './components/Research'
 import Projects from './components/Projects'
 import Education from './components/Education'
 import Contact from './components/Contact'
@@ -8,12 +11,18 @@ import Footer from './components/Footer'
 
 export default function App() {
   const heroRef = useRef<HTMLDivElement>(null)
+  const skillsRef = useRef<HTMLDivElement>(null)
+  const experienceRef = useRef<HTMLDivElement>(null)
+  const researchRef = useRef<HTMLDivElement>(null)
   const projectsRef = useRef<HTMLDivElement>(null)
   const educationRef = useRef<HTMLDivElement>(null)
   const contactRef = useRef<HTMLDivElement>(null)
 
   const sections = [
     { label: 'Top', ref: heroRef },
+    { label: 'Skills', ref: skillsRef },
+    { label: 'Experience', ref: experienceRef },
+    { label: 'Research', ref: researchRef },
     { label: 'Projects', ref: projectsRef },
     { label: 'Education', ref: educationRef },
     { label: 'Contact', ref: contactRef },
@@ -24,6 +33,9 @@ export default function App() {
       <Nav sections={sections} />
       <main>
         <div ref={heroRef}><Hero /></div>
+        <div ref={skillsRef}><Skills /></div>
+        <div ref={experienceRef}><Experience /></div>
+        <div ref={researchRef}><Research /></div>
         <div ref={projectsRef}><Projects /></div>
         <div ref={educationRef}><Education /></div>
         <div ref={contactRef}><Contact /></div>
