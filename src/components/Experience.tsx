@@ -46,7 +46,7 @@ const experiences: ExperienceEntry[] = [
     ],
   },
   {
-    period: '2024',
+    period: '2025 Aug',
     company: 'Accenture',
     role: 'Engineering Intern',
     description: [
@@ -54,11 +54,11 @@ const experiences: ExperienceEntry[] = [
     ],
   },
   {
-    period: '2024',
+    period: '2026 Feb (2 weeks)',
     company: 'GMO Internet Group',
     role: 'Engineering Intern',
     description: [
-      '5日間の集中プログラムで「天秤AI」（AI比較ツール）をエンドツーエンドで実装',
+      '2週間の集中プログラムで「天秤AI」（AI比較ツール）をエンドツーエンドで実装',
     ],
   },
 ]
