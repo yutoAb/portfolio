@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://yutoab.github.io/portfolio-new/sitemap.xml
