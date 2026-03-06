@@ -9,6 +9,14 @@ type ExperienceEntry = {
 
 const experiences: ExperienceEntry[] = [
   {
+    period: '2026 Feb (2 weeks)',
+    company: 'GMO Internet Group',
+    role: 'Engineering Intern',
+    description: [
+      '2週間の集中プログラムで「天秤AI」（AI比較ツール）をエンドツーエンドで実装',
+    ],
+  },
+  {
     period: '2025 - Present',
     company: 'National Institute of Informatics (NII)',
     role: 'Research Engineer',
@@ -24,6 +32,14 @@ const experiences: ExperienceEntry[] = [
     role: 'Research Intern',
     description: [
       'Qwen-Audio（大規模音声言語モデル）を用いたフェイク音声検出の研究',
+    ],
+  },
+  {
+    period: '2025 Aug',
+    company: 'Accenture',
+    role: 'Engineering Intern',
+    description: [
+      '倉庫管理アプリケーションの開発',
     ],
   },
   {
@@ -43,22 +59,6 @@ const experiences: ExperienceEntry[] = [
       'Elasticsearch + React + MUI によるアクセスログ分析ダッシュボードの設計・実装',
       'Elasticsearch集約の最適化によるAPIレスポンス遅延の解決',
       'パフォーマンスプロファイリングに基づくフロントエンドレンダリングの最適化',
-    ],
-  },
-  {
-    period: '2025 Aug',
-    company: 'Accenture',
-    role: 'Engineering Intern',
-    description: [
-      '倉庫管理アプリケーションの開発',
-    ],
-  },
-  {
-    period: '2026 Feb (2 weeks)',
-    company: 'GMO Internet Group',
-    role: 'Engineering Intern',
-    description: [
-      '2週間の集中プログラムで「天秤AI」（AI比較ツール）をエンドツーエンドで実装',
     ],
   },
 ]
