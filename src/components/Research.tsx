@@ -18,6 +18,7 @@ const publications: Publication[] = [
       { label: 'Paper', href: 'https://aclanthology.org/2026.iwsds-1.10/' },
       { label: 'Project Page', href: 'https://llm-jp.github.io/llm-jp-moshi/' },
       { label: 'Model', href: 'https://huggingface.co/llm-jp/llm-jp-moshi-v1' },
+      { label: 'Demo', href: 'https://www.youtube.com/playlist?list=PLN-myW-27c0JM3yc41rBUe5BDfWZ0mfe-' },
     ],
   },
   {
