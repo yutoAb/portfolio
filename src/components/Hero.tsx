@@ -25,8 +25,9 @@ export default function Hero() {
             </p>
             <p>
               国立情報学研究所 (NII) にてリサーチエンジニアとして、
-              7Bパラメータの日本語全二重音声対話モデル <span className="font-semibold">LLM-jp-Moshi-v1</span> を筆頭開発。
-              IWSDS 2026 にて筆頭著者として発表予定。
+              7Bパラメータの日本語全二重音声対話モデル{' '}
+              <a href="https://llm-jp.github.io/llm-jp-moshi/" target="_blank" rel="noopener noreferrer" className="font-semibold underline underline-offset-2 hover:text-white">LLM-jp-Moshi-v1</a> を筆頭開発。
+              <a href="https://aclanthology.org/2026.iwsds-1.10/" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-white">IWSDS 2026</a> にて筆頭著者として発表。
             </p>
             <p>
               データ基盤を設計・構築するソフトウェアエンジニアリングと、

@@ -5,6 +5,7 @@ type Publication = {
   venue: string
   year: string
   role: string
+  links?: { label: string; href: string }[]
 }
 
 const publications: Publication[] = [
@@ -13,6 +14,11 @@ const publications: Publication[] = [
     venue: 'IWSDS 2026 (International Workshop on Spoken Dialogue Systems)',
     year: '2026',
     role: 'First Author',
+    links: [
+      { label: 'Paper', href: 'https://aclanthology.org/2026.iwsds-1.10/' },
+      { label: 'Project Page', href: 'https://llm-jp.github.io/llm-jp-moshi/' },
+      { label: 'Model', href: 'https://huggingface.co/llm-jp/llm-jp-moshi-v1' },
+    ],
   },
   {
     title: '日本語全二重音声対話モデルに関する発表',
@@ -50,7 +56,7 @@ export default function Research() {
                 <div key={i} className="p-4 rounded-lg bg-white/5 border border-white/10">
                   <p className="font-semibold mb-1">{pub.title}</p>
                   <p className="text-sm text-white/70">{pub.venue}</p>
-                  <div className="flex gap-3 mt-2">
+                  <div className="flex flex-wrap gap-3 mt-2">
                     <span className="text-xs px-2 py-0.5 rounded-full bg-purple-500/30 text-purple-200">
                       {pub.role}
                     </span>
@@ -58,6 +64,24 @@ export default function Research() {
                       {pub.year}
                     </span>
                   </div>
+                  {pub.links && (
+                    <div className="flex flex-wrap gap-3 mt-3">
+                      {pub.links.map((link) => (
+                        <a
+                          key={link.label}
+                          href={link.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-md bg-purple-500/30 text-purple-100 border border-purple-400/30 hover:bg-purple-500/50 hover:border-purple-400/50 transition-colors"
+                        >
+                          <svg className="w-3 h-3" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                          </svg>
+                          {link.label}
+                        </a>
+                      ))}
+                    </div>
+                  )}
                 </div>
               ))}
             </div>
