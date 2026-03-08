@@ -27,6 +27,23 @@ const experiences: ExperienceEntry[] = [
     ],
   },
   {
+    period: '2025 Oct',
+    company: 'Medley, Inc.',
+    role: 'Engineering Intern',
+    description: [
+      'LLMベースの医療対話要約の改善',
+      '薬品名の欠落や文脈参照の問題を解決',
+    ],
+  },
+  {
+    period: '2025 Sep (1 day)',
+    company: 'kubell, Inc.',
+    role: 'Data Science Intern',
+    description: [
+      'Chatworkの顧客データ分析に基づく経営戦略の立案',
+    ],
+  },
+  {
     period: '2025 Aug - Sep',
     company: 'Hitachi, Ltd. R&D Group',
     role: 'Research Intern',
@@ -43,12 +60,11 @@ const experiences: ExperienceEntry[] = [
     ],
   },
   {
-    period: '2025 Feb',
-    company: 'Medley, Inc.',
-    role: 'Engineering Intern',
+    period: '2025 Aug (1 day)',
+    company: 'BayCurrent Consulting',
+    role: 'Consulting Intern',
     description: [
-      'LLMベースの医療対話要約の改善',
-      '薬品名の欠落や文脈参照の問題を解決',
+      '保険会社向けコンサルティングのグループディスカッション',
     ],
   },
   {
