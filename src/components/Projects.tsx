@@ -7,6 +7,7 @@ type Project = {
   description: string
   tech: string[]
   link?: string
+  repo?: string
 }
 
 const projects: Project[] = [
@@ -15,7 +16,8 @@ const projects: Project[] = [
     description:
       'リアルタイム全二重音声対話モデルのための人間中心A/B評価プラットフォーム。ブラインド比較とBradley-Terryランキングの統合を実現。',
     tech: ['Next.js', 'PostgreSQL', 'Prisma', 'Cloudflare Tunnel', 'GPU Inference'],
-    link: 'https://github.com/kobas-lab/speech-arena',
+    link: 'https://web-fawn-five-91.vercel.app/',
+    repo: 'https://github.com/kobas-lab/speech-arena',
   },
   {
     title: 'Changemakers',
@@ -36,6 +38,8 @@ const projects: Project[] = [
     description:
       'チームみらい学生エンジニアとして、テクノロジーと政策をつなぐシビックテックイニシアチブのリード。有権者エンゲージメントのための政治クイズアプリの開発。',
     tech: ['Civic Tech', 'Full-Stack'],
+    link: 'https://minhaya-web.pages.dev/',
+    repo: 'https://github.com/yutoAb/minhaya-app',
   },
   {
     title: "Father's Company Homepage",
@@ -112,18 +116,28 @@ export default function Projects() {
               ))}
             </div>
             <div className="flex justify-between items-center">
-              {selected.link ? (
-                <a
-                  href={selected.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue hover:underline font-medium"
-                >
-                  View Project
-                </a>
-              ) : (
-                <span />
-              )}
+              <div className="flex gap-4">
+                {selected.link && (
+                  <a
+                    href={selected.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue hover:underline font-medium"
+                  >
+                    View App
+                  </a>
+                )}
+                {selected.repo && (
+                  <a
+                    href={selected.repo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue hover:underline font-medium"
+                  >
+                    GitHub
+                  </a>
+                )}
+              </div>
               <button
                 onClick={() => setSelected(null)}
                 className="px-4 py-2 text-sm rounded-lg bg-gray-200 hover:bg-gray-300 transition-colors cursor-pointer"
