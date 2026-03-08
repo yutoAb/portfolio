@@ -6,16 +6,16 @@ const skillCategories = [
     skills: ['Python', 'TypeScript', 'JavaScript', 'C++', 'Java', 'Scala', 'PHP'],
   },
   {
-    title: 'ML / AI',
-    skills: ['PyTorch', 'Hugging Face', 'MLflow', 'Qwen-Audio', 'Mimi Codec', 'Speech Tokenization'],
+    title: 'Data Science / ML',
+    skills: ['PyTorch', 'Hugging Face', 'MLflow', 'scikit-learn', 'pandas', 'Speech Tokenization'],
   },
   {
-    title: 'Web',
-    skills: ['React', 'Next.js', 'Node.js', 'Prisma', 'PostgreSQL', 'MySQL', 'Elasticsearch'],
+    title: 'Data Engineering',
+    skills: ['PostgreSQL', 'MySQL', 'Elasticsearch', 'Prisma', 'ETL Pipeline', 'Data Visualization'],
   },
   {
-    title: 'Infrastructure',
-    skills: ['Docker', 'GCP', 'AWS', 'Cloudflare', 'WebRTC', 'WebSocket', 'GitHub Actions'],
+    title: 'Web / Infra',
+    skills: ['React', 'Next.js', 'Node.js', 'Docker', 'GCP', 'AWS', 'GitHub Actions'],
   },
 ]
 
