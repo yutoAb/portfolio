@@ -1,4 +1,5 @@
 import { useInView } from './useInView'
+import thesisVideo from '../assets/卒業論文研究紹介動画.mp4'
 
 type Publication = {
   title: string
@@ -108,6 +109,27 @@ export default function Research() {
               <p className="text-xs text-white/50 mt-2">
                 Adviser: Prof. Tetsunori Kobayashi & Prof. Tetsuji Ogawa — Waseda University
               </p>
+            </div>
+
+            <div className="mt-4 p-4 rounded-lg bg-white/5 border border-white/10">
+              <h4 className="font-semibold mb-2">Bachelor's Thesis</h4>
+              <p className="text-sm text-white/70 leading-relaxed">
+                GPT-2言語モデルと音声認識モデルのモデルマージによる音声認識性能の向上
+              </p>
+              <p className="text-xs text-white/50 mt-2">
+                Adviser: Prof. Tetsunori Kobayashi & Prof. Tetsuji Ogawa — Waseda University
+              </p>
+              <a
+                href={thesisVideo}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-xs px-3 py-1.5 mt-3 rounded-md bg-purple-500/30 text-purple-100 border border-purple-400/30 hover:bg-purple-500/50 hover:border-purple-400/50 transition-colors"
+              >
+                <svg className="w-3 h-3" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 010 1.972l-11.54 6.347a1.125 1.125 0 01-1.667-.986V5.653z" />
+                </svg>
+                紹介動画
+              </a>
             </div>
           </div>
         </div>
