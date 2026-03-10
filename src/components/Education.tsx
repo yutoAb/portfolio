@@ -27,6 +27,27 @@ const awards = [
   { year: '2025', title: 'PR TIMES Hackathon Individual Excellence Award', project: 'Dream Blossom' },
 ]
 
+const communities = [
+  {
+    period: '2025 Dec - Present',
+    name: 'チームみらい 学生運営エンジニアチーム',
+    description: 'テクノロジーと政策をつなぐシビックテック活動',
+    href: 'https://github.com/team-mirai-students',
+  },
+  {
+    period: '2025 Aug - Present',
+    name: 'Recursion',
+    description: 'CS基礎を体系的に学ぶプログラミング学習コミュニティ',
+    href: 'https://recursionist.io/',
+  },
+  {
+    period: '2021 - 2025',
+    name: '理工展覧会',
+    description: '早稲田大学の学園祭ホームページの作成',
+    href: 'https://circle.rikoten.com/',
+  },
+]
+
 export default function Education() {
   const { ref, inView } = useInView()
 
@@ -38,9 +59,9 @@ export default function Education() {
           inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
         }`}
       >
-        <h2 className="text-3xl md:text-4xl font-bold mb-10">Education & Awards</h2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-10">Education, Awards & Communities</h2>
 
-        <div className="grid md:grid-cols-2 gap-12">
+        <div className="grid md:grid-cols-3 gap-12">
           <div>
             <h3 className="text-xl font-bold mb-6">Education</h3>
             <div className="relative pl-6 border-l-2 border-white/30 space-y-8">
@@ -69,6 +90,25 @@ export default function Education() {
                   <p className="font-semibold">{award.title}</p>
                   <p className="text-sm text-white/70">{award.project}</p>
                 </div>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <h3 className="text-xl font-bold mb-6">Communities</h3>
+            <div className="space-y-4">
+              {communities.map((c, i) => (
+                <a
+                  key={i}
+                  href={c.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block p-4 rounded-lg bg-white/10 border border-white/20 hover:bg-white/15 transition-colors"
+                >
+                  <p className="text-xs text-white/60 mb-1">{c.period}</p>
+                  <p className="font-semibold">{c.name}</p>
+                  <p className="text-sm text-white/70 mt-1">{c.description}</p>
+                </a>
               ))}
             </div>
           </div>
