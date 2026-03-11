@@ -77,6 +77,14 @@ const experiences: ExperienceEntry[] = [
       'パフォーマンスプロファイリングに基づくフロントエンドレンダリングの最適化',
     ],
   },
+  {
+    period: '2022 Nov - 2023 Feb',
+    company: 'Carrot Software Co., Ltd.',
+    role: 'Part-time Engineer',
+    description: [
+      'システムのテスト業務',
+    ],
+  },
 ]
 
 export default function Experience() {

@@ -34,10 +34,18 @@ const projects: Project[] = [
     tech: ['React', 'TypeScript', 'Animation'],
   },
   {
-    title: 'Global Mirai Parliament & Political Quiz App',
+    title: 'Global Mirai Parliament',
     description:
-      'チームみらい学生エンジニアとして、テクノロジーと政策をつなぐシビックテックイニシアチブのリード。有権者エンゲージメントのための政治クイズアプリの開発。',
-    tech: ['Civic Tech', 'Full-Stack'],
+      'AIとチャットして自分の課題を抽出し、世界各国の政策を取得して日本風にアレンジするシビックテックアプリ。チームみらい学生エンジニアとして開発。',
+    tech: ['Next.js', 'AI Chat', 'Civic Tech'],
+    link: 'https://global-policies.vercel.app/',
+    repo: 'https://github.com/team-mirai-students/global-policies',
+  },
+  {
+    title: 'Political Quiz App',
+    description:
+      '政治に関するクイズが出題される「みんはや」風アプリ。複数人でのリアルタイム対戦に対応。',
+    tech: ['React', 'TypeScript', 'Multiplayer'],
     link: 'https://minhaya-web.pages.dev/',
     repo: 'https://github.com/yutoAb/minhaya-app',
   },
