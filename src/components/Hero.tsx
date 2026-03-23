@@ -18,8 +18,18 @@ export default function Hero() {
             Yuto Abe
           </h1>
           <p className="text-lg text-white/70 mb-6">{t('hero', 'subtitle')}</p>
-          <div className="mb-6">
+          <div className="mb-6 flex items-center gap-4">
             <SnsLinks />
+            <a
+              href="cv.pdf"
+              download
+              className="inline-flex items-center gap-1.5 text-sm px-3 py-1.5 rounded-md border border-white/30 text-white/80 hover:text-white hover:border-white/50 transition-colors"
+            >
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
+              </svg>
+              CV
+            </a>
           </div>
           <div className="space-y-3 leading-relaxed text-white/90">
             <p>{t('hero', 'bio1')}</p>
