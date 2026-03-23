@@ -1,4 +1,5 @@
 import { useState, useEffect, type RefObject } from 'react'
+import { useLang } from '../i18n/LangContext'
 
 type Section = {
   label: string
@@ -8,6 +9,7 @@ type Section = {
 export default function Nav({ sections }: { sections: Section[] }) {
   const [active, setActive] = useState(0)
   const [open, setOpen] = useState(false)
+  const { lang, toggleLang } = useLang()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -50,11 +52,21 @@ export default function Nav({ sections }: { sections: Section[] }) {
           ))}
         </ul>
 
-        {/* Mobile hamburger */}
-        <button
-          className="md:hidden text-white cursor-pointer"
-          onClick={() => setOpen(!open)}
-        >
+        <div className="flex items-center gap-3">
+          <button
+            onClick={toggleLang}
+            className="text-xs px-2.5 py-1 rounded-full border border-white/30 hover:border-white/50 transition-colors cursor-pointer flex items-center gap-1"
+          >
+            <span className={lang === 'ja' ? 'text-white font-bold' : 'text-white/40'}>JA</span>
+            <span className="text-white/30">/</span>
+            <span className={lang === 'en' ? 'text-white font-bold' : 'text-white/40'}>EN</span>
+          </button>
+
+          {/* Mobile hamburger */}
+          <button
+            className="md:hidden text-white cursor-pointer"
+            onClick={() => setOpen(!open)}
+          >
           <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             {open ? (
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -62,7 +74,8 @@ export default function Nav({ sections }: { sections: Section[] }) {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
             )}
           </svg>
-        </button>
+          </button>
+        </div>
       </div>
 
       {/* Mobile menu */}

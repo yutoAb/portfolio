@@ -1,5 +1,6 @@
 import React from 'react'
 import { useInView } from './useInView'
+import { useT } from '../i18n/useT'
 
 type ProfileLink = {
   label: string
@@ -9,14 +10,14 @@ type ProfileLink = {
 
 type ProfileCategory = {
   title: string
-  description: string
+  descKey: keyof typeof import('../i18n/translations').default.profiles
   links: ProfileLink[]
 }
 
 const categories: ProfileCategory[] = [
   {
     title: 'Software Engineering',
-    description: 'データ基盤の設計・構築、アルゴリズム',
+    descKey: 'swDescription',
     links: [
       {
         label: 'GitHub',
@@ -41,7 +42,7 @@ const categories: ProfileCategory[] = [
   },
   {
     title: 'Data Science',
-    description: 'データからモデルを構築、実験・分析',
+    descKey: 'dsDescription',
     links: [
       {
         label: 'GitHub',
@@ -80,7 +81,7 @@ const categories: ProfileCategory[] = [
   },
   {
     title: 'Others',
-    description: 'SNS・発信・キャリア',
+    descKey: 'othersDescription',
     links: [
       {
         label: 'LinkedIn',
@@ -121,6 +122,7 @@ const categories: ProfileCategory[] = [
 
 export default function Profiles() {
   const { ref, inView } = useInView()
+  const t = useT()
 
   return (
     <section className="bg-slate-900 text-white px-6 py-20">
@@ -141,7 +143,7 @@ export default function Profiles() {
               <h3 className="text-lg font-bold mb-1 text-purple-300">
                 {cat.title}
               </h3>
-              <p className="text-sm text-white/50 mb-5">{cat.description}</p>
+              <p className="text-sm text-white/50 mb-5">{t('profiles', cat.descKey)}</p>
               <div className="space-y-3">
                 {cat.links.map((link) => (
                   <a

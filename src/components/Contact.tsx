@@ -1,10 +1,12 @@
 import { useState } from 'react'
 import { useInView } from './useInView'
 import icon from '../assets/icon.png'
+import { useT } from '../i18n/useT'
 
 export default function Contact() {
   const { ref, inView } = useInView()
   const [form, setForm] = useState({ name: '', email: '', subject: '', message: '' })
+  const t = useT()
 
   const update = (field: string, value: string) => setForm({ ...form, [field]: value })
 
@@ -14,7 +16,7 @@ export default function Contact() {
     const domain = 'gmail.com'
     const to = `${user}@${domain}`
     const mailtoLink = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
-      `お名前：${name}\nメールアドレス：${email}\n\nお問い合わせ内容：\n${message}`
+      `${t('contact', 'mailtoName')}：${name}\n${t('contact', 'mailtoEmail')}：${email}\n\n${t('contact', 'mailtoMessage')}：\n${message}`
     )}`
     window.location.href = mailtoLink
   }
@@ -32,9 +34,9 @@ export default function Contact() {
         <div className="flex flex-col md:flex-row gap-12 items-start">
           <div className="w-full max-w-lg space-y-4">
             {[
-              { label: 'お名前', field: 'name', type: 'text' },
-              { label: 'メールアドレス', field: 'email', type: 'email' },
-              { label: '件名', field: 'subject', type: 'text' },
+              { label: t('contact', 'name'), field: 'name', type: 'text' },
+              { label: t('contact', 'email'), field: 'email', type: 'email' },
+              { label: t('contact', 'subject'), field: 'subject', type: 'text' },
             ].map(({ label, field, type }) => (
               <div key={field}>
                 <label className="block text-sm mb-1 text-white/80">{label}</label>
@@ -47,7 +49,7 @@ export default function Contact() {
               </div>
             ))}
             <div>
-              <label className="block text-sm mb-1 text-white/80">お問い合わせ内容</label>
+              <label className="block text-sm mb-1 text-white/80">{t('contact', 'message')}</label>
               <textarea
                 rows={5}
                 value={form.message}
@@ -59,7 +61,7 @@ export default function Contact() {
               onClick={handleSubmit}
               className="px-8 py-2 bg-white text-purple font-semibold rounded-lg hover:bg-white/90 transition-colors cursor-pointer"
             >
-              送信
+              {t('contact', 'submit')}
             </button>
           </div>
 

@@ -1,7 +1,10 @@
 import SnsLinks from './SnsLinks'
 import profileImg from '../assets/2024_阿部雄斗.png'
+import { useT } from '../i18n/useT'
 
 export default function Hero() {
+  const t = useT()
+
   return (
     <section className="min-h-screen bg-purple text-white flex items-center pt-16">
       <div className="max-w-5xl mx-auto px-6 py-16 flex flex-col md:flex-row items-center gap-10">
@@ -14,31 +17,21 @@ export default function Hero() {
           <h1 className="text-3xl md:text-5xl font-bold mb-2">
             Yuto Abe
           </h1>
-          <p className="text-lg text-white/70 mb-6">阿部 雄斗</p>
+          <p className="text-lg text-white/70 mb-6">{t('hero', 'subtitle')}</p>
           <div className="mb-6">
             <SnsLinks />
           </div>
           <div className="space-y-3 leading-relaxed text-white/90">
+            <p>{t('hero', 'bio1')}</p>
             <p>
-              早稲田大学 基幹理工学術院 修士1年。小林・小川研究室にて、
-              全二重音声対話システムの研究に取り組んでいます。
+              {t('hero', 'bio2_prefix')}{' '}
+              <a href="https://llm-jp.github.io/llm-jp-moshi/" target="_blank" rel="noopener noreferrer" className="font-semibold underline underline-offset-2 hover:text-white">LLM-jp-Moshi-v1</a>
+              {t('hero', 'bio2_mid')}{' '}
+              <a href="https://aclanthology.org/2026.iwsds-1.10/" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-white">IWSDS 2026</a>
+              {t('hero', 'bio2_suffix')}
             </p>
-            <p>
-              国立情報学研究所 (NII) にてリサーチエンジニアとして、
-              7Bパラメータの日本語全二重音声対話モデル{' '}
-              <a href="https://llm-jp.github.io/llm-jp-moshi/" target="_blank" rel="noopener noreferrer" className="font-semibold underline underline-offset-2 hover:text-white">LLM-jp-Moshi-v1</a> を筆頭開発。
-              <a href="https://aclanthology.org/2026.iwsds-1.10/" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-white">IWSDS 2026</a> にて筆頭著者として発表。
-            </p>
-            <p>
-              データ基盤を設計・構築するソフトウェアエンジニアリングと、
-              データからモデルを生み出すデータサイエンスの両軸で、
-              人とAIの自然なコミュニケーションの実現を目指しています。
-            </p>
-            <p>
-              将来のビジョンとして、AIとテクノロジーの力で
-              「衣食住の自動化」を実現し、誰もが生活の基盤を気にせず
-              創造的な活動に集中できる社会をつくりたいと考えています。
-            </p>
+            <p>{t('hero', 'bio3')}</p>
+            <p>{t('hero', 'bio4')}</p>
           </div>
         </div>
       </div>

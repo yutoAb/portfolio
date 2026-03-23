@@ -1,4 +1,5 @@
 import { useInView } from './useInView'
+import { useT } from '../i18n/useT'
 
 type TimelineEntry = {
   date: string
@@ -27,29 +28,37 @@ const awards = [
   { year: '2025', title: 'PR TIMES Hackathon Individual Excellence Award', project: 'Dream Blossom' },
 ]
 
-const communities = [
+type Community = {
+  period: string
+  nameKey: keyof typeof import('../i18n/translations').default.education
+  descKey: keyof typeof import('../i18n/translations').default.education
+  href: string
+}
+
+const communities: Community[] = [
   {
     period: '2025 Dec - Present',
-    name: 'チームみらい 学生運営エンジニアチーム',
-    description: 'テクノロジーと政策をつなぐシビックテック活動',
+    nameKey: 'communityMirai',
+    descKey: 'communityMiraiDesc',
     href: 'https://github.com/team-mirai-students',
   },
   {
     period: '2025 Aug - Present',
-    name: 'Recursion',
-    description: 'CS基礎を体系的に学ぶプログラミング学習コミュニティ',
+    nameKey: 'communityRecursion',
+    descKey: 'communityRecursionDesc',
     href: 'https://recursionist.io/',
   },
   {
     period: '2021 - 2025',
-    name: '理工展覧会',
-    description: '早稲田大学の学園祭ホームページの作成',
+    nameKey: 'communityRikoten',
+    descKey: 'communityRikotenDesc',
     href: 'https://circle.rikoten.com/',
   },
 ]
 
 export default function Education() {
   const { ref, inView } = useInView()
+  const t = useT()
 
   return (
     <section className="bg-pink text-white px-6 py-20">
@@ -106,8 +115,8 @@ export default function Education() {
                   className="block p-4 rounded-lg bg-white/10 border border-white/20 hover:bg-white/15 transition-colors"
                 >
                   <p className="text-xs text-white/60 mb-1">{c.period}</p>
-                  <p className="font-semibold">{c.name}</p>
-                  <p className="text-sm text-white/70 mt-1">{c.description}</p>
+                  <p className="font-semibold">{t('education', c.nameKey)}</p>
+                  <p className="text-sm text-white/70 mt-1">{t('education', c.descKey)}</p>
                 </a>
               ))}
             </div>

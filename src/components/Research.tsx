@@ -1,8 +1,10 @@
 import { useInView } from './useInView'
+import { useT } from '../i18n/useT'
 import thesisVideo from '../assets/卒業論文研究紹介動画.mp4'
 
 type Publication = {
-  title: string
+  titleKey?: keyof typeof import('../i18n/translations').default.research
+  titleFixed?: string
   venue: string
   year: string
   role: string
@@ -11,7 +13,7 @@ type Publication = {
 
 const publications: Publication[] = [
   {
-    title: 'LLM-jp-Moshi-v1: A Japanese Full-Duplex Spoken Dialogue Model',
+    titleFixed: 'LLM-jp-Moshi-v1: A Japanese Full-Duplex Spoken Dialogue Model',
     venue: 'IWSDS 2026 (International Workshop on Spoken Dialogue Systems)',
     year: '2026',
     role: 'First Author',
@@ -23,7 +25,7 @@ const publications: Publication[] = [
     ],
   },
   {
-    title: '日本語全二重音声対話モデルに関する発表',
+    titleKey: 'pub_asj_title',
     venue: 'ASJ Spring Meeting 2026 (日本音響学会 春季研究発表会)',
     year: '2026',
     role: 'First Author',
@@ -39,6 +41,7 @@ const researchTopics = [
 
 export default function Research() {
   const { ref, inView } = useInView()
+  const t = useT()
 
   return (
     <section className="bg-slate-800 text-white px-6 py-20">
@@ -56,7 +59,9 @@ export default function Research() {
             <div className="space-y-6">
               {publications.map((pub, i) => (
                 <div key={i} className="p-4 rounded-lg bg-white/5 border border-white/10">
-                  <p className="font-semibold mb-1">{pub.title}</p>
+                  <p className="font-semibold mb-1">
+                    {pub.titleKey ? t('research', pub.titleKey) : pub.titleFixed}
+                  </p>
                   <p className="text-sm text-white/70">{pub.venue}</p>
                   <div className="flex flex-wrap gap-3 mt-2">
                     <span className="text-xs px-2 py-0.5 rounded-full bg-purple-500/30 text-purple-200">
@@ -112,9 +117,9 @@ export default function Research() {
             </div>
 
             <div className="mt-4 p-4 rounded-lg bg-white/5 border border-white/10">
-              <h4 className="font-semibold mb-2">Bachelor's Thesis</h4>
+              <h4 className="font-semibold mb-2">{t('research', 'bachelorThesisTitle')}</h4>
               <p className="text-sm text-white/70 leading-relaxed">
-                GPT-2言語モデルと音声認識モデルのモデルマージによる音声認識性能の向上
+                {t('research', 'bachelorThesisDesc')}
               </p>
               <p className="text-xs text-white/50 mt-2">
                 Adviser: Prof. Tetsunori Kobayashi & Prof. Tetsuji Ogawa — Waseda University
@@ -128,7 +133,7 @@ export default function Research() {
                 <svg className="w-3 h-3" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 010 1.972l-11.54 6.347a1.125 1.125 0 01-1.667-.986V5.653z" />
                 </svg>
-                紹介動画
+                {t('research', 'videoLabel')}
               </a>
             </div>
           </div>

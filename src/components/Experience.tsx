@@ -1,10 +1,11 @@
 import { useInView } from './useInView'
+import { useT } from '../i18n/useT'
 
 type ExperienceEntry = {
   period: string
   company: string
   role: string
-  description: string[]
+  descKeys: (keyof typeof import('../i18n/translations').default.experience)[]
 }
 
 const experiences: ExperienceEntry[] = [
@@ -12,83 +13,61 @@ const experiences: ExperienceEntry[] = [
     period: '2026 Feb (2 weeks)',
     company: 'GMO Internet Group',
     role: 'Engineering Intern',
-    description: [
-      '2週間の集中プログラムで「天秤AI」（AI比較ツール）をエンドツーエンドで実装',
-    ],
+    descKeys: ['gmo_desc0'],
   },
   {
     period: '2025 - Present',
     company: 'National Institute of Informatics (NII)',
     role: 'Research Engineer',
-    description: [
-      'LLM-jp-Moshi-v1: 7Bパラメータの日本語全二重音声対話モデルを筆頭開発',
-      'J-CHAT, CSJ, CallHome-Japanese等の多言語対話コーパスを用いたカリキュラム学習',
-      'ターンテイキング・相槌行動のモデリングに関する研究',
-    ],
+    descKeys: ['nii_desc0', 'nii_desc1', 'nii_desc2'],
   },
   {
     period: '2025 Oct',
     company: 'Medley, Inc.',
     role: 'Engineering Intern',
-    description: [
-      'LLMベースの医療対話要約の改善',
-      '薬品名の欠落や文脈参照の問題を解決',
-    ],
+    descKeys: ['medley_desc0', 'medley_desc1'],
   },
   {
     period: '2025 Sep (1 day)',
     company: 'kubell, Inc.',
     role: 'Data Science Intern',
-    description: [
-      'Chatworkの顧客データ分析に基づく経営戦略の立案',
-    ],
+    descKeys: ['kubell_desc0'],
   },
   {
     period: '2025 Aug - Sep',
     company: 'Hitachi, Ltd. R&D Group',
     role: 'Research Intern',
-    description: [
-      'Qwen-Audio（大規模音声言語モデル）を用いたフェイク音声検出の研究',
-    ],
+    descKeys: ['hitachi_desc0'],
   },
   {
     period: '2025 Aug',
     company: 'Accenture',
     role: 'Engineering Intern',
-    description: [
-      '倉庫管理アプリケーションの開発',
-    ],
+    descKeys: ['accenture_desc0'],
   },
   {
     period: '2025 Aug (1 day)',
     company: 'BayCurrent Consulting',
     role: 'Consulting Intern',
-    description: [
-      '保険会社向けコンサルティングのグループディスカッション',
-    ],
+    descKeys: ['baycurrent_desc0'],
   },
   {
     period: '2023 Feb - 2025 Oct',
     company: 'Japan Useware Systems Co., Ltd.',
     role: 'Software Engineer',
-    description: [
-      'Elasticsearch + React + MUI によるアクセスログ分析ダッシュボードの設計・実装',
-      'Elasticsearch集約の最適化によるAPIレスポンス遅延の解決',
-      'パフォーマンスプロファイリングに基づくフロントエンドレンダリングの最適化',
-    ],
+    descKeys: ['jus_desc0', 'jus_desc1', 'jus_desc2'],
   },
   {
     period: '2022 Nov - 2023 Feb',
     company: 'Carrot Software Co., Ltd.',
     role: 'Part-time Engineer',
-    description: [
-      'システムのテスト業務',
-    ],
+    descKeys: ['carrot_desc0'],
   },
 ]
 
 export default function Experience() {
   const { ref, inView } = useInView()
+  const t = useT()
 
   return (
     <section className="bg-blue text-white px-6 py-20">
@@ -111,10 +90,10 @@ export default function Experience() {
               <h3 className="text-xl font-bold">{exp.company}</h3>
               <p className="text-white/80 mb-2">{exp.role}</p>
               <ul className="space-y-1 text-sm text-white/70">
-                {exp.description.map((d, j) => (
-                  <li key={j} className="flex gap-2">
+                {exp.descKeys.map((key) => (
+                  <li key={key} className="flex gap-2">
                     <span className="shrink-0 mt-1.5 w-1.5 h-1.5 rounded-full bg-white/40" />
-                    {d}
+                    {t('experience', key)}
                   </li>
                 ))}
               </ul>

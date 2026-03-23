@@ -1,10 +1,11 @@
 import { useState } from 'react'
 import { useInView } from './useInView'
+import { useT } from '../i18n/useT'
 
 type Project = {
   title: string
   award?: string
-  description: string
+  descKey: keyof typeof import('../i18n/translations').default.projects
   tech: string[]
   link?: string
   repo?: string
@@ -13,8 +14,7 @@ type Project = {
 const projects: Project[] = [
   {
     title: 'Speech Arena',
-    description:
-      'リアルタイム全二重音声対話モデルのための人間中心A/B評価プラットフォーム。ブラインド比較とBradley-Terryランキングの統合を実現。',
+    descKey: 'speechArena',
     tech: ['Next.js', 'PostgreSQL', 'Prisma', 'Cloudflare Tunnel', 'GPU Inference'],
     link: 'https://web-fawn-five-91.vercel.app/',
     repo: 'https://github.com/kobas-lab/speech-arena',
@@ -22,37 +22,32 @@ const projects: Project[] = [
   {
     title: 'Changemakers',
     award: 'PKSHA Hackathon Grand Prize',
-    description:
-      'GPT-Realtime APIを活用したAI医療相談・予約アプリ。リアルタイム音声インタラクションによる病院の問診を実現。',
+    descKey: 'changemakers',
     tech: ['GPT-Realtime API', 'React', 'Voice AI'],
   },
   {
     title: 'Dream Blossom',
     award: 'PR TIMES Hackathon 2025 Individual Excellence Award',
-    description:
-      '個人の夢や目標を共有・追跡するWebアプリ。目標達成時に桜のアニメーションが咲く。',
+    descKey: 'dreamBlossom',
     tech: ['React', 'TypeScript', 'Animation'],
   },
   {
     title: 'Global Mirai Parliament',
-    description:
-      'AIとチャットして自分の課題を抽出し、世界各国の政策を取得して日本風にアレンジするシビックテックアプリ。チームみらい学生エンジニアとして開発。',
+    descKey: 'globalMirai',
     tech: ['Next.js', 'AI Chat', 'Civic Tech'],
     link: 'https://global-policies.vercel.app/',
     repo: 'https://github.com/team-mirai-students/global-policies',
   },
   {
     title: 'Political Quiz App',
-    description:
-      '政治に関するクイズが出題される「みんはや」風アプリ。複数人でのリアルタイム対戦に対応。',
+    descKey: 'politicalQuiz',
     tech: ['React', 'TypeScript', 'Multiplayer'],
     link: 'https://minhaya-web.pages.dev/',
     repo: 'https://github.com/yutoAb/minhaya-app',
   },
   {
     title: "Father's Company Homepage",
-    description:
-      '企業紹介とお問い合わせ機能を備えたコーポレートサイト。',
+    descKey: 'fatherCompany',
     tech: ['Next.js', 'MUI'],
     link: 'https://www.heiseiyusou.co.jp/',
   },
@@ -61,6 +56,7 @@ const projects: Project[] = [
 export default function Projects() {
   const { ref, inView } = useInView()
   const [selected, setSelected] = useState<Project | null>(null)
+  const t = useT()
 
   return (
     <section className="bg-blue text-white px-6 py-20">
@@ -87,11 +83,11 @@ export default function Projects() {
                   {project.award}
                 </span>
               )}
-              <p className="text-sm text-white/60 line-clamp-2">{project.description}</p>
+              <p className="text-sm text-white/60 line-clamp-2">{t('projects', project.descKey)}</p>
               <div className="flex flex-wrap gap-1.5 mt-3">
-                {project.tech.slice(0, 3).map((t) => (
-                  <span key={t} className="text-xs px-2 py-0.5 rounded-full bg-white/10">
-                    {t}
+                {project.tech.slice(0, 3).map((tc) => (
+                  <span key={tc} className="text-xs px-2 py-0.5 rounded-full bg-white/10">
+                    {tc}
                   </span>
                 ))}
               </div>
@@ -115,11 +111,11 @@ export default function Projects() {
                 {selected.award}
               </span>
             )}
-            <p className="mb-4 text-gray-700">{selected.description}</p>
+            <p className="mb-4 text-gray-700">{t('projects', selected.descKey)}</p>
             <div className="flex flex-wrap gap-1.5 mb-4">
-              {selected.tech.map((t) => (
-                <span key={t} className="text-xs px-2 py-0.5 rounded-full bg-gray-100 text-gray-600">
-                  {t}
+              {selected.tech.map((tc) => (
+                <span key={tc} className="text-xs px-2 py-0.5 rounded-full bg-gray-100 text-gray-600">
+                  {tc}
                 </span>
               ))}
             </div>
@@ -150,7 +146,7 @@ export default function Projects() {
                 onClick={() => setSelected(null)}
                 className="px-4 py-2 text-sm rounded-lg bg-gray-200 hover:bg-gray-300 transition-colors cursor-pointer"
               >
-                Close
+                {t('projects', 'close')}
               </button>
             </div>
           </div>
