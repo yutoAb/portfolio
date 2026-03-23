@@ -30,6 +30,7 @@ const projects: Project[] = [
     award: 'PR TIMES Hackathon 2025 Individual Excellence Award',
     descKey: 'dreamBlossom',
     tech: ['React', 'TypeScript', 'Animation'],
+    repo: 'https://github.com/PRTIMES-hackathon-2025-winter-team2/frontend',
   },
   {
     title: 'Global Mirai Parliament',
