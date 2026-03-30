@@ -24,8 +24,8 @@ const education: TimelineEntry[] = [
 ]
 
 const awards = [
-  { year: '2025', title: 'PKSHA Hackathon Grand Prize', project: 'Changemakers' },
-  { year: '2025', title: 'PR TIMES Hackathon Individual Excellence Award', project: 'Dream Blossom' },
+  { year: '2025', title: 'PKSHA Hackathon Grand Prize', project: 'Changemakers', link: 'https://pksha.notion.site/pksha-hackathon2025' },
+  { year: '2025', title: 'PR TIMES Hackathon Individual Excellence Award', project: 'Dream Blossom', link: 'https://prtimes.jp/main/html/rd/p/000001483.000000112.html' },
 ]
 
 type Community = {
@@ -98,6 +98,19 @@ export default function Education() {
                   </div>
                   <p className="font-semibold">{award.title}</p>
                   <p className="text-sm text-white/70">{award.project}</p>
+                  {award.link && (
+                    <a
+                      href={award.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-xs mt-2 text-white/60 hover:text-white transition-colors"
+                    >
+                      <svg className="w-3 h-3" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                      </svg>
+                      Article
+                    </a>
+                  )}
                 </div>
               ))}
             </div>

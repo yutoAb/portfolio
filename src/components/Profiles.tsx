@@ -38,6 +38,11 @@ const categories: ProfileCategory[] = [
         href: 'https://leetcode.com/u/yutoAb/',
         icon: <span className="w-5 h-5 flex items-center justify-center font-bold text-sm">L</span>,
       },
+      {
+        label: 'Recursion',
+        href: 'https://recursionist.io/users/youtoo',
+        icon: <span className="w-5 h-5 flex items-center justify-center font-bold text-sm">R</span>,
+      },
     ],
   },
   {
