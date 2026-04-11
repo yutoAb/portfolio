@@ -6,8 +6,8 @@ const translations = {
   hero: {
     subtitle: { ja: '阿部 雄斗', en: 'Yuto Abe' } as T,
     bio1: {
-      ja: '早稲田大学 基幹理工学術院 修士1年。小林・小川研究室にて、全二重音声対話システムの研究に取り組んでいます。',
-      en: "M1 at Waseda University, Graduate School of Fundamental Science and Engineering. Researching full-duplex spoken dialogue systems in Kobayashi-Ogawa Lab.",
+      ja: '早稲田大学 基幹理工学術院 修士2年。小林・小川研究室にて、全二重音声対話システムの研究に取り組んでいます。',
+      en: "M2 at Waseda University, Graduate School of Fundamental Science and Engineering. Researching full-duplex spoken dialogue systems in Kobayashi-Ogawa Lab.",
     } as T,
     bio2_prefix: {
       ja: '国立情報学研究所 (NII) にてリサーチエンジニアとして、7Bパラメータの日本語全二重音声対話モデル',
@@ -79,7 +79,7 @@ const translations = {
     sectionTitle: { ja: '学歴・受賞・コミュニティ', en: 'Education, Awards & Communities' } as T,
     educationLabel: { ja: '学歴', en: 'Education' } as T,
     awardsLabel: { ja: '受賞', en: 'Awards' } as T,
-    communitiesLabel: { ja: 'コミュニティ', en: 'Communities' } as T,
+    communitiesLabel: { ja: 'コミュニティ・課外活動', en: 'Communities & Activities' } as T,
     eduDate1: { ja: '2025年4月 - 2027年3月（見込み）', en: '2025 Apr - 2027 Mar (Expected)' } as T,
     eduTitle1: { ja: '早稲田大学 基幹理工学研究科 修士課程', en: 'Waseda University - Master of Engineering' } as T,
     eduSubtitle1: { ja: '情報理工・情報通信専攻', en: 'Computer Science & Communications' } as T,
@@ -98,6 +98,12 @@ const translations = {
     communityRecursionDesc: { ja: 'CS基礎を体系的に学ぶプログラミング学習コミュニティ', en: 'A programming learning community for systematic CS fundamentals' } as T,
     communityRikoten: { ja: '理工展覧会', en: 'Rikoten (Science & Engineering Exhibition)' } as T,
     communityRikotenDesc: { ja: '早稲田大学の学園祭ホームページの作成', en: "Development of Waseda University's campus festival website" } as T,
+    circlePadi: { ja: 'パディゴルフクラブ', en: 'Padi Golf Club' } as T,
+    circlePadiDesc: { ja: 'ゴルフサークル', en: 'Golf circle' } as T,
+    circleNeige: { ja: 'La Neige', en: 'La Neige' } as T,
+    circleNeigeDesc: { ja: 'テニスサークル', en: 'Tennis circle' } as T,
+    circleUtaou: { ja: '早稲田うたおう会', en: 'Waseda Utaou-kai' } as T,
+    circleUtaouDesc: { ja: 'バンドサークル', en: 'Band circle' } as T,
   },
   skills: {
     sectionTitle: { ja: 'スキル', en: 'Skills' } as T,

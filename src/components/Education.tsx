@@ -39,7 +39,7 @@ type Community = {
   period: string
   nameKey: keyof typeof import('../i18n/translations').default.education
   descKey: keyof typeof import('../i18n/translations').default.education
-  href: string
+  href?: string
 }
 
 const communities: Community[] = [
@@ -56,10 +56,28 @@ const communities: Community[] = [
     href: 'https://recursionist.io/',
   },
   {
-    period: '2021 - 2025',
+    period: '2021 - 2024',
     nameKey: 'communityRikoten',
     descKey: 'communityRikotenDesc',
     href: 'https://circle.rikoten.com/',
+  },
+  {
+    period: '2021 - 2024',
+    nameKey: 'circlePadi',
+    descKey: 'circlePadiDesc',
+    href: 'https://www.waseda.jp/inst/weekly/circleguide/detail/?id=3402',
+  },
+  {
+    period: '2021 - 2024',
+    nameKey: 'circleNeige',
+    descKey: 'circleNeigeDesc',
+    href: 'https://laneige.wixsite.com/laneige41st',
+  },
+  {
+    period: '2021 - 2024',
+    nameKey: 'circleUtaou',
+    descKey: 'circleUtaouDesc',
+    href: 'https://www.waseda.jp/inst/weekly/circleguide/detail/?id=3543',
   },
 ]
 
@@ -119,19 +137,30 @@ export default function Education() {
           <div>
             <h3 className="text-xl font-bold mb-6">{t('education', 'communitiesLabel')}</h3>
             <div className="space-y-4">
-              {communities.map((c, i) => (
-                <a
-                  key={i}
-                  href={c.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block p-4 rounded-lg bg-white/10 border border-white/20 hover:bg-white/15 transition-colors"
-                >
-                  <p className="text-xs text-white/60 mb-1">{c.period}</p>
-                  <p className="font-semibold">{t('education', c.nameKey)}</p>
-                  <p className="text-sm text-white/70 mt-1">{t('education', c.descKey)}</p>
-                </a>
-              ))}
+              {communities.map((c, i) => {
+                const content = (
+                  <>
+                    <p className="text-xs text-white/60 mb-1">{c.period}</p>
+                    <p className="font-semibold">{t('education', c.nameKey)}</p>
+                    <p className="text-sm text-white/70 mt-1">{t('education', c.descKey)}</p>
+                  </>
+                )
+                return c.href ? (
+                  <a
+                    key={i}
+                    href={c.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block p-4 rounded-lg bg-white/10 border border-white/20 hover:bg-white/15 transition-colors"
+                  >
+                    {content}
+                  </a>
+                ) : (
+                  <div key={i} className="p-4 rounded-lg bg-white/10 border border-white/20">
+                    {content}
+                  </div>
+                )
+              })}
             </div>
           </div>
         </div>
