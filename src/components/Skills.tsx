@@ -1,4 +1,5 @@
 import { useInView } from './useInView'
+import { useT } from '../i18n/useT'
 
 const skillCategories = [
   {
@@ -21,6 +22,7 @@ const skillCategories = [
 
 export default function Skills() {
   const { ref, inView } = useInView()
+  const t = useT()
 
   return (
     <section className="bg-slate-900 text-white px-6 py-20">
@@ -30,7 +32,7 @@ export default function Skills() {
           inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
         }`}
       >
-        <h2 className="text-3xl md:text-4xl font-bold mb-10">Skills</h2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-10">{t('skills', 'sectionTitle')}</h2>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {skillCategories.map((cat) => (

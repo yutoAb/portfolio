@@ -77,7 +77,7 @@ export default function Experience() {
           inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
         }`}
       >
-        <h2 className="text-3xl md:text-4xl font-bold mb-10">Experience</h2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-10">{t('experience', 'sectionTitle')}</h2>
 
         <div className="space-y-8">
           {experiences.map((exp, i) => (

@@ -29,7 +29,7 @@ export default function Contact() {
           inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
         }`}
       >
-        <h2 className="text-3xl md:text-4xl font-bold mb-10">Contact</h2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-10">{t('contact', 'sectionTitle')}</h2>
 
         <div className="flex flex-col md:flex-row gap-12 items-start">
           <div className="w-full max-w-lg space-y-4">

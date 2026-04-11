@@ -13,7 +13,7 @@ type Publication = {
 
 const publications: Publication[] = [
   {
-    titleFixed: 'LLM-jp-Moshi-v1: A Japanese Full-Duplex Spoken Dialogue Model',
+    titleFixed: 'Effects of Dialogue Corpora Properties on Fine-Tuning a Moshi-Based Spoken Dialogue Model',
     venue: 'IWSDS 2026 (International Workshop on Spoken Dialogue Systems)',
     year: '2026',
     role: 'First Author',
@@ -32,12 +32,7 @@ const publications: Publication[] = [
   },
 ]
 
-const researchTopics = [
-  'Full-duplex spoken dialogue systems',
-  'Speech tokens x LLM architectures',
-  'Turn-taking evaluation & speech tokenization',
-  'MLOps pipelines for speech models',
-]
+const researchTopicKeys = ['topic1', 'topic2', 'topic3', 'topic4'] as const
 
 export default function Research() {
   const { ref, inView } = useInView()
@@ -51,11 +46,11 @@ export default function Research() {
           inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
         }`}
       >
-        <h2 className="text-3xl md:text-4xl font-bold mb-10">Research</h2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-10">{t('research', 'sectionTitle')}</h2>
 
         <div className="grid md:grid-cols-2 gap-12">
           <div>
-            <h3 className="text-xl font-bold mb-6 text-purple-300">Publications</h3>
+            <h3 className="text-xl font-bold mb-6 text-purple-300">{t('research', 'publicationsLabel')}</h3>
             <div className="space-y-6">
               {publications.map((pub, i) => (
                 <div key={i} className="p-4 rounded-lg bg-white/5 border border-white/10">
@@ -95,24 +90,23 @@ export default function Research() {
           </div>
 
           <div>
-            <h3 className="text-xl font-bold mb-6 text-purple-300">Research Interests</h3>
+            <h3 className="text-xl font-bold mb-6 text-purple-300">{t('research', 'researchInterestsTitle')}</h3>
             <ul className="space-y-3">
-              {researchTopics.map((topic, i) => (
+              {researchTopicKeys.map((key, i) => (
                 <li key={i} className="flex items-center gap-3">
                   <span className="shrink-0 w-2 h-2 rounded-full bg-purple-400" />
-                  <span className="text-white/80">{topic}</span>
+                  <span className="text-white/80">{t('research', key)}</span>
                 </li>
               ))}
             </ul>
 
             <div className="mt-8 p-4 rounded-lg bg-white/5 border border-white/10">
-              <h4 className="font-semibold mb-2">Master's Thesis</h4>
+              <h4 className="font-semibold mb-2">{t('research', 'mastersThesisTitle')}</h4>
               <p className="text-sm text-white/70 leading-relaxed">
-                Infrastructure-centric MLOps pipeline for continuously evaluating and improving
-                full-duplex spoken dialogue models' natural chat ability
+                {t('research', 'mastersThesisDesc')}
               </p>
               <p className="text-xs text-white/50 mt-2">
-                Adviser: Prof. Tetsunori Kobayashi & Prof. Tetsuji Ogawa — Waseda University
+                {t('research', 'mastersAdviser')}
               </p>
             </div>
 
@@ -122,7 +116,7 @@ export default function Research() {
                 {t('research', 'bachelorThesisDesc')}
               </p>
               <p className="text-xs text-white/50 mt-2">
-                Adviser: Prof. Tetsunori Kobayashi & Prof. Tetsuji Ogawa — Waseda University
+                {t('research', 'bachelorAdviser')}
               </p>
               <a
                 href={thesisVideo}

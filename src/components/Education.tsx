@@ -1,31 +1,38 @@
 import { useInView } from './useInView'
 import { useT } from '../i18n/useT'
 
-type TimelineEntry = {
-  date: string
-  title: string
-  subtitle?: string
-  detail?: string
+type TimelineEntryKeys = {
+  dateKey: keyof typeof import('../i18n/translations').default.education
+  titleKey: keyof typeof import('../i18n/translations').default.education
+  subtitleKey?: keyof typeof import('../i18n/translations').default.education
+  detailKey?: keyof typeof import('../i18n/translations').default.education
 }
 
-const education: TimelineEntry[] = [
+const educationKeys: TimelineEntryKeys[] = [
   {
-    date: '2025 Apr - 2027 Mar (Expected)',
-    title: 'Waseda University - Master of Engineering',
-    subtitle: 'Computer Science & Communications',
-    detail: 'Kobayashi-Ogawa Lab / Full-duplex spoken dialogue systems / LLM-jp Dialogue WG (NII)',
+    dateKey: 'eduDate1',
+    titleKey: 'eduTitle1',
+    subtitleKey: 'eduSubtitle1',
+    detailKey: 'eduDetail1',
   },
   {
-    date: '2021 Apr - 2025 Mar',
-    title: 'Waseda University - Bachelor of Engineering',
-    subtitle: 'Information & Communication Engineering',
-    detail: 'GPA: 3.33 / 4.00',
+    dateKey: 'eduDate2',
+    titleKey: 'eduTitle2',
+    subtitleKey: 'eduSubtitle2',
+    detailKey: 'eduDetail2',
   },
 ]
 
-const awards = [
-  { year: '2025', title: 'PKSHA Hackathon Grand Prize', project: 'Changemakers', link: 'https://pksha.notion.site/pksha-hackathon2025' },
-  { year: '2025', title: 'PR TIMES Hackathon Individual Excellence Award', project: 'Dream Blossom', link: 'https://prtimes.jp/main/html/rd/p/000001483.000000112.html' },
+type AwardKeys = {
+  year: string
+  titleKey: keyof typeof import('../i18n/translations').default.education
+  projectKey: keyof typeof import('../i18n/translations').default.education
+  link: string
+}
+
+const awards: AwardKeys[] = [
+  { year: '2025', titleKey: 'award1Title', projectKey: 'award1Project', link: 'https://pksha.notion.site/pksha-hackathon2025' },
+  { year: '2025', titleKey: 'award2Title', projectKey: 'award2Project', link: 'https://prtimes.jp/main/html/rd/p/000001483.000000112.html' },
 ]
 
 type Community = {
@@ -68,26 +75,26 @@ export default function Education() {
           inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
         }`}
       >
-        <h2 className="text-3xl md:text-4xl font-bold mb-10">Education, Awards & Communities</h2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-10">{t('education', 'sectionTitle')}</h2>
 
         <div className="grid md:grid-cols-3 gap-12">
           <div>
-            <h3 className="text-xl font-bold mb-6">Education</h3>
+            <h3 className="text-xl font-bold mb-6">{t('education', 'educationLabel')}</h3>
             <div className="relative pl-6 border-l-2 border-white/30 space-y-8">
-              {education.map((item, i) => (
+              {educationKeys.map((item, i) => (
                 <div key={i} className="relative">
                   <div className="absolute -left-[25px] top-1.5 w-3 h-3 rounded-full bg-white" />
-                  <p className="text-sm text-white/60">{item.date}</p>
-                  <p className="font-semibold text-lg">{item.title}</p>
-                  {item.subtitle && <p className="text-white/80">{item.subtitle}</p>}
-                  {item.detail && <p className="text-sm text-white/60 mt-1">{item.detail}</p>}
+                  <p className="text-sm text-white/60">{t('education', item.dateKey)}</p>
+                  <p className="font-semibold text-lg">{t('education', item.titleKey)}</p>
+                  {item.subtitleKey && <p className="text-white/80">{t('education', item.subtitleKey)}</p>}
+                  {item.detailKey && <p className="text-sm text-white/60 mt-1">{t('education', item.detailKey)}</p>}
                 </div>
               ))}
             </div>
           </div>
 
           <div>
-            <h3 className="text-xl font-bold mb-6">Awards</h3>
+            <h3 className="text-xl font-bold mb-6">{t('education', 'awardsLabel')}</h3>
             <div className="space-y-4">
               {awards.map((award, i) => (
                 <a
@@ -102,15 +109,15 @@ export default function Education() {
                       {award.year}
                     </span>
                   </div>
-                  <p className="font-semibold">{award.title}</p>
-                  <p className="text-sm text-white/70">{award.project}</p>
+                  <p className="font-semibold">{t('education', award.titleKey)}</p>
+                  <p className="text-sm text-white/70">{t('education', award.projectKey)}</p>
                 </a>
               ))}
             </div>
           </div>
 
           <div>
-            <h3 className="text-xl font-bold mb-6">Communities</h3>
+            <h3 className="text-xl font-bold mb-6">{t('education', 'communitiesLabel')}</h3>
             <div className="space-y-4">
               {communities.map((c, i) => (
                 <a

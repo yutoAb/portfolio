@@ -137,7 +137,7 @@ export default function Profiles() {
           inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
         }`}
       >
-        <h2 className="text-3xl md:text-4xl font-bold mb-10">Profiles</h2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-10">{t('profiles', 'sectionTitle')}</h2>
 
         <div className="grid md:grid-cols-3 gap-8">
           {categories.map((cat) => (
