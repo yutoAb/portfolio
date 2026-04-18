@@ -1,6 +1,7 @@
 import { useRef } from 'react'
 import Nav from './components/Nav'
 import Hero from './components/Hero'
+import Philosophy from './components/Philosophy'
 import Skills from './components/Skills'
 import Profiles from './components/Profiles'
 import Experience from './components/Experience'
@@ -12,6 +13,7 @@ import Footer from './components/Footer'
 
 export default function App() {
   const heroRef = useRef<HTMLDivElement>(null)
+  const philosophyRef = useRef<HTMLDivElement>(null)
   const skillsRef = useRef<HTMLDivElement>(null)
   const profilesRef = useRef<HTMLDivElement>(null)
   const experienceRef = useRef<HTMLDivElement>(null)
@@ -22,6 +24,7 @@ export default function App() {
 
   const sections = [
     { label: 'Top', ref: heroRef },
+    { label: 'Philosophy', ref: philosophyRef },
     { label: 'Skills', ref: skillsRef },
     { label: 'Profiles', ref: profilesRef },
     { label: 'Experience', ref: experienceRef },
@@ -36,6 +39,7 @@ export default function App() {
       <Nav sections={sections} />
       <main>
         <div ref={heroRef}><Hero /></div>
+        <div ref={philosophyRef}><Philosophy /></div>
         <div ref={skillsRef}><Skills /></div>
         <div ref={profilesRef}><Profiles /></div>
         <div ref={experienceRef}><Experience /></div>

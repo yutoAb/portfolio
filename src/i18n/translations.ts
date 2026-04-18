@@ -24,6 +24,33 @@ const translations = {
       en: 'My long-term vision is to automate the essentials of daily life — clothing, food, and housing — through AI and technology, creating a society where everyone can focus on creative pursuits.',
     } as T,
   },
+  philosophy: {
+    sectionTitle: { ja: '思想', en: 'Philosophy' } as T,
+    sectionLead: {
+      ja: '日々の研究・開発・観察から形成されてきた、自分なりの世界の捉え方と、向かいたい未来。',
+      en: 'My evolving way of seeing the world and the future I want to move toward — shaped by everyday research, engineering, and observation.',
+    } as T,
+    visionTitle: { ja: '衣食住の自動化と World API', en: 'Automating the Essentials & the World API' } as T,
+    visionBody: {
+      ja: '技術で生活基盤を自動化し、人間が創造的な活動に集中できる社会を作りたい。衣・食・住といった生きるための土台を丸ごと動かせる「World API」のような仕組みを、最終的には手元で扱えるようにしたい。',
+      en: 'I want to use technology to automate life\'s essentials so that humans can focus on creative pursuits. My long-term goal is a "World API" that lets us orchestrate the foundations of living — clothing, food, and housing — as a first-class interface.',
+    } as T,
+    worldviewTitle: { ja: 'SWE × DS × BIZ の三位一体', en: 'The SWE × DS × BIZ Trinity' } as T,
+    worldviewBody: {
+      ja: '世界は 3 つの役割で回っていると捉えている。ルールベースでデータを動かす「ソフトウェアエンジニア」、そのデータからモデルを生み出す「データサイエンティスト」、出来上がったプロダクトをユーザーに届けて要望を汲み取る「ビジネスパーソン」。必要に応じてフィジカル (ハードウェア・ロボティクス) が加わる。自分は SWE と DS の両輪を自力で回せる人間でいたい。',
+      en: 'I see the world running on three roles: software engineers who move data rule-based, data scientists who create models from that data, and business people who deliver the products and capture user needs. Physical domains (hardware/robotics) join when needed. I aim to be the kind of person who can personally cover both SWE and DS.',
+    } as T,
+    dreamTitle: { ja: '研究の先にある夢 — 個人の再現', en: 'A Dream Beyond Research — Recreating People' } as T,
+    dreamBody: {
+      ja: 'Black Mirror が描いたように、人間の音声対話や人格をデジタルで再現したい。全二重音声対話システムの研究の先には、いつか、失われた人とももう一度話せる未来があると信じている。',
+      en: 'Inspired by Black Mirror, I want to digitally recreate human voice conversations and personalities. Beyond my research on full-duplex spoken dialogue systems, I imagine a future where we can speak once more with those we have lost.',
+    } as T,
+    observationTitle: { ja: 'ブラックボックスでも、データが揃えば再現できてしまう', en: 'Black Box or Not — Enough Data Will Reproduce It' } as T,
+    observationBody: {
+      ja: '音声対話研究と自動運転を間近で見ていて気づいたこと。入出力さえ決めてしまえば、モデルの中身がブラックボックスでも、ノイジーな大量データとクリーンなデータを積み上げていくだけで、悲しいかなそれを再現できるモデルが出来上がってしまう (調子の波はあれど)。これは、人間の対話や運転のような「知能らしい振る舞い」も例外ではない、という実感。',
+      en: 'An observation from watching spoken dialogue research and self-driving closely: once you fix the input and output, even if the model itself is a black box, simply stacking massive noisy data together with clean data is enough to produce a model that — bittersweetly — reproduces the behavior (with some variance in quality). This applies to "intelligent-looking" behavior like conversation and driving too.',
+    } as T,
+  },
   profiles: {
     sectionTitle: { ja: 'プロフィール・リンク', en: 'Profiles' } as T,
     swDescription: { ja: 'データ基盤の設計・構築、アルゴリズム', en: 'Data infrastructure, algorithms' } as T,
