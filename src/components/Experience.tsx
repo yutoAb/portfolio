@@ -1,66 +1,68 @@
 import { useInView } from './useInView'
 import { useT } from '../i18n/useT'
 
+type ExpKey = keyof typeof import('../i18n/translations').default.experience
+
 type ExperienceEntry = {
   period: string
-  company: string
-  role: string
-  descKeys: (keyof typeof import('../i18n/translations').default.experience)[]
+  companyKey: ExpKey
+  roleKey: ExpKey
+  descKeys: ExpKey[]
 }
 
 const experiences: ExperienceEntry[] = [
   {
     period: '2026 Feb (2 weeks)',
-    company: 'GMO Internet Group',
-    role: 'Engineering Intern',
+    companyKey: 'gmo_company',
+    roleKey: 'gmo_role',
     descKeys: ['gmo_desc0'],
   },
   {
     period: '2025 - Present',
-    company: 'National Institute of Informatics (NII)',
-    role: 'Research Engineer',
+    companyKey: 'nii_company',
+    roleKey: 'nii_role',
     descKeys: ['nii_desc0', 'nii_desc1', 'nii_desc2'],
   },
   {
     period: '2025 Oct',
-    company: 'Medley, Inc.',
-    role: 'Engineering Intern',
+    companyKey: 'medley_company',
+    roleKey: 'medley_role',
     descKeys: ['medley_desc0', 'medley_desc1'],
   },
   {
     period: '2025 Sep (1 day)',
-    company: 'kubell, Inc.',
-    role: 'Data Science Intern',
+    companyKey: 'kubell_company',
+    roleKey: 'kubell_role',
     descKeys: ['kubell_desc0'],
   },
   {
     period: '2025 Aug - Sep',
-    company: 'Hitachi, Ltd. R&D Group',
-    role: 'Research Intern',
+    companyKey: 'hitachi_company',
+    roleKey: 'hitachi_role',
     descKeys: ['hitachi_desc0'],
   },
   {
     period: '2025 Aug',
-    company: 'Accenture',
-    role: 'Engineering Intern',
+    companyKey: 'accenture_company',
+    roleKey: 'accenture_role',
     descKeys: ['accenture_desc0'],
   },
   {
     period: '2025 Aug (1 day)',
-    company: 'BayCurrent Consulting',
-    role: 'Consulting Intern',
+    companyKey: 'baycurrent_company',
+    roleKey: 'baycurrent_role',
     descKeys: ['baycurrent_desc0'],
   },
   {
     period: '2023 Feb - 2025 Oct',
-    company: 'Japan Useware Systems Co., Ltd.',
-    role: 'Software Engineer',
+    companyKey: 'jus_company',
+    roleKey: 'jus_role',
     descKeys: ['jus_desc0', 'jus_desc1', 'jus_desc2'],
   },
   {
     period: '2022 Nov - 2023 Feb',
-    company: 'Carrot Software Co., Ltd.',
-    role: 'Part-time Engineer',
+    companyKey: 'carrot_company',
+    roleKey: 'carrot_role',
     descKeys: ['carrot_desc0'],
   },
 ]
@@ -87,8 +89,8 @@ export default function Experience() {
             >
               <div className="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-white/90" />
               <p className="text-sm text-white/60 mb-1">{exp.period}</p>
-              <h3 className="text-xl font-bold">{exp.company}</h3>
-              <p className="text-white/80 mb-2">{exp.role}</p>
+              <h3 className="text-xl font-bold">{t('experience', exp.companyKey)}</h3>
+              <p className="text-white/80 mb-2">{t('experience', exp.roleKey)}</p>
               <ul className="space-y-1 text-sm text-white/70">
                 {exp.descKeys.map((key) => (
                   <li key={key} className="flex gap-2">
