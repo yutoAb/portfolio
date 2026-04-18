@@ -16,9 +16,12 @@ const skillCategories = [
   },
   {
     title: 'Web / Infra',
-    skills: ['React', 'Next.js', 'Node.js', 'Docker', 'GCP', 'AWS', 'GitHub Actions'],
+    skills: ['React', 'Next.js', 'Node.js', 'Docker', 'Terraform', 'GCP', 'AWS', 'GitHub Actions'],
   },
 ]
+
+const learningTools = ['Go', 'Rust', 'Kubernetes', 'Accelerate', 'DeepSpeed']
+const learningTopicKeys = ['topicMLOps', 'topicDistributed', 'topicRealtime'] as const
 
 export default function Skills() {
   const { ref, inView } = useInView()
@@ -50,6 +53,39 @@ export default function Skills() {
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="mt-10 p-6 rounded-xl border border-dashed border-white/20 bg-white/[0.02]">
+          <h3 className="text-lg font-bold mb-2 text-purple-300">{t('skills', 'learningTitle')}</h3>
+          <p className="text-sm text-white/60 mb-5">{t('skills', 'learningNote')}</p>
+
+          <div className="mb-4">
+            <p className="text-xs text-white/50 mb-2 uppercase tracking-wider">{t('skills', 'learningToolsLabel')}</p>
+            <div className="flex flex-wrap gap-2">
+              {learningTools.map((skill) => (
+                <span
+                  key={skill}
+                  className="px-3 py-1 text-sm rounded-full bg-white/5 border border-dashed border-white/30 text-white/80"
+                >
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <p className="text-xs text-white/50 mb-2 uppercase tracking-wider">{t('skills', 'learningTopicsLabel')}</p>
+            <div className="flex flex-wrap gap-2">
+              {learningTopicKeys.map((key) => (
+                <span
+                  key={key}
+                  className="px-3 py-1 text-sm rounded-full bg-white/5 border border-dashed border-white/30 text-white/80"
+                >
+                  {t('skills', key)}
+                </span>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>

@@ -163,6 +163,16 @@ const translations = {
   },
   skills: {
     sectionTitle: { ja: 'スキル', en: 'Skills' } as T,
+    learningTitle: { ja: '学習中', en: 'Currently Learning' } as T,
+    learningNote: {
+      ja: 'データ基盤・システム側と大規模モデル学習側、両方向のスケールを取りにいくために学習中。',
+      en: 'Scaling in both directions — data infrastructure/systems and large-scale model training.',
+    } as T,
+    learningToolsLabel: { ja: 'ツール', en: 'Tools' } as T,
+    learningTopicsLabel: { ja: '注力領域', en: 'Focus Areas' } as T,
+    topicMLOps: { ja: 'MLOps', en: 'MLOps' } as T,
+    topicDistributed: { ja: '分散システム (PB級)', en: 'Distributed Systems (PB-scale)' } as T,
+    topicRealtime: { ja: 'リアルタイム処理 (Kafka)', en: 'Real-time Streaming (Kafka)' } as T,
   },
   contact: {
     sectionTitle: { ja: 'お問い合わせ', en: 'Contact' } as T,
