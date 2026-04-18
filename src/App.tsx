@@ -1,4 +1,5 @@
 import { useRef } from 'react'
+import { useT } from './i18n/useT'
 import Nav from './components/Nav'
 import Hero from './components/Hero'
 import Philosophy from './components/Philosophy'
@@ -21,17 +22,18 @@ export default function App() {
   const projectsRef = useRef<HTMLDivElement>(null)
   const educationRef = useRef<HTMLDivElement>(null)
   const contactRef = useRef<HTMLDivElement>(null)
+  const t = useT()
 
   const sections = [
-    { label: 'Top', ref: heroRef },
-    { label: 'Philosophy', ref: philosophyRef },
-    { label: 'Skills', ref: skillsRef },
-    { label: 'Profiles', ref: profilesRef },
-    { label: 'Experience', ref: experienceRef },
-    { label: 'Research', ref: researchRef },
-    { label: 'Projects', ref: projectsRef },
-    { label: 'Education', ref: educationRef },
-    { label: 'Contact', ref: contactRef },
+    { label: t('nav', 'top'), ref: heroRef },
+    { label: t('nav', 'philosophy'), ref: philosophyRef },
+    { label: t('nav', 'skills'), ref: skillsRef },
+    { label: t('nav', 'profiles'), ref: profilesRef },
+    { label: t('nav', 'experience'), ref: experienceRef },
+    { label: t('nav', 'research'), ref: researchRef },
+    { label: t('nav', 'projects'), ref: projectsRef },
+    { label: t('nav', 'education'), ref: educationRef },
+    { label: t('nav', 'contact'), ref: contactRef },
   ]
 
   return (

@@ -24,6 +24,17 @@ const translations = {
       en: 'My long-term vision is to automate the essentials of daily life — clothing, food, and housing — through AI and technology, creating a society where everyone can focus on creative pursuits.',
     } as T,
   },
+  nav: {
+    top: { ja: 'トップ', en: 'Top' } as T,
+    philosophy: { ja: '思想', en: 'Philosophy' } as T,
+    skills: { ja: 'スキル', en: 'Skills' } as T,
+    profiles: { ja: 'プロフィール', en: 'Profiles' } as T,
+    experience: { ja: '職務経歴', en: 'Experience' } as T,
+    research: { ja: '研究', en: 'Research' } as T,
+    projects: { ja: 'プロジェクト', en: 'Projects' } as T,
+    education: { ja: '学歴', en: 'Education' } as T,
+    contact: { ja: 'お問い合わせ', en: 'Contact' } as T,
+  },
   philosophy: {
     sectionTitle: { ja: '思想', en: 'Philosophy' } as T,
     sectionLead: {
