@@ -144,6 +144,8 @@ const translations = {
     eduTitle2: { ja: '早稲田大学 基幹理工学部', en: 'Waseda University - Bachelor of Engineering' } as T,
     eduSubtitle2: { ja: '情報通信学科', en: 'Information & Communication Engineering' } as T,
     eduDetail2: { ja: 'GPA: 3.33 / 4.00', en: 'GPA: 3.33 / 4.00' } as T,
+    award0Title: { ja: 'Progate ハッカソン 最優秀賞', en: 'Progate Hackathon Grand Prize' } as T,
+    award0Project: { ja: 'Samether.io', en: 'Samether.io' } as T,
     award1Title: { ja: 'PKSHA ハッカソン 最優秀賞', en: 'PKSHA Hackathon Grand Prize' } as T,
     award1Project: { ja: 'Changemakers', en: 'Changemakers' } as T,
     award2Title: { ja: 'PR TIMES ハッカソン 個人優秀賞', en: 'PR TIMES Hackathon Individual Excellence Award' } as T,
