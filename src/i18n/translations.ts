@@ -61,6 +61,92 @@ const translations = {
       ja: '音声対話研究と自動運転を間近で見ていて気づいたこと。入出力さえ決めてしまえば、モデルの中身がブラックボックスでも、ノイジーな大量データとクリーンなデータを積み上げていくだけで、悲しいかなそれを再現できるモデルが出来上がってしまう (調子の波はあれど)。これは、人間の対話や運転のような「知能らしい振る舞い」も例外ではない、という実感。',
       en: 'An observation from watching spoken dialogue research and self-driving closely: once you fix the input and output, even if the model itself is a black box, simply stacking massive noisy data together with clean data is enough to produce a model that — bittersweetly — reproduces the behavior (with some variance in quality). This applies to "intelligent-looking" behavior like conversation and driving too.',
     } as T,
+    readMore: { ja: '続きを読む', en: 'Read more' } as T,
+    close: { ja: '閉じる', en: 'Close' } as T,
+    visionArticle: {
+      ja: `自分の長期的なビジョンは、技術の力で「生きるための土台」を自動化することだ。衣・食・住という、人間が生まれてから死ぬまで避けて通れない基盤。これらを自動化できれば、人は本当に創造的な活動だけに時間を使えるようになる。
+
+いまの世界は、この土台に膨大な人的リソースが投入されている。服を作る人、食事を作る人、家を建てる人、そしてそれらを届ける物流。どれも不可欠だが、AI とロボティクスの進歩で自動化できる領域が急速に広がっている。
+
+「World API」という言葉で自分が考えているのは、この現実世界の基盤を、ソフトウェアから呼び出せる API として扱える未来だ。order_meal(), provide_housing(needs), deliver_clothes(style) — こういった抽象化を現実世界に対してできるようになれば、人間は「何を作りたいか」にだけ集中できる。
+
+そのために、自分は今、データ基盤とモデル開発の両方を経験している。どちらか片方では足りない。現実世界から信頼できるデータを流し、そこから意思決定モデルを作り、物理世界にアクションを返す — この循環を作る側に回りたい。`,
+      en: `My long-term vision is to use technology to automate the foundations of human life. Clothing, food, housing — the essentials nobody can escape from birth to death. If these can be automated, humans can truly spend their time on creative activities.
+
+Today's world pours enormous human resources into these foundations. People who make clothes, prepare food, build houses, and the logistics that deliver all of it. All indispensable, but AI and robotics are rapidly expanding what can be automated.
+
+When I say "World API," I mean a future where these real-world foundations can be invoked as APIs from software. order_meal(), provide_housing(needs), deliver_clothes(style) — if we can abstract the physical world this way, humans can focus purely on "what do we want to create?"
+
+That's why I'm now gaining experience in both data infrastructure and model development. One without the other isn't enough. Flow trusted data from the real world, build decision-making models from it, return actions to the physical world — I want to be on the side that builds this loop.`,
+    } as T,
+    worldviewArticle: {
+      ja: `世界を構成するソフトウェアは、大きく 3 つの役割で回っていると自分は見ている。
+
+1. ルールベースでデータを動かす人 — ソフトウェアエンジニア。データベースに情報を入れ、API を通じてそれを取り出し、ユーザー画面に表示する。世界に存在するデータを、どう安全に・正しく・速く動かすかを突き詰める職能。
+
+2. データから価値を抽出する人 — データサイエンティスト。動かされているデータをモデルに食わせ、予測・分類・生成を通じて「人間にとって useful な信号」を絞り出す。統計・機械学習の力で、ルールベースでは書けない知能を作り出す。
+
+3. 出来上がったプロダクトをユーザーに届ける人 — ビジネスパーソン。プロダクトマーケター、セールス、事業責任者。ユーザーの声を拾い、プロダクトに要求としてフィードバックする。技術と市場の翻訳者。
+
+この 3 者が揃って初めて、世の中に「使われる」ソフトウェアが生まれる。さらに、ハードウェア・ロボティクスが絡むと「フィジカル」なレイヤーが加わる。これらが噛み合って、初めて「衣食住の自動化」のような大きなビジョンに近づける。
+
+自分は、SWE と DS の両輪を回せる存在でいたい。この 2 つを分断せず、データが生まれる瞬間からモデルが推論を返す瞬間まで、全部自分で触れる人間でありたい。`,
+      en: `I see software-driven society running on three core roles.
+
+1. People who move data rule-based — software engineers. They insert data into databases, retrieve it through APIs, display it on user screens. Professionals who pursue the question of how to move existing data safely, correctly, and quickly.
+
+2. People who extract value from data — data scientists. They feed that flowing data into models to squeeze out "useful signals for humans" through prediction, classification, and generation. With statistics and ML, they create intelligence that rule-based code can't express.
+
+3. People who deliver the product to users — business folks. Product marketers, salespeople, business leads. They capture user voices and feed them back as requirements. Translators between technology and market.
+
+Only when these three come together does software that "gets used" come into the world. Add hardware and robotics, and a "physical" layer joins. All of these interlocking is what brings us closer to big visions like automating clothing, food, and housing.
+
+I want to be someone who can personally turn both the SWE and DS wheels. Without splitting these two, I want to be the kind of person who can touch every step — from the moment data is born to the moment the model returns an inference.`,
+    } as T,
+    dreamArticle: {
+      ja: `Black Mirror の "Be Right Back" というエピソードがある。亡くなった恋人の SNS ログから、AI が本人の声・人格・振る舞いを再現してくれるという話。見終わった後、ずっと忘れられなかった。
+
+これは単なる SF ではなく、いま自分が研究している技術の延長線上にある未来だからだ。
+
+自分は全二重音声対話システムを研究している。7B パラメータの音声対話モデルを日本語データで学習し、人間のように「相槌を打つ」「遮って話す」「黙って聞く」ことができる AI を作る。この研究が進んだ先には、誰か特定の個人の音声ログ・チャット履歴・動画があれば、その人の喋り方・考え方・人格までコピーされたデジタルコピーを作れる未来がある。
+
+これが倫理的に難しいのは分かっている。本人の同意、遺族感情、死の受容。それでも、失われた人ともう一度話せる未来があるなら、それを可能にする側に自分は回りたい。
+
+研究者としての好奇心だけではなく、人の人生の経験として「もう一度あの人と話したい」という感情は、誰にでもあるものだと思う。そこに技術で応えられるなら、応える価値があると思っている。`,
+      en: `There's a Black Mirror episode called "Be Right Back." An AI recreates a deceased partner's voice, personality, and behavior from their social media logs. After watching, I couldn't forget it.
+
+That's because this isn't just sci-fi — it's a future on the extension of the technology I research today.
+
+I study full-duplex spoken dialogue systems. I train 7B-parameter spoken dialogue models on Japanese data to build AI that can backchannel, interrupt, and listen silently like humans. Beyond this research lies a future where, given someone's voice logs, chat history, and videos, we can create a digital copy that replicates their way of speaking, thinking, and personality.
+
+I know the ethical difficulty — consent, grief, accepting death. Even so, if there's a future where we can speak once more with those we've lost, I want to be on the side that makes it possible.
+
+Beyond researcher curiosity, I believe the feeling of "I want to talk to that person one more time" is something everyone carries. If technology can answer that, I think it's worth answering.`,
+    } as T,
+    observationArticle: {
+      ja: `音声対話モデルの研究と、自動運転の進化を間近で見ていて、ある気持ち悪い洞察に辿り着いた。
+
+「入力と出力さえ決めてしまえば、モデルの中身がブラックボックスでも、ノイジーなデータの大量とクリーンなデータの積み重ねで、それを再現するモデルが出来上がってしまう」
+
+音声対話で言えば、膨大な人間同士の対話ログを食わせれば、人間らしい相槌・ターンテイキング・流暢さが出てくる。自動運転で言えば、大量のドライブレコーダー映像から、人間らしい運転判断が出てくる。
+
+これは「悲しいかな」と付け加えたくなる洞察だ。なぜなら、人間の知能や判断が、特別な魔法ではなく、単にデータの分布を学習した関数近似で置き換え可能だと示唆しているから。
+
+もちろん調子の良し悪しはあるし、エッジケースで失敗することもある。それでも平均的な振る舞いは、十分なデータと計算資源があれば再現できてしまう。
+
+この洞察は、自分のキャリアの基礎になっている。「人間らしい振る舞い」を目指すのであれば、まずデータ基盤を作り、大量にデータを集める場を作ることが最短ルート。だからデータエンジニアリングと MLOps に自分は重みを置いている。`,
+      en: `Watching spoken dialogue research and the evolution of self-driving up close, I've arrived at an uncomfortable insight.
+
+"Once you fix the input and output, even if the model itself is a black box, simply stacking massive noisy data with clean data is enough to produce a model that reproduces the behavior."
+
+In spoken dialogue: feed enough human conversation logs, and human-like backchanneling, turn-taking, and fluency emerge. In self-driving: feed enough dashcam footage, and human-like driving judgment emerges.
+
+It's an insight that makes me want to add "bittersweetly" — because it suggests human intelligence and judgment aren't a special kind of magic, but are replaceable by function approximations that have simply learned a data distribution.
+
+Of course there's variance in quality, and edge cases fail. Still, the average behavior can be reproduced given enough data and compute.
+
+This insight has become the foundation of my career. If the goal is "human-like behavior," the shortest path is to first build the data infrastructure — create the place where massive amounts of data accumulate. That's why I put weight on data engineering and MLOps.`,
+    } as T,
   },
   profiles: {
     sectionTitle: { ja: 'プロフィール・リンク', en: 'Profiles' } as T,
