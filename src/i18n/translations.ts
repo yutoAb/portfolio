@@ -123,6 +123,11 @@ I know the ethical difficulty — consent, grief, accepting death. Even so, if t
 
 Beyond researcher curiosity, I believe the feeling of "I want to talk to that person one more time" is something everyone carries. If technology can answer that, I think it's worth answering.`,
     } as T,
+    dreamImageAlt: { ja: '個人を再現する AI のイメージ', en: 'Conceptual image of an AI recreating an individual' } as T,
+    dreamImageCaption: {
+      ja: 'イメージ：失われた人を、声・人格・振る舞いまで再現する未来',
+      en: 'Image: a future where voice, personality, and behavior of the lost are recreated',
+    } as T,
     observationArticle: {
       ja: `音声対話モデルの研究と、自動運転の進化を間近で見ていて、ある気持ち悪い洞察に辿り着いた。
 

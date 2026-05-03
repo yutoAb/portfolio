@@ -8,12 +8,22 @@ type Block = {
   titleKey: PhilosophyKey
   bodyKey: PhilosophyKey
   articleKey: PhilosophyKey
+  image?: { src: string; altKey: PhilosophyKey; captionKey: PhilosophyKey }
 }
 
 const blocks: Block[] = [
   { titleKey: 'visionTitle', bodyKey: 'visionBody', articleKey: 'visionArticle' },
   { titleKey: 'worldviewTitle', bodyKey: 'worldviewBody', articleKey: 'worldviewArticle' },
-  { titleKey: 'dreamTitle', bodyKey: 'dreamBody', articleKey: 'dreamArticle' },
+  {
+    titleKey: 'dreamTitle',
+    bodyKey: 'dreamBody',
+    articleKey: 'dreamArticle',
+    image: {
+      src: `${import.meta.env.BASE_URL}philosophy-dream.jpg`,
+      altKey: 'dreamImageAlt',
+      captionKey: 'dreamImageCaption',
+    },
+  },
   { titleKey: 'observationTitle', bodyKey: 'observationBody', articleKey: 'observationArticle' },
 ]
 
@@ -88,6 +98,20 @@ export default function Philosophy() {
                   {t('philosophy', selected.block.titleKey)}
                 </h3>
               </div>
+
+              {selected.block.image && (
+                <figure className="mb-6 -mx-2">
+                  <img
+                    src={selected.block.image.src}
+                    alt={t('philosophy', selected.block.image.altKey)}
+                    loading="lazy"
+                    className="w-full rounded-lg border border-white/10"
+                  />
+                  <figcaption className="mt-2 text-xs text-white/50 text-center">
+                    {t('philosophy', selected.block.image.captionKey)}
+                  </figcaption>
+                </figure>
+              )}
 
               <p className="text-sm md:text-base text-white/85 leading-[1.9] whitespace-pre-line">
                 {t('philosophy', selected.block.articleKey)}
