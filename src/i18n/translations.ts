@@ -43,32 +43,32 @@ const translations = {
     } as T,
     visionTitle: { ja: '衣食住の自動化と World API', en: 'Automating the Essentials & the World API' } as T,
     visionBody: {
-      ja: '衣・食・住の手間を技術で少しずつ減らし、人がもっと「作ること」に時間を使える社会になればと願っている。生活の土台をプログラムから動かせる「World API」のような仕組みを、いつか手元で扱えるようになれたら嬉しい。',
+      ja: '衣・食・住の手間を技術で少しずつ減らし、人がもっと「作ること」に時間を使える社会になればと願っています。生活の土台をプログラムから動かせる「World API」のような仕組みを、いつか手元で扱えるようになれたら嬉しいです。',
       en: 'I want to use technology to automate life\'s essentials so that humans can focus on creative pursuits. My long-term goal is a "World API" that lets us orchestrate the foundations of living — clothing, food, and housing — as a first-class interface.',
     } as T,
     worldviewTitle: { ja: 'SWE × DS × BIZ の三位一体', en: 'The SWE × DS × BIZ Trinity' } as T,
     worldviewBody: {
-      ja: 'ソフトウェアの世界は、おおまかに 3 つの職能で回っていると感じている。データを安全に動かすエンジニア、そこからモデルを生むデータサイエンティスト、出来上がったものを届けて声を拾うビジネスサイド。必要に応じて、ハードウェアやロボティクスが物理層として加わる。せめてエンジニアとサイエンティストの両輪くらいは、自分の手で回せる人になっていきたい。',
+      ja: 'ソフトウェアの世界は、おおまかに 3 つの職能で回っていると感じています。データを安全に動かすエンジニア、そこからモデルを生むデータサイエンティスト、出来上がったものを届けて声を拾うビジネスサイド。必要に応じて、ハードウェアやロボティクスが物理層として加わります。せめてエンジニアとサイエンティストの両輪くらいは、自分の手で回せる人になっていきたいです。',
       en: 'I see the world running on three roles: software engineers who move data rule-based, data scientists who create models from that data, and business people who deliver the products and capture user needs. Physical domains (hardware/robotics) join when needed. I aim to be the kind of person who can personally cover both SWE and DS.',
     } as T,
     dreamTitle: { ja: '研究の先にある夢 — 個人の再現', en: 'A Dream Beyond Research — Recreating People' } as T,
     dreamBody: {
-      ja: 'Black Mirror が描いたように、人の声や人格をデジタルで写し取る技術に、ずっと惹かれている。全二重音声対話システムの研究の先に、いつか失われた人ともう一度話せる未来があれば、と思っている。',
+      ja: 'Black Mirror が描いたように、人の声や人格をデジタルで写し取る技術に、ずっと惹かれています。全二重音声対話システムの研究の先に、いつか失われた人ともう一度話せる未来があれば、と思っています。',
       en: 'Inspired by Black Mirror, I want to digitally recreate human voice conversations and personalities. Beyond my research on full-duplex spoken dialogue systems, I imagine a future where we can speak once more with those we have lost.',
     } as T,
     observationTitle: { ja: 'ブラックボックスでも、データが揃えば再現できてしまう', en: 'Black Box or Not — Enough Data Will Reproduce It' } as T,
     observationBody: {
-      ja: '音声対話と自動運転を近くで見ていて感じる、少し居心地の悪い気づきがある。入力と出力さえ揃えば、たとえ中身がブラックボックスでも、ノイズの多い大量のデータと、少しの整ったデータを積むだけで、その振る舞いをかなり再現できてしまうらしい。人間らしい対話や運転も、例外ではなさそうだと感じている。',
+      ja: '音声対話と自動運転を近くで見ていて、少し居心地の悪い気づきがあります。入力と出力さえ揃えば、たとえ中身がブラックボックスでも、ノイズの多い大量のデータと、少しの整ったデータを積むだけで、その振る舞いをかなり再現できてしまうようです。人間らしい対話や運転も、例外ではなさそうだと感じています。',
       en: 'An observation from watching spoken dialogue research and self-driving closely: once you fix the input and output, even if the model itself is a black box, simply stacking massive noisy data together with clean data is enough to produce a model that — bittersweetly — reproduces the behavior (with some variance in quality). This applies to "intelligent-looking" behavior like conversation and driving too.',
     } as T,
     readMore: { ja: '続きを読む', en: 'Read more' } as T,
     close: { ja: '閉じる', en: 'Close' } as T,
     visionArticle: {
-      ja: `長期的に向き合いたいのは、衣・食・住という生きるための土台を、もう少し技術で軽くすることだと思っている。生まれてから死ぬまで避けて通れない営みに、いまも本当に膨大な人手が注がれている。服を縫う人、食事を作る人、家を建てる人、それらを届ける物流。どれも欠かせない営みだけれど、AI とロボティクスの進歩で、機械に任せられる範囲は静かに広がってきている。
+      ja: `長期的に向き合いたいのは、衣・食・住という生きるための土台を、もう少し技術で軽くすることだと思っています。生まれてから死ぬまで避けて通れない営みに、いまも本当に膨大な人手が注がれています。服を縫う人、食事を作る人、家を建てる人、それらを届ける物流。どれも欠かせない営みですが、AI とロボティクスの進歩で、機械に任せられる範囲は静かに広がってきています。
 
-その先に、現実世界の基盤をソフトウェアから呼び出せる「World API」のような仕組みを、漠然と夢想している。order_meal(), provide_housing(needs), deliver_clothes(style) — こうした粒度で物理世界を抽象化できれば、人は「何を作りたいか」にだけ向き合えるようになるんじゃないか、と思う。
+その先に、現実世界の基盤をソフトウェアから呼び出せる「World API」のような仕組みを、漠然と夢想しています。order_meal(), provide_housing(needs), deliver_clothes(style) — こうした粒度で物理世界を抽象化できれば、人は「何を作りたいか」にだけ向き合えるようになるのではないか、と思っています。
 
-もちろん、これは一人で実現できる話ではないし、形になるまでには何十年もかかるはずだ。それでも、データ基盤とモデルの両方を地道に触り続けて、その循環のどこか一部分でも、自分の手で作れるようになっていけたらと願っている。`,
+もちろん、これは一人で実現できる話ではありませんし、形になるまでには何十年もかかるはずです。それでも、データ基盤とモデルの両方を地道に触り続けて、その循環のどこか一部分でも、自分の手で作れるようになっていけたら、と願っています。`,
       en: `My long-term vision is to use technology to automate the foundations of human life. Clothing, food, housing — the essentials nobody can escape from birth to death. If these can be automated, humans can truly spend their time on creative activities.
 
 Today's world pours enormous human resources into these foundations. People who make clothes, prepare food, build houses, and the logistics that deliver all of it. All indispensable, but AI and robotics are rapidly expanding what can be automated.
@@ -78,17 +78,17 @@ When I say "World API," I mean a future where these real-world foundations can b
 That's why I'm now gaining experience in both data infrastructure and model development. One without the other isn't enough. Flow trusted data from the real world, build decision-making models from it, return actions to the physical world — I want to be on the side that builds this loop.`,
     } as T,
     worldviewArticle: {
-      ja: `ソフトウェアの世界は、おおまかに 3 つの職能で回っていると感じている。
+      ja: `ソフトウェアの世界は、おおまかに 3 つの職能で回っていると感じています。
 
-1 つめは、データを動かすソフトウェアエンジニア。データベースに入れ、API で取り出し、画面に届ける。世界中のデータを、どう安全に・正しく・速く流すかを突き詰める仕事だと理解している。
+1 つめは、データを動かすソフトウェアエンジニア。データベースに入れ、API で取り出し、画面に届けます。世界中のデータを、どう安全に・正しく・速く流すかを突き詰める仕事だと理解しています。
 
-2 つめは、データから価値を引き出すデータサイエンティスト。流れているデータをモデルに食わせ、予測や分類や生成を通じて、人にとって意味のある信号に変える。ルールでは書ききれない知能を、統計と機械学習で形にする役割だと思う。
+2 つめは、データから価値を引き出すデータサイエンティスト。流れているデータをモデルに食わせ、予測や分類や生成を通じて、人にとって意味のある信号に変えます。ルールでは書ききれない知能を、統計と機械学習で形にする役割だと思っています。
 
-3 つめは、出来上がったものをユーザーに届けるビジネスサイド。マーケター、セールス、事業責任者。ユーザーの声を拾い、要求として開発に戻す。技術と市場をつなぐ、欠かせない役割だと感じている。
+3 つめは、出来上がったものをユーザーに届けるビジネスサイド。マーケター、セールス、事業責任者。ユーザーの声を拾い、要求として開発に戻します。技術と市場をつなぐ、欠かせない役割だと感じています。
 
-この 3 つが噛み合って、ようやく「使われる」ソフトウェアになる。ハードウェアやロボティクスが加わると、ここに物理層が乗る。すべてが揃って、ようやく「衣食住の自動化」のような遠い目標にも、少しずつ手が届きはじめる気がしている。
+この 3 つが噛み合って、ようやく「使われる」ソフトウェアになります。ハードウェアやロボティクスが加わると、ここに物理層が乗ります。すべてが揃って、ようやく「衣食住の自動化」のような遠い目標にも、少しずつ手が届きはじめる気がしています。
 
-全部を一人で背負うのは到底無理だと分かっているけれど、せめてエンジニアとサイエンティストの 2 つだけは分断せず、データが生まれる瞬間から推論が返る瞬間まで、ひと通り追える人にはなっていきたい。`,
+全部を一人で背負うのは到底無理だと分かっていますが、せめてエンジニアとサイエンティストの 2 つだけは分断せず、データが生まれる瞬間から推論が返る瞬間まで、ひと通り追える人にはなっていきたいです。`,
       en: `I see software-driven society running on three core roles.
 
 1. People who move data rule-based — software engineers. They insert data into databases, retrieve it through APIs, display it on user screens. Professionals who pursue the question of how to move existing data safely, correctly, and quickly.
@@ -102,15 +102,15 @@ Only when these three come together does software that "gets used" come into the
 I want to be someone who can personally turn both the SWE and DS wheels. Without splitting these two, I want to be the kind of person who can touch every step — from the moment data is born to the moment the model returns an inference.`,
     } as T,
     dreamArticle: {
-      ja: `Black Mirror に "Be Right Back" というエピソードがある。亡くなった恋人の SNS ログから、AI が本人の声や人格、振る舞いまで再現してしまう、という話だ。見終わってからずっと、頭から離れなかった。
+      ja: `Black Mirror に "Be Right Back" というエピソードがあります。亡くなった恋人の SNS ログから、AI が本人の声や人格、振る舞いまで再現してしまう、という話です。見終わってからずっと、頭から離れませんでした。
 
-ただの SF として消費できなかったのは、いま研究している技術の延長線上に、これに近い未来が見えてしまうからだと思う。
+ただの SF として消費できなかったのは、いま研究している技術の延長線上に、これに近い未来が見えてしまうからだと思います。
 
-普段は全二重音声対話システムの研究をしている。7B パラメータほどのモデルを日本語データで学習し、相槌を打ったり、遮って話したり、黙って聞いたりできる AI を作っている。この方向の研究が進んだ先には、ある人の音声・チャット・映像が十分にあれば、その人の話し方や考え方をかなりの精度で写し取れる未来が来るのではないか、と感じている。
+普段は全二重音声対話システムの研究をしています。7B パラメータほどのモデルを日本語データで学習し、相槌を打ったり、遮って話したり、黙って聞いたりできる AI を作っています。この方向の研究が進んだ先には、ある人の音声・チャット・映像が十分にあれば、その人の話し方や考え方をかなりの精度で写し取れる未来が来るのではないか、と感じています。
 
-もちろん、ここには倫理的に重い問題がいくつもある。本人の同意、遺された人の気持ち、そもそも死をどう受け入れるか。決して簡単な話ではないと分かっている。それでも、もし「もう一度話せる」未来があり得るなら、その実現に少しでも関われる側にいたい、というのが正直な気持ちだ。
+もちろん、ここには倫理的に重い問題がいくつもあります。本人の同意、遺された人の気持ち、そもそも死をどう受け入れるか。決して簡単な話ではないと分かっています。それでも、もし「もう一度話せる」未来があり得るなら、その実現に少しでも関われる側にいたい、というのが正直な気持ちです。
 
-「もう一度あの人と話したい」という感情は、形は違えど誰の中にも残っているものだと思う。研究者としての好奇心だけでなく、その感情にいつか技術で応えられるのなら、応える努力をする価値はあるんじゃないか、と感じている。`,
+「もう一度あの人と話したい」という感情は、形は違えど誰の中にも残っているものだと思います。研究者としての好奇心だけでなく、その感情にいつか技術で応えられるのなら、応える努力をする価値はあるのではないか、と感じています。`,
       en: `There's a Black Mirror episode called "Be Right Back." An AI recreates a deceased partner's voice, personality, and behavior from their social media logs. After watching, I couldn't forget it.
 
 That's because this isn't just sci-fi — it's a future on the extension of the technology I research today.
@@ -127,17 +127,17 @@ Beyond researcher curiosity, I believe the feeling of "I want to talk to that pe
       en: 'Image: a future where voice, personality, and behavior of the lost are recreated',
     } as T,
     observationArticle: {
-      ja: `音声対話モデルの研究と、自動運転の進化を近くで見ていて、少し落ち着かない気持ちになる気づきがあった。
+      ja: `音声対話モデルの研究と、自動運転の進化を近くで見ていて、少し落ち着かない気持ちになる気づきがありました。
 
-入力と出力さえ決まってしまえば、たとえモデルの中身がブラックボックスでも、ノイズまみれの大量のデータと、少量の整ったデータを積むだけで、その振る舞いをかなり再現できるモデルが組み上がってしまうらしい、ということだ。
+入力と出力さえ決まってしまえば、たとえモデルの中身がブラックボックスでも、ノイズまみれの大量のデータと、少量の整ったデータを積むだけで、その振る舞いをかなり再現できるモデルが組み上がってしまうようです。
 
-音声対話なら、人間同士の対話ログを大量に食わせるほど、相槌の打ち方・ターンの取り合い・流暢さが、自然と立ち上がってくる。自動運転も同じで、膨大なドライブレコーダー映像を学習させれば、それらしい運転判断が出てくるようになる。
+音声対話なら、人間同士の対話ログを大量に食わせるほど、相槌の打ち方・ターンの取り合い・流暢さが、自然と立ち上がってきます。自動運転も同じで、膨大なドライブレコーダー映像を学習させれば、それらしい運転判断が出てくるようになります。
 
-ここに「悲しいかな」と付け加えたくなるのは、人間の知能や判断が、何か特別な魔法というよりも、データの分布を学習した関数近似で、かなりのところまで置き換えられてしまいそうだ、ということを示唆しているからだ。
+ここに「悲しいかな」と付け加えたくなるのは、人間の知能や判断が、何か特別な魔法というよりも、データの分布を学習した関数近似で、かなりのところまで置き換えられてしまいそうだ、ということを示唆しているからです。
 
-もちろん、調子の波はあるし、エッジケースで派手に失敗することもある。それでも平均的な振る舞いに限れば、十分なデータと計算資源さえあれば、近づけてしまえるらしい。
+もちろん、調子の波はありますし、エッジケースで派手に失敗することもあります。それでも平均的な振る舞いに限れば、十分なデータと計算資源さえあれば、近づけてしまえるようです。
 
-この感覚は、自分のキャリア選択の根っこになっている。もし「人間らしい振る舞い」に近づきたいなら、まずデータが集まり続ける場を整えるのが、いちばんの近道なのかもしれない。データエンジニアリングと MLOps に重心を置いているのは、そういう理由からだ。`,
+この感覚は、自分のキャリア選択の根っこになっています。もし「人間らしい振る舞い」に近づきたいなら、まずデータが集まり続ける場を整えるのが、いちばんの近道なのかもしれません。データエンジニアリングと MLOps に重心を置いているのは、そういう理由からです。`,
       en: `Watching spoken dialogue research and the evolution of self-driving up close, I've arrived at an uncomfortable insight.
 
 "Once you fix the input and output, even if the model itself is a black box, simply stacking massive noisy data with clean data is enough to produce a model that reproduces the behavior."
