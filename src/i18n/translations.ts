@@ -125,7 +125,7 @@ Beyond researcher curiosity, I believe the feeling of "I want to talk to that pe
       en: 'Image: a future where voice, personality, and behavior of the lost are recreated',
     } as T,
     observationArticle: {
-      ja: `音声対話モデルの研究と、自動運転の進化を近くで見ていて、少し落ち着かない気持ちになる気づきがありました。
+      ja: `音声対話モデルの研究と、自動運転の進化を近くで見ていて感じたことがあります。
 
 入力と出力さえ決まってしまえば、たとえモデルの中身がブラックボックスでも、ノイズまみれの大量のデータと、少量の整ったデータを積むだけで、その振る舞いをかなり再現できるモデルが組み上がってしまうようです。
 
