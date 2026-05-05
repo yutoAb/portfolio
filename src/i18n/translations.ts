@@ -58,7 +58,7 @@ const translations = {
     } as T,
     observationTitle: { ja: 'ブラックボックスでも、データが揃えば再現できてしまう', en: 'Black Box or Not — Enough Data Will Reproduce It' } as T,
     observationBody: {
-      ja: '音声対話と自動運転を近くで見ていて、少し居心地の悪い気づきがあります。入力と出力さえ揃えば、たとえ中身がブラックボックスでも、ノイズの多い大量のデータと、少しの整ったデータを積むだけで、その振る舞いをかなり再現できてしまうようです。人間らしい対話や運転も、例外ではなさそうだと感じています。',
+      ja: '音声対話と自動運転を近くで見ていて感じたことです。入力と出力さえ揃えば、たとえ中身がブラックボックスでも、ノイズの多い大量のデータと、少しの整ったデータを積むだけで、その振る舞いをかなり再現できてしまうようです。人間らしい対話や運転も、例外ではなさそうだと感じています。',
       en: 'An observation from watching spoken dialogue research and self-driving closely: once you fix the input and output, even if the model itself is a black box, simply stacking massive noisy data together with clean data is enough to produce a model that — bittersweetly — reproduces the behavior (with some variance in quality). This applies to "intelligent-looking" behavior like conversation and driving too.',
     } as T,
     readMore: { ja: '続きを読む', en: 'Read more' } as T,
@@ -102,9 +102,7 @@ Only when these three come together does software that "gets used" come into the
 I want to be someone who can personally turn both the SWE and DS wheels. Without splitting these two, I want to be the kind of person who can touch every step — from the moment data is born to the moment the model returns an inference.`,
     } as T,
     dreamArticle: {
-      ja: `Black Mirror に "Be Right Back" というエピソードがあります。亡くなった恋人の SNS ログから、AI が本人の声や人格、振る舞いまで再現してしまう、という話です。見終わってからずっと、頭から離れませんでした。
-
-ただの SF として消費できなかったのは、いま研究している技術の延長線上に、これに近い未来が見えてしまうからだと思います。
+      ja: `Black Mirror に "Be Right Back" というエピソードがあります。亡くなった恋人の SNS ログから、AI が本人の声や人格、振る舞いまで再現してしまう、という話です。研究活動は SF を再現することにあるんだな、と感じたのはこのドラマを観てからです。
 
 普段は全二重音声対話システムの研究をしています。7B パラメータほどのモデルを日本語データで学習し、相槌を打ったり、遮って話したり、黙って聞いたりできる AI を作っています。この方向の研究が進んだ先には、ある人の音声・チャット・映像が十分にあれば、その人の話し方や考え方をかなりの精度で写し取れる未来が来るのではないか、と感じています。
 
