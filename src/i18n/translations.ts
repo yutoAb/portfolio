@@ -66,14 +66,14 @@ const translations = {
     visionArticle: {
       ja: `長期的に向き合いたいのは、衣・食・住という生きるための土台を、もう少し技術で軽くすることだと思っています。生まれてから死ぬまで避けて通れない営みに、いまも本当に膨大な人手が注がれています。服を縫う人、食事を作る人、家を建てる人、それらを届ける物流。どれも欠かせない営みですが、AI とロボティクスの進歩で、機械に任せられる範囲は静かに広がってきています。
 
-その先に、現実世界の基盤をソフトウェアから呼び出せる「World API」のような仕組みを、漠然と夢想しています。order_meal(), provide_housing(needs), deliver_clothes(style) — こうした粒度で物理世界を抽象化できれば、人は「何を作りたいか」にだけ向き合えるようになるのではないか、と思っています。
+その先に、現実世界の基盤をソフトウェアから呼び出せる「World API」のような仕組みを、漠然と夢想しています。order_meal(), provide_housing(needs), deliver_clothes(style) — こうした粒度で物理世界を抽象化できれば、人は本当に向き合いたいことにだけ、時間を使えるようになるのではないか、と思っています。何に価値を感じるかは人それぞれ違うはずなので、自分にとって「価値」だと思えることに、それぞれが時間を注げる世界になればいい、と願っています。
 
 もちろん、これは一人で実現できる話ではありませんし、形になるまでには何十年もかかるはずです。それでも、データ基盤とモデルの両方を地道に触り続けて、その循環のどこか一部分でも、自分の手で作れるようになっていけたら、と願っています。`,
       en: `My long-term vision is to use technology to automate the foundations of human life. Clothing, food, housing — the essentials nobody can escape from birth to death. If these can be automated, humans can truly spend their time on creative activities.
 
 Today's world pours enormous human resources into these foundations. People who make clothes, prepare food, build houses, and the logistics that deliver all of it. All indispensable, but AI and robotics are rapidly expanding what can be automated.
 
-When I say "World API," I mean a future where these real-world foundations can be invoked as APIs from software. order_meal(), provide_housing(needs), deliver_clothes(style) — if we can abstract the physical world this way, humans can focus purely on "what do we want to create?"
+When I say "World API," I mean a future where these real-world foundations can be invoked as APIs from software. order_meal(), provide_housing(needs), deliver_clothes(style) — if we can abstract the physical world this way, people can spend their time only on what they truly want to face. What counts as "value" differs from person to person, so I hope for a world where each of us can pour our time into whatever we ourselves feel is valuable.
 
 That's why I'm now gaining experience in both data infrastructure and model development. One without the other isn't enough. Flow trusted data from the real world, build decision-making models from it, return actions to the physical world — I want to be on the side that builds this loop.`,
     } as T,
