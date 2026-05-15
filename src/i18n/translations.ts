@@ -209,6 +209,7 @@ This insight has become the foundation of my career. If the goal is "human-like 
   },
   projects: {
     sectionTitle: { ja: 'プロジェクト', en: 'Projects' } as T,
+    airflowMoshi: { ja: 'ABCI HPC (PBS Pro) 上で動く LLM-jp-Moshi 学習パイプラインの Apache Airflow DAG。SSH ベースの qsub/qstat 連携 (PBSJobOperator)、動的タスクマッピングによる 100 並列 TTS 合成パイプライン (約 46K wav / 530 時間)、preemption リトライ付き 7 段階学習 DAG を実装。', en: 'Apache Airflow DAGs for the LLM-jp-Moshi training pipeline on ABCI HPC (PBS Pro). Implemented a PBSJobOperator (SSH-based qsub/qstat integration with preemption-aware exit handling), a 100-way fan-out TTS synthesis pipeline using dynamic task mapping (~46K wavs / ~530h audio), and a 7-stage training DAG with retry-on-preemption.' } as T,
     speechArena: { ja: 'リアルタイム全二重音声対話モデルのための人間中心A/B評価プラットフォーム。ブラインド比較とBradley-Terryランキングの統合を実現。', en: 'A human-centric A/B evaluation platform for real-time full-duplex spoken dialogue models. Integrates blind comparison with Bradley-Terry ranking.' } as T,
     changemakers: { ja: 'GPT-Realtime APIを活用したAI医療相談・予約アプリ。リアルタイム音声インタラクションによる病院の問診を実現。', en: 'An AI medical consultation & booking app powered by GPT-Realtime API. Enables hospital consultations via real-time voice interaction.' } as T,
     dreamBlossom: { ja: '個人の夢や目標を共有・追跡するWebアプリ。目標達成時に桜のアニメーションが咲く。', en: 'A web app for sharing and tracking personal dreams and goals. Cherry blossom animations bloom when goals are achieved.' } as T,

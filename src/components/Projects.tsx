@@ -13,6 +13,12 @@ type Project = {
 
 const projects: Project[] = [
   {
+    title: 'airflow-moshi-orchestration',
+    descKey: 'airflowMoshi',
+    tech: ['Apache Airflow', 'PBS Pro', 'ABCI HPC', 'Python', 'MLOps'],
+    repo: 'https://github.com/abePclWaseda/airflow-moshi-orchestration',
+  },
+  {
     title: 'Speech Arena',
     descKey: 'speechArena',
     tech: ['Next.js', 'PostgreSQL', 'Prisma', 'Cloudflare Tunnel', 'GPU Inference'],
