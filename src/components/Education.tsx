@@ -23,6 +23,18 @@ const educationKeys: TimelineEntryKeys[] = [
   },
 ]
 
+type Certification = {
+  date: string
+  nameKey: keyof typeof import('../i18n/translations').default.education
+  planned?: boolean
+}
+
+const certifications: Certification[] = [
+  { date: '2024/12', nameKey: 'cert0Name' },
+  { date: '2026/03', nameKey: 'cert1Name' },
+  { date: '2026', nameKey: 'cert2Name', planned: true },
+]
+
 type AwardKeys = {
   year: string
   titleKey: keyof typeof import('../i18n/translations').default.education
@@ -107,6 +119,26 @@ export default function Education() {
                   <p className="font-semibold text-lg">{t('education', item.titleKey)}</p>
                   {item.subtitleKey && <p className="text-white/80">{t('education', item.subtitleKey)}</p>}
                   {item.detailKey && <p className="text-sm text-white/60 mt-1">{t('education', item.detailKey)}</p>}
+                </div>
+              ))}
+            </div>
+
+            <h3 className="text-xl font-bold mt-10 mb-6">{t('education', 'certificationsLabel')}</h3>
+            <div className="space-y-3">
+              {certifications.map((c, i) => (
+                <div key={i} className="p-4 rounded-lg bg-white/10 border border-white/20">
+                  <div className="flex items-center gap-2 mb-1">
+                    {c.planned ? (
+                      <span className="text-xs px-2 py-0.5 rounded-full bg-blue-400/20 text-blue-100 whitespace-nowrap">
+                        {t('education', 'certPlanned')} {c.date}
+                      </span>
+                    ) : (
+                      <span className="text-xs px-2 py-0.5 rounded-full bg-white/15 text-white/80 whitespace-nowrap">
+                        {c.date}
+                      </span>
+                    )}
+                  </div>
+                  <p className="font-semibold text-sm">{t('education', c.nameKey)}</p>
                 </div>
               ))}
             </div>
