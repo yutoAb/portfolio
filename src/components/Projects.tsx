@@ -2,8 +2,11 @@ import { useState } from 'react'
 import { useInView } from './useInView'
 import { useT } from '../i18n/useT'
 
+type Category = 'personal' | 'team' | 'research'
+
 type Project = {
   title: string
+  category: Category
   award?: string
   descKey: keyof typeof import('../i18n/translations').default.projects
   tech: string[]
@@ -11,28 +14,50 @@ type Project = {
   repo?: string
 }
 
+const categoryStyle: Record<Category, { labelKey: 'categoryPersonal' | 'categoryTeam' | 'categoryResearch'; onDark: string; onLight: string }> = {
+  personal: {
+    labelKey: 'categoryPersonal',
+    onDark: 'bg-purple-400/20 text-purple-100',
+    onLight: 'bg-purple-100 text-purple-800',
+  },
+  team: {
+    labelKey: 'categoryTeam',
+    onDark: 'bg-emerald-400/20 text-emerald-100',
+    onLight: 'bg-emerald-100 text-emerald-800',
+  },
+  research: {
+    labelKey: 'categoryResearch',
+    onDark: 'bg-sky-400/20 text-sky-100',
+    onLight: 'bg-sky-100 text-sky-800',
+  },
+}
+
 const projects: Project[] = [
   {
     title: 'airflow-moshi-orchestration',
+    category: 'research',
     descKey: 'airflowMoshi',
     tech: ['Apache Airflow', 'PBS Pro', 'ABCI HPC', 'Python', 'MLOps'],
     repo: 'https://github.com/abePclWaseda/airflow-moshi-orchestration',
   },
   {
     title: 'Speech Arena',
+    category: 'research',
     descKey: 'speechArena',
     tech: ['Next.js', 'PostgreSQL', 'Prisma', 'Cloudflare Tunnel', 'GPU Inference'],
-    link: 'https://web-fawn-five-91.vercel.app/',
-    repo: 'https://github.com/kobas-lab/speech-arena',
+    link: 'https://speech-arena-next.vercel.app/',
+    repo: 'https://github.com/abePclWaseda/speech-arena-next',
   },
   {
     title: 'Changemakers',
+    category: 'team',
     award: 'PKSHA Hackathon Grand Prize',
     descKey: 'changemakers',
     tech: ['GPT-Realtime API', 'React', 'Voice AI'],
   },
   {
     title: 'Dream Blossom',
+    category: 'team',
     award: 'PR TIMES Hackathon 2025 Individual Excellence Award',
     descKey: 'dreamBlossom',
     tech: ['React', 'TypeScript', 'Animation'],
@@ -40,6 +65,7 @@ const projects: Project[] = [
   },
   {
     title: 'Global Mirai Parliament',
+    category: 'team',
     descKey: 'globalMirai',
     tech: ['Next.js', 'AI Chat', 'Civic Tech'],
     link: 'https://global-policies.vercel.app/',
@@ -47,6 +73,7 @@ const projects: Project[] = [
   },
   {
     title: 'Political Quiz App',
+    category: 'personal',
     descKey: 'politicalQuiz',
     tech: ['React', 'TypeScript', 'Multiplayer'],
     link: 'https://minhaya-web.pages.dev/',
@@ -54,6 +81,7 @@ const projects: Project[] = [
   },
   {
     title: "Father's Company Homepage",
+    category: 'personal',
     descKey: 'fatherCompany',
     tech: ['Next.js', 'MUI'],
     link: 'https://www.heiseiyusou.co.jp/',
@@ -85,11 +113,16 @@ export default function Projects() {
               <h3 className="text-lg font-bold mb-2 group-hover:text-purple-200 transition-colors">
                 {project.title}
               </h3>
-              {project.award && (
-                <span className="inline-block text-xs px-2 py-0.5 rounded-full bg-yellow-500/20 text-yellow-200 mb-2">
-                  {project.award}
+              <div className="flex flex-wrap gap-1.5 mb-2">
+                <span className={`inline-block text-xs px-2 py-0.5 rounded-full ${categoryStyle[project.category].onDark}`}>
+                  {t('projects', categoryStyle[project.category].labelKey)}
                 </span>
-              )}
+                {project.award && (
+                  <span className="inline-block text-xs px-2 py-0.5 rounded-full bg-yellow-500/20 text-yellow-200">
+                    {project.award}
+                  </span>
+                )}
+              </div>
               <p className="text-sm text-white/60 line-clamp-2">{t('projects', project.descKey)}</p>
               <div className="flex flex-wrap gap-1.5 mt-3">
                 {project.tech.slice(0, 3).map((tc) => (
@@ -113,11 +146,16 @@ export default function Projects() {
             onClick={(e) => e.stopPropagation()}
           >
             <h3 className="text-xl font-bold mb-1">{selected.title}</h3>
-            {selected.award && (
-              <span className="inline-block text-xs px-2 py-0.5 rounded-full bg-yellow-100 text-yellow-800 mb-3">
-                {selected.award}
+            <div className="flex flex-wrap gap-1.5 mb-3">
+              <span className={`inline-block text-xs px-2 py-0.5 rounded-full ${categoryStyle[selected.category].onLight}`}>
+                {t('projects', categoryStyle[selected.category].labelKey)}
               </span>
-            )}
+              {selected.award && (
+                <span className="inline-block text-xs px-2 py-0.5 rounded-full bg-yellow-100 text-yellow-800">
+                  {selected.award}
+                </span>
+              )}
+            </div>
             <p className="mb-4 text-gray-700">{t('projects', selected.descKey)}</p>
             <div className="flex flex-wrap gap-1.5 mb-4">
               {selected.tech.map((tc) => (
