@@ -119,11 +119,30 @@ I know the ethical difficulty — consent, grief, accepting death. Even so, if t
 
 Beyond researcher curiosity, I believe the feeling of "I want to talk to that person one more time" is something everyone carries. If technology can answer that, I think it's worth answering.`,
     } as T,
+    visionImageAlt: { ja: '衣食住を World API から呼び出す未来のイメージ', en: 'Conceptual image of a future where daily essentials are invoked via a World API' } as T,
+    visionImageCaption: {
+      ja: 'イメージ：衣食住が API から動く世界で、人は「作ること」に時間を使う',
+      en: 'Image: in a world where daily essentials run via APIs, humans spend their time creating',
+    } as T,
     dreamImageAlt: { ja: '個人を再現する AI のイメージ', en: 'Conceptual image of an AI recreating an individual' } as T,
     dreamImageCaption: {
       ja: 'イメージ：失われた人を、声・人格・振る舞いまで再現する未来',
       en: 'Image: a future where voice, personality, and behavior of the lost are recreated',
     } as T,
+    observationImageAlt: { ja: 'ブラックボックスモデルがデータから人間らしい振る舞いを再現するイメージ', en: 'Conceptual image of a black-box model reproducing human-like behavior from data' } as T,
+    observationImageCaption: {
+      ja: 'イメージ：大量のデータが黒い箱を通り、人間らしい対話や運転として出てくる',
+      en: 'Image: massive data flows through a black box and emerges as human-like conversation and driving',
+    } as T,
+    worldviewImageAlt: { ja: 'SWE × DS × BIZ の関係を示す図', en: 'Diagram showing the relationship between SWE, DS, and BIZ' } as T,
+    worldviewImageCaption: {
+      ja: '図：3 つの職能と、その重なりに位置する MLOps 領域。土台としてハードウェアと物理層。',
+      en: 'Diagram: three professions with MLOps at their overlap, grounded in the hardware / physical layer.',
+    } as T,
+    worldviewDiagramSWESub: { ja: 'データを流す · API · インフラ', en: 'move data · APIs · infra' } as T,
+    worldviewDiagramDSSub: { ja: 'モデル · 予測 · 学習', en: 'models · prediction · learn' } as T,
+    worldviewDiagramBIZSub: { ja: '届ける · 声を拾う · ドメイン', en: 'deliver · capture user needs · domain' } as T,
+    worldviewDiagramPhysical: { ja: '物理層 — ハードウェア / ロボティクス', en: 'Physical Layer — Hardware / Robotics' } as T,
     observationArticle: {
       ja: `音声対話モデルの研究と、自動運転の進化を近くで見ていて感じたことがあります。
 

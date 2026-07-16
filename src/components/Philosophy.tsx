@@ -1,6 +1,7 @@
-import { useState } from 'react'
+import { useState, type ComponentType } from 'react'
 import { useInView } from './useInView'
 import { useT } from '../i18n/useT'
+import WorldviewDiagram from './philosophy/WorldviewDiagram'
 
 type PhilosophyKey = keyof typeof import('../i18n/translations').default.philosophy
 
@@ -9,11 +10,30 @@ type Block = {
   bodyKey: PhilosophyKey
   articleKey: PhilosophyKey
   image?: { src: string; altKey: PhilosophyKey; captionKey: PhilosophyKey }
+  diagram?: { Component: ComponentType; altKey: PhilosophyKey; captionKey: PhilosophyKey }
 }
 
 const blocks: Block[] = [
-  { titleKey: 'visionTitle', bodyKey: 'visionBody', articleKey: 'visionArticle' },
-  { titleKey: 'worldviewTitle', bodyKey: 'worldviewBody', articleKey: 'worldviewArticle' },
+  {
+    titleKey: 'visionTitle',
+    bodyKey: 'visionBody',
+    articleKey: 'visionArticle',
+    image: {
+      src: `${import.meta.env.BASE_URL}philosophy-vision.jpg`,
+      altKey: 'visionImageAlt',
+      captionKey: 'visionImageCaption',
+    },
+  },
+  {
+    titleKey: 'worldviewTitle',
+    bodyKey: 'worldviewBody',
+    articleKey: 'worldviewArticle',
+    diagram: {
+      Component: WorldviewDiagram,
+      altKey: 'worldviewImageAlt',
+      captionKey: 'worldviewImageCaption',
+    },
+  },
   {
     titleKey: 'dreamTitle',
     bodyKey: 'dreamBody',
@@ -24,7 +44,16 @@ const blocks: Block[] = [
       captionKey: 'dreamImageCaption',
     },
   },
-  { titleKey: 'observationTitle', bodyKey: 'observationBody', articleKey: 'observationArticle' },
+  {
+    titleKey: 'observationTitle',
+    bodyKey: 'observationBody',
+    articleKey: 'observationArticle',
+    image: {
+      src: `${import.meta.env.BASE_URL}philosophy-observation.jpg`,
+      altKey: 'observationImageAlt',
+      captionKey: 'observationImageCaption',
+    },
+  },
 ]
 
 export default function Philosophy() {
@@ -112,6 +141,20 @@ export default function Philosophy() {
                   </figcaption>
                 </figure>
               )}
+
+              {selected.block.diagram && (() => {
+                const Diagram = selected.block.diagram.Component
+                return (
+                  <figure className="mb-6 -mx-2">
+                    <div className="w-full rounded-lg border border-white/10 overflow-hidden">
+                      <Diagram />
+                    </div>
+                    <figcaption className="mt-2 text-xs text-white/50 text-center">
+                      {t('philosophy', selected.block.diagram.captionKey)}
+                    </figcaption>
+                  </figure>
+                )
+              })()}
 
               <p className="text-sm md:text-base text-white/85 leading-[1.9] whitespace-pre-line">
                 {t('philosophy', selected.block.articleKey)}
