@@ -43,7 +43,7 @@ const translations = {
     } as T,
     visionTitle: { ja: '衣食住の自動化と World API', en: 'Automating the Essentials & the World API' } as T,
     visionBody: {
-      ja: '衣・食・住の手間を技術で少しずつ減らし、人がもっと「作ること」に時間を使える社会になればと願っています。生活の土台をプログラムから動かせる「World API」のような仕組みを、いつか手元で扱えるようになれたら嬉しいです。',
+      ja: '衣・食・住の手間を技術で少しずつ減らし、人がもっと「創ること」に時間を使える社会になればと願っています。生活の土台をプログラムから動かせる「World API」のような仕組みを、いつか手元で扱えるようになれたら嬉しいです。',
       en: 'I want to use technology to automate life\'s essentials so that humans can focus on creative pursuits. My long-term goal is a "World API" that lets us orchestrate the foundations of living — clothing, food, and housing — as a first-class interface.',
     } as T,
     worldviewTitle: { ja: 'SWE × DS × BIZ の三位一体', en: 'The SWE × DS × BIZ Trinity' } as T,
@@ -121,7 +121,7 @@ Beyond researcher curiosity, I believe the feeling of "I want to talk to that pe
     } as T,
     visionImageAlt: { ja: '衣食住を World API から呼び出す未来のイメージ', en: 'Conceptual image of a future where daily essentials are invoked via a World API' } as T,
     visionImageCaption: {
-      ja: 'イメージ：衣食住が API から動く世界で、人は「作ること」に時間を使う',
+      ja: 'イメージ：衣食住が API から動く世界で、人は「創ること」に時間を使う',
       en: 'Image: in a world where daily essentials run via APIs, humans spend their time creating',
     } as T,
     dreamImageAlt: { ja: '個人を再現する AI のイメージ', en: 'Conceptual image of an AI recreating an individual' } as T,
