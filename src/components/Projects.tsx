@@ -38,7 +38,6 @@ const projects: Project[] = [
     category: 'research',
     descKey: 'airflowMoshi',
     tech: ['Apache Airflow', 'PBS Pro', 'ABCI HPC', 'Python', 'MLOps'],
-    repo: 'https://github.com/abePclWaseda/airflow-moshi-orchestration',
   },
   {
     title: 'Speech Arena',
@@ -46,7 +45,6 @@ const projects: Project[] = [
     descKey: 'speechArena',
     tech: ['Next.js', 'PostgreSQL', 'Prisma', 'Cloudflare Tunnel', 'GPU Inference'],
     link: 'https://speech-arena-next.vercel.app/',
-    repo: 'https://github.com/abePclWaseda/speech-arena-next',
   },
   {
     title: 'Changemakers',
@@ -72,19 +70,50 @@ const projects: Project[] = [
     repo: 'https://github.com/team-mirai-students/global-policies',
   },
   {
+    title: 'hanasu',
+    category: 'personal',
+    descKey: 'hanasu',
+    tech: ['WebGPU', 'On-device ASR/LLM/TTS', 'Vercel'],
+    link: 'https://hanasu-sigma.vercel.app/',
+    repo: 'https://github.com/yutoAb/hanasu',
+  },
+  {
+    title: 'g1-work-coach',
+    category: 'personal',
+    descKey: 'g1WorkCoach',
+    tech: ['Unitree G1', 'OpenAI Realtime API', 'rt/arm_sdk', 'Python'],
+    repo: 'https://github.com/yutoAb/g1-work-coach',
+  },
+  {
+    title: 'so101-lab',
+    category: 'personal',
+    descKey: 'so101Lab',
+    tech: ['LeRobot', 'SO-101', 'Python', 'MLOps'],
+    repo: 'https://github.com/yutoAb/so101-lab',
+  },
+  {
+    title: 'flowarrow',
+    category: 'personal',
+    descKey: 'flowarrow',
+    tech: ['Vanilla JS', 'Canvas', 'GIF'],
+    link: 'https://flow-arrow.com/',
+    repo: 'https://github.com/yutoAb/flowarrow',
+  },
+  {
+    title: 'system-design-puzzle',
+    category: 'personal',
+    descKey: 'systemDesignPuzzle',
+    tech: ['React Flow', 'TypeScript', 'Vercel'],
+    link: 'https://system-design-puzzle.vercel.app/',
+    repo: 'https://github.com/yutoAb/system-design-puzzle',
+  },
+  {
     title: 'Political Quiz App',
     category: 'personal',
     descKey: 'politicalQuiz',
     tech: ['React', 'TypeScript', 'Multiplayer'],
     link: 'https://minhaya-web.pages.dev/',
     repo: 'https://github.com/yutoAb/minhaya-app',
-  },
-  {
-    title: "Father's Company Homepage",
-    category: 'personal',
-    descKey: 'fatherCompany',
-    tech: ['Next.js', 'MUI'],
-    link: 'https://www.heiseiyusou.co.jp/',
   },
 ]
 
