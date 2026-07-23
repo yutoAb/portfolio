@@ -40,7 +40,7 @@ const projects: Project[] = [
     tech: ['Apache Airflow', 'PBS Pro', 'ABCI HPC', 'Python', 'MLOps'],
   },
   {
-    title: 'Speech Arena',
+    title: 'Spoken Dialogue Arena',
     category: 'research',
     descKey: 'speechArena',
     tech: ['Next.js', 'PostgreSQL', 'Prisma', 'Cloudflare Tunnel', 'GPU Inference'],
