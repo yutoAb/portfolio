@@ -12,6 +12,7 @@ type Project = {
   tech: string[]
   link?: string
   repo?: string
+  articles?: { title: string; url: string }[]
 }
 
 const categoryStyle: Record<Category, { labelKey: 'categoryPersonal' | 'categoryTeam' | 'categoryResearch'; onDark: string; onLight: string }> = {
@@ -90,6 +91,20 @@ const projects: Project[] = [
     descKey: 'so101Lab',
     tech: ['LeRobot', 'SO-101', 'Python', 'MLOps'],
     repo: 'https://github.com/yutoAb/so101-lab',
+    articles: [
+      {
+        title: 'Claude に SO-101 を「学習なし」で直接操縦させたら、模倣学習の必要性を理解した',
+        url: 'https://qiita.com/yuAbe/items/b498be1d93103d587a7a',
+      },
+      {
+        title: 'SO-101 で模倣学習、「実機で動かないポリシー」をデバッグして 60% まで動かしてみた',
+        url: 'https://qiita.com/yuAbe/items/9611280b08f5114f8816',
+      },
+      {
+        title: '事前学習VLA（SmolVLA）は「掴めない位置」を救うのか？ACTと同じ土俵で比べた',
+        url: 'https://qiita.com/yuAbe/items/6bad2384bc2233727d3e',
+      },
+    ],
   },
   {
     title: 'flowarrow',
@@ -98,6 +113,12 @@ const projects: Project[] = [
     tech: ['Vanilla JS', 'Canvas', 'GIF'],
     link: 'https://flow-arrow.com/',
     repo: 'https://github.com/yutoAb/flowarrow',
+    articles: [
+      {
+        title: 'Googleスライドで「流れる矢印」を作る方法【無料ツールを作った】',
+        url: 'https://qiita.com/yuAbe/items/193950568e02a7318c01',
+      },
+    ],
   },
   {
     title: 'system-design-puzzle',
@@ -153,12 +174,17 @@ export default function Projects() {
                 )}
               </div>
               <p className="text-sm text-white/60 line-clamp-2">{t('projects', project.descKey)}</p>
-              <div className="flex flex-wrap gap-1.5 mt-3">
+              <div className="flex flex-wrap gap-1.5 mt-3 items-center">
                 {project.tech.slice(0, 3).map((tc) => (
                   <span key={tc} className="text-xs px-2 py-0.5 rounded-full bg-white/10">
                     {tc}
                   </span>
                 ))}
+                {project.articles && (
+                  <span className="text-xs px-2 py-0.5 rounded-full bg-white/10 text-white/70">
+                    📝 {project.articles.length}
+                  </span>
+                )}
               </div>
             </button>
           ))}
@@ -193,6 +219,27 @@ export default function Projects() {
                 </span>
               ))}
             </div>
+            {selected.articles && (
+              <div className="mb-4">
+                <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">
+                  📝 {t('projects', 'relatedArticles')}
+                </div>
+                <ul className="space-y-1.5">
+                  {selected.articles.map((a) => (
+                    <li key={a.url}>
+                      <a
+                        href={a.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm text-blue hover:underline block leading-snug"
+                      >
+                        {a.title}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
             <div className="flex justify-between items-center">
               <div className="flex gap-4">
                 {selected.link && (

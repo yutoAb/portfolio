@@ -244,6 +244,7 @@ This insight has become the foundation of my career. If the goal is "human-like 
     systemDesignPuzzle: { ja: 'システム設計面接の題材を、ドラッグ&ドロップで組み立てて採点するブラウザゲーム。React Flow の自由キャンバス上でピースを繋ぎ、スコアと模範解答で学習できる。', en: 'A browser game where you assemble system design interview problems via drag & drop. Connect pieces on a free-form React Flow canvas and learn from scores and reference solutions.' } as T,
     viewApp: { ja: 'View App', en: 'View App' } as T,
     close: { ja: '閉じる', en: 'Close' } as T,
+    relatedArticles: { ja: '関連記事', en: 'Related Articles' } as T,
   },
   education: {
     sectionTitle: { ja: '学歴・資格・受賞・コミュニティ', en: 'Education, Certifications, Awards & Communities' } as T,
