@@ -125,7 +125,7 @@ const projects: Project[] = [
     category: 'personal',
     descKey: 'systemDesignPuzzle',
     tech: ['React Flow', 'TypeScript', 'Vercel'],
-    link: 'https://system-design-puzzle.vercel.app/',
+    link: 'https://interview.yutoabe.com/',
     repo: 'https://github.com/yutoAb/system-design-puzzle',
   },
   {
