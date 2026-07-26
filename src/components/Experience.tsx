@@ -12,6 +12,12 @@ type ExperienceEntry = {
 
 const experiences: ExperienceEntry[] = [
   {
+    period: '2026 Mar - Present',
+    companyKey: 'abeja_company',
+    roleKey: 'abeja_role',
+    descKeys: ['abeja_desc0'],
+  },
+  {
     period: '2026 Feb (2 weeks)',
     companyKey: 'gmo_company',
     roleKey: 'gmo_role',
