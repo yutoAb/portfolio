@@ -6,6 +6,7 @@ const links = [
   { href: 'https://github.com/yutoAb', label: 'GitHub', icon: 'github' },
   { href: 'https://linkedin.com/in/yutoAb', label: 'LinkedIn', icon: 'linkedin' },
   { href: 'https://qiita.com/yuAbe', label: 'Qiita', icon: 'qiita' },
+  { href: 'https://www.youtube.com/channel/UCQy9TEAprZARVlt-mvfkSOA', label: 'YouTube', icon: 'youtube' },
 ] as const
 
 const icons: Record<string, React.ReactNode> = {
@@ -32,6 +33,11 @@ const icons: Record<string, React.ReactNode> = {
   qiita: (
     <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
       <path d="M20.4 0H3.6A3.6 3.6 0 0 0 0 3.6v16.8A3.6 3.6 0 0 0 3.6 24h16.8a3.6 3.6 0 0 0 3.6-3.6V3.6A3.6 3.6 0 0 0 20.4 0zm-1.68 17.32-1.4 1.4-3.24-3.24a5.6 5.6 0 1 1 1.4-1.4l3.24 3.24zM10.72 6.9a3.62 3.62 0 1 0 0 7.24 3.62 3.62 0 0 0 0-7.24z" />
+    </svg>
+  ),
+  youtube: (
+    <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
     </svg>
   ),
 }
