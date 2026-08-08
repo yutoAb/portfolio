@@ -15,7 +15,7 @@ export default function Hero() {
         />
         <div className="animate-[slide-fade-in_1s_ease-out]">
           <h1 className="text-3xl md:text-5xl font-bold mb-2">
-            Yuto Abe
+            Yuto Abe / 阿部 雄斗
           </h1>
           <p className="text-lg text-white/70 mb-6">{t('hero', 'subtitle')}</p>
           <div className="mb-6 flex items-center gap-4">
