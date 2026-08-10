@@ -4,7 +4,7 @@ type T = Record<Lang, string>
 
 const translations = {
   hero: {
-    subtitle: { ja: '阿部 雄斗', en: 'Yuto Abe' } as T,
+    subtitle: { ja: 'ML リサーチャー & ソフトウェアエンジニア', en: 'ML Researcher & Software Engineer' } as T,
     bio1: {
       ja: '早稲田大学 基幹理工学術院 修士2年。小林・小川研究室にて、全二重音声対話システムの研究に取り組んでいます。',
       en: "M2 at Waseda University, Graduate School of Fundamental Science and Engineering. Researching full-duplex spoken dialogue systems in Kobayashi-Ogawa Lab.",

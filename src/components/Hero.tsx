@@ -1,13 +1,30 @@
+import { lazy, Suspense, useEffect, useState } from 'react'
 import SnsLinks from './SnsLinks'
 import profileImg from '../assets/2024_阿部雄斗.png'
 import { useT } from '../i18n/useT'
 
+const HeroBackground = lazy(() => import('./HeroBackground'))
+
 export default function Hero() {
   const t = useT()
+  const [enableBg, setEnableBg] = useState(false)
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    const isCoarse = window.matchMedia('(pointer: coarse)').matches
+    const isNarrow = window.matchMedia('(max-width: 640px)').matches
+    setEnableBg(!reduceMotion && !(isCoarse && isNarrow))
+  }, [])
 
   return (
-    <section className="min-h-screen bg-purple text-white flex items-center pt-16">
-      <div className="max-w-5xl mx-auto px-6 py-16 flex flex-col md:flex-row items-center gap-10">
+    <section className="relative min-h-screen bg-purple text-white flex items-center pt-16 overflow-hidden">
+      {enableBg && (
+        <Suspense fallback={null}>
+          <HeroBackground />
+        </Suspense>
+      )}
+      <div className="relative z-10 max-w-5xl mx-auto px-6 py-16 flex flex-col md:flex-row items-center gap-10">
         <img
           src={profileImg}
           alt="阿部 雄斗"
