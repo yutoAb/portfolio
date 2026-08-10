@@ -27,3 +27,23 @@ body {
     transform: translateY(0);
   }
 }
+
+@keyframes gentle-float {
+  0%, 100% { transform: translateY(0) rotate(-1deg); }
+  50% { transform: translateY(-22px) rotate(1deg); }
+}
+
+@keyframes glow-pulse {
+  0%, 100% { opacity: 0.6; scale: 1; }
+  50% { opacity: 1; scale: 1.18; }
+}
+
+@keyframes glow-pulse-inner {
+  0%, 100% { opacity: 0.7; scale: 0.95; }
+  50% { opacity: 1; scale: 1.12; }
+}
+
+@keyframes shimmer-orbit {
+  0% { rotate: 0deg; }
+  100% { rotate: 360deg; }
+}
