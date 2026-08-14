@@ -71,6 +71,13 @@ const projects: Project[] = [
     repo: 'https://github.com/team-mirai-students/global-policies',
   },
   {
+    title: 'Automation Landscape',
+    category: 'personal',
+    descKey: 'automationLandscape',
+    tech: ['Astro', 'React', 'Tailwind CSS 4', 'MDX', 'Cloudflare Pages'],
+    link: 'https://automation.yutoabe.com/',
+  },
+  {
     title: 'hanasu',
     category: 'personal',
     descKey: 'hanasu',
