@@ -1,4 +1,4 @@
-import { lazy, Suspense, useEffect, useState } from 'react'
+import { lazy, Suspense, useEffect, useMemo, useState } from 'react'
 import SnsLinks from './SnsLinks'
 import profileImg from '../assets/2024_阿部雄斗.png'
 import { useT } from '../i18n/useT'
@@ -7,20 +7,35 @@ import { useLang } from '../i18n/LangContext'
 const HeroBackground = lazy(() => import('./HeroBackground'))
 
 type Chunk = { direct: string } | { ime: string; kana: string }
+type Message = { chunks: Chunk[]; finalText: string }
 
-const JA_SEQUENCE: Chunk[] = [
-  { direct: 'DS ' },
-  { ime: 'wo', kana: 'を' },
-  { direct: ' ' },
-  { ime: 'bakkuguraundo', kana: 'バックグラウンド' },
-  { ime: 'toshita', kana: 'とした' },
-  { direct: ' SWE (MLOps ' },
-  { ime: 'enjinia', kana: 'エンジニア' },
-  { direct: ') ' },
-  { ime: 'wo', kana: 'を' },
-  { direct: ' ' },
-  { ime: 'mezashite', kana: '目指して' },
-  { ime: 'gakushuuchuu', kana: '学習中' },
+const JA_MESSAGES: Message[] = [
+  {
+    finalText: 'DS をバックグラウンドとした SWE (MLOps エンジニア) を目指して学習中',
+    chunks: [
+      { direct: 'DS ' },
+      { ime: 'wo', kana: 'を' },
+      { direct: ' ' },
+      { ime: 'bakkuguraundo', kana: 'バックグラウンド' },
+      { ime: 'toshita', kana: 'とした' },
+      { direct: ' SWE (MLOps ' },
+      { ime: 'enjinia', kana: 'エンジニア' },
+      { direct: ') ' },
+      { ime: 'wo', kana: 'を' },
+      { direct: ' ' },
+      { ime: 'mezashite', kana: '目指して' },
+      { ime: 'gakushuuchuu', kana: '学習中' },
+    ],
+  },
+  {
+    finalText: 'DS = 部分最適 / SWE = 全体最適',
+    chunks: [
+      { direct: 'DS = ' },
+      { ime: 'bubunsaiteki', kana: '部分最適' },
+      { direct: ' / SWE = ' },
+      { ime: 'zentaisaiteki', kana: '全体最適' },
+    ],
+  },
 ]
 
 type Frame = { confirmed: string; romaji: string; delay: number }
@@ -48,26 +63,44 @@ function buildFrames(chunks: Chunk[]): Frame[] {
   return frames
 }
 
-function useTypewriter(lang: 'ja' | 'en', finalText: string) {
+function useTypewriter(lang: 'ja' | 'en', enMessages: Message[]) {
   const [state, setState] = useState<{ confirmed: string; romaji: string }>({ confirmed: '', romaji: '' })
 
   useEffect(() => {
     if (typeof window === 'undefined') return
 
+    const messages = lang === 'ja' ? JA_MESSAGES : enMessages
+
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      setState({ confirmed: finalText, romaji: '' })
+      setState({ confirmed: messages[0].finalText, romaji: '' })
       return
     }
-
-    const chunks: Chunk[] = lang === 'ja' ? JA_SEQUENCE : [{ direct: finalText }]
-    const frames = buildFrames(chunks)
-    const finalConfirmed = frames[frames.length - 1]?.confirmed ?? finalText
 
     let cancelled = false
     let timer: number | undefined
     let phase: 'typing' | 'hold' | 'erasing' | 'pause' = 'typing'
     let idx = 0
     let eraseLen = 0
+    let prevMsgIdx = -1
+    let frames: Frame[] = []
+    let finalConfirmed = ''
+
+    function pickNext() {
+      if (messages.length <= 1) {
+        prevMsgIdx = 0
+      } else {
+        let next: number
+        do {
+          next = Math.floor(Math.random() * messages.length)
+        } while (next === prevMsgIdx)
+        prevMsgIdx = next
+      }
+      const msg = messages[prevMsgIdx]
+      frames = buildFrames(msg.chunks)
+      finalConfirmed = msg.finalText
+    }
+
+    pickNext()
 
     const schedule = (ms: number) => {
       timer = window.setTimeout(loop, ms)
@@ -103,6 +136,7 @@ function useTypewriter(lang: 'ja' | 'en', finalText: string) {
       } else {
         phase = 'typing'
         idx = 0
+        pickNext()
         schedule(0)
       }
     }
@@ -113,7 +147,7 @@ function useTypewriter(lang: 'ja' | 'en', finalText: string) {
       cancelled = true
       if (timer !== undefined) clearTimeout(timer)
     }
-  }, [lang, finalText])
+  }, [lang, enMessages])
 
   return state
 }
@@ -122,8 +156,17 @@ export default function Hero() {
   const t = useT()
   const { lang } = useLang()
   const [enableBg, setEnableBg] = useState(false)
-  const status = t('hero', 'status')
-  const typed = useTypewriter(lang, status)
+  const statusCareer = t('hero', 'status')
+  const statusPhilosophy = t('hero', 'statusPhilosophy')
+  const enMessages = useMemo<Message[]>(
+    () => [
+      { finalText: statusCareer, chunks: [{ direct: statusCareer }] },
+      { finalText: statusPhilosophy, chunks: [{ direct: statusPhilosophy }] },
+    ],
+    [statusCareer, statusPhilosophy],
+  )
+  const typed = useTypewriter(lang, enMessages)
+  const ariaLabel = `${statusCareer}. ${statusPhilosophy}.`
 
   useEffect(() => {
     if (typeof window === 'undefined') return
@@ -180,7 +223,7 @@ export default function Hero() {
           <div
             className="hero-bubble mt-8 opacity-0 flex md:justify-end"
             style={{ animation: 'hero-bubble-rise 0.7s cubic-bezier(0.16,1,0.3,1) 0.5s both, hero-bubble-idle 5.5s ease-in-out 3.6s infinite' }}
-            aria-label={status}
+            aria-label={ariaLabel}
           >
             <div
               className="relative inline-block px-4 py-2.5 text-sm text-white"

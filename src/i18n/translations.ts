@@ -9,6 +9,10 @@ const translations = {
       ja: 'DS をバックグラウンドとした SWE (MLOps エンジニア) を目指して学習中',
       en: 'Aiming for an SWE / MLOps role with a DS background',
     } as T,
+    statusPhilosophy: {
+      ja: 'DS = 部分最適 / SWE = 全体最適',
+      en: 'DS = local optimization / SWE = global optimization',
+    } as T,
     bio1: {
       ja: '早稲田大学 基幹理工学術院 修士2年。小林・小川研究室にて、全二重音声対話システムの研究に取り組んでいます。',
       en: "M2 at Waseda University, Graduate School of Fundamental Science and Engineering. Researching full-duplex spoken dialogue systems in Kobayashi-Ogawa Lab.",
