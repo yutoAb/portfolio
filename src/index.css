@@ -47,3 +47,23 @@ body {
   0% { rotate: 0deg; }
   100% { rotate: 360deg; }
 }
+
+@keyframes hero-bubble-rise {
+  0% { opacity: 0; transform: translateY(16px) scale(0.94); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes hero-caret-blink {
+  0%, 45% { opacity: 1; }
+  55%, 100% { opacity: 0; }
+}
+
+@keyframes hero-bubble-idle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-bubble { animation: none !important; opacity: 1 !important; transform: none !important; }
+  .hero-bubble-caret { animation: none !important; opacity: 0.5 !important; }
+}

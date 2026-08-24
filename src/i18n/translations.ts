@@ -5,6 +5,10 @@ type T = Record<Lang, string>
 const translations = {
   hero: {
     subtitle: { ja: 'ML リサーチャー & ソフトウェアエンジニア', en: 'ML Researcher & Software Engineer' } as T,
+    status: {
+      ja: 'DS をバックグラウンドとした SWE (MLOps エンジニア) を目指して学習中',
+      en: 'Aiming for an SWE / MLOps role with a DS background',
+    } as T,
     bio1: {
       ja: '早稲田大学 基幹理工学術院 修士2年。小林・小川研究室にて、全二重音声対話システムの研究に取り組んでいます。',
       en: "M2 at Waseda University, Graduate School of Fundamental Science and Engineering. Researching full-duplex spoken dialogue systems in Kobayashi-Ogawa Lab.",
