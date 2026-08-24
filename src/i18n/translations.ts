@@ -282,6 +282,8 @@ This insight has become the foundation of my career. If the goal is "human-like 
     award1Project: { ja: 'Changemakers', en: 'Changemakers' } as T,
     award2Title: { ja: 'PR TIMES ハッカソン 個人優秀賞', en: 'PR TIMES Hackathon Individual Excellence Award' } as T,
     award2Project: { ja: 'Dream Blossom', en: 'Dream Blossom' } as T,
+    award3Title: { ja: 'YANS 2026 ハッカソン 独自モデル部門 優秀賞', en: 'YANS 2026 Hackathon Excellence Award (Original Model Division)' } as T,
+    award3Project: { ja: 'チーム1「国際センタに牛タンを」', en: 'Team 1: 国際センタに牛タンを' } as T,
     communityMirai: { ja: 'チームみらい 学生運営エンジニアチーム', en: 'Team Mirai Student Engineer Team' } as T,
     communityMiraiDesc: { ja: 'テクノロジーと政策をつなぐシビックテック活動', en: 'Civic tech initiative bridging technology and policy' } as T,
     communityRecursion: { ja: 'Recursion', en: 'Recursion' } as T,
