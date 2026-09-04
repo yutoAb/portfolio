@@ -18,6 +18,12 @@ const experiences: ExperienceEntry[] = [
     descKeys: ['abeja_desc0'],
   },
   {
+    period: '2026 Aug - Sep',
+    companyKey: 'tieriv_company',
+    roleKey: 'tieriv_role',
+    descKeys: ['tieriv_desc0'],
+  },
+  {
     period: '2026 Feb (2 weeks)',
     companyKey: 'gmo_company',
     roleKey: 'gmo_role',
