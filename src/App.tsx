@@ -14,8 +14,11 @@ import Footer from './components/Footer'
 import Manga from './components/Manga'
 
 export default function App() {
-  if (typeof window !== 'undefined' && window.location.pathname === '/manga') {
-    return <Manga />
+  if (typeof window !== 'undefined') {
+    const path = window.location.pathname.replace(/\/+$/, '')
+    if (path === '/manga') {
+      return <Manga />
+    }
   }
 
   const heroRef = useRef<HTMLDivElement>(null)
