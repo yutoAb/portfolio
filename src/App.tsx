@@ -11,8 +11,13 @@ import Projects from './components/Projects'
 import Education from './components/Education'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import Manga from './components/Manga'
 
 export default function App() {
+  if (typeof window !== 'undefined' && window.location.pathname === '/manga') {
+    return <Manga />
+  }
+
   const heroRef = useRef<HTMLDivElement>(null)
   const philosophyRef = useRef<HTMLDivElement>(null)
   const skillsRef = useRef<HTMLDivElement>(null)
@@ -36,9 +41,11 @@ export default function App() {
     { label: t('nav', 'contact'), ref: contactRef },
   ]
 
+  const links = [{ label: t('nav', 'manga'), href: '/manga' }]
+
   return (
     <>
-      <Nav sections={sections} />
+      <Nav sections={sections} links={links} />
       <main>
         <div ref={heroRef}><Hero /></div>
         <div ref={philosophyRef}><Philosophy /></div>

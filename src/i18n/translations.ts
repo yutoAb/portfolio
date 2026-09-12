@@ -42,6 +42,7 @@ const translations = {
     projects: { ja: 'プロジェクト', en: 'Projects' } as T,
     education: { ja: '学歴', en: 'Education' } as T,
     contact: { ja: 'お問い合わせ', en: 'Contact' } as T,
+    manga: { ja: '漫画', en: 'Manga' } as T,
   },
   philosophy: {
     sectionTitle: { ja: '思想', en: 'Philosophy' } as T,
@@ -325,6 +326,54 @@ This insight has become the foundation of my career. If the goal is "human-like 
     mailtoName: { ja: 'お名前', en: 'Name' } as T,
     mailtoEmail: { ja: 'メールアドレス', en: 'Email' } as T,
     mailtoMessage: { ja: 'お問い合わせ内容', en: 'Message' } as T,
+  },
+  manga: {
+    pageTitle: { ja: '日本の漫画は最高！', en: 'Japanese Manga Are the Best!' } as T,
+    pageLead: {
+      ja: '自分の思考のクセや、これから向かいたい方向を、自分の言葉より先に言い当ててくれた漫画たち。ある勉強会 LT で使ったスライドから、3 作品を紹介します。',
+      en: "Manga that pinned down my way of thinking — and the direction I want to head — before I could put it into my own words. Three works, drawn from slides I used at a study-group lightning talk.",
+    } as T,
+    backToPortfolio: { ja: '← ポートフォリオに戻る', en: '← Back to portfolio' } as T,
+    imageAlt: { ja: '発表スライドの引用', en: 'Slide quoted from the talk' } as T,
+
+    kingdomTitle: { ja: 'キングダム', en: 'Kingdom' } as T,
+    kingdomMeta: { ja: '原泰久 著 / 46 巻', en: 'Yasuhisa Hara / Vol. 46' } as T,
+    kingdomLead: {
+      ja: '"法" とは何なのか — 昌文君と李斯の問答が、そのまま「モデルが体現すべき理想を、どう形にするか」に重なる。',
+      en: 'The dialogue between Shōbun-kun and Li Si about what "the law" truly is maps directly onto the question: how do you shape the ideals a model should embody?',
+    } as T,
+    kingdomTakeaway: {
+      ja: 'モデルにどう振舞ってほしいかを考えて、SFT に使う合成データは作るべき。損失関数もアーキテクチャも同様。今どきの構成をコピーしたり、Web クロールを流し込むだけでは、理想通りには動かない。',
+      en: 'Design the synthetic data for SFT while thinking about how you want the model to behave. Same goes for loss functions and architectures. Copying the latest stack or hosing in a web crawl will not get you there.',
+    } as T,
+
+    hiroakaTitle: { ja: '僕のヒーローアカデミア', en: 'My Hero Academia' } as T,
+    hiroakaMeta: { ja: '堀越耕平 著', en: 'Kōhei Horikoshi' } as T,
+    hiroakaLead: {
+      ja: 'ホークス「ヒーローが暇を持て余す世の中にしたいんです」— 自分の「衣食住の自動化」ビジョンの原型。',
+      en: 'Hawks: "I want a world where heroes have too much time on their hands." The prototype for my own "automate the essentials" vision.',
+    } as T,
+    hiroakaTakeaway: {
+      ja: '人間が暇を持て余す社会を作りたい。やりたくないことを仕事にして、働く必要のない社会。もっと創造的なことに時間を使えるように。(もちろん、やりたくて働いているのは別にいいんですが。)',
+      en: 'I want to build a society where people have plenty of free time. Where no one has to make a living from work they do not want to do. So we can spend more time on genuinely creative things. (Working because you want to is obviously fine.)',
+    } as T,
+
+    wtriggerTitle: { ja: 'ワールドトリガー', en: 'World Trigger' } as T,
+    wtriggerMeta: { ja: '葦原大介 著', en: 'Daisuke Ashihara' } as T,
+    wtriggerLead: {
+      ja: '空閑「刻む…んだ」— 自分が登れる小さいステップを作り続けること、その行動を「努力」と呼ぶ。',
+      en: 'Kuga: "You carve it out." Keep making the smallest step you can actually climb — that is what we call effort.',
+    } as T,
+    wtriggerTakeaway: {
+      ja: '昨日の自分より、なにか一つ成長 (新しいことを覚えた・経験した・価値観を得た) を続けていく。つまり「トライして、失敗する (経験) のループを、AI を使って回しまくること」が大事。',
+      en: "Grow by one thing each day — a new skill, a new experience, a new perspective. In other words, what matters is spinning the try-and-fail (experience) loop as fast as you can, with AI to accelerate it.",
+    } as T,
+
+    credit: {
+      ja: '出典: LT スライド「音声対話は「交互」をやめられるか」— 音声×HCI 勉強会 #03 (2026-09-24)、p24〜p26',
+      en: 'Source: LT slides "Can spoken dialogue stop being turn-taking?" — Speech × HCI Study Group #03 (2026-09-24), pp. 24–26',
+    } as T,
+    viewSlides: { ja: '発表スライド全体を見る', en: 'See the full presentation' } as T,
   },
 } as const
 

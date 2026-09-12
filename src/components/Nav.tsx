@@ -6,7 +6,12 @@ type Section = {
   ref: RefObject<HTMLDivElement | null>
 }
 
-export default function Nav({ sections }: { sections: Section[] }) {
+type Link = {
+  label: string
+  href: string
+}
+
+export default function Nav({ sections, links = [] }: { sections: Section[]; links?: Link[] }) {
   const [active, setActive] = useState(0)
   const [open, setOpen] = useState(false)
   const { lang, toggleLang } = useLang()
@@ -37,7 +42,7 @@ export default function Nav({ sections }: { sections: Section[] }) {
         <span className="text-white font-bold text-lg">yutoAb</span>
 
         {/* Desktop */}
-        <ul className="hidden md:flex gap-6">
+        <ul className="hidden md:flex gap-6 items-center">
           {sections.map((s, i) => (
             <li key={s.label}>
               <button
@@ -48,6 +53,16 @@ export default function Nav({ sections }: { sections: Section[] }) {
               >
                 {s.label}
               </button>
+            </li>
+          ))}
+          {links.map((l) => (
+            <li key={l.label}>
+              <a
+                href={l.href}
+                className="text-sm text-white/60 hover:text-white transition-colors"
+              >
+                {l.label}
+              </a>
             </li>
           ))}
         </ul>
@@ -91,6 +106,17 @@ export default function Nav({ sections }: { sections: Section[] }) {
               >
                 {s.label}
               </button>
+            </li>
+          ))}
+          {links.map((l) => (
+            <li key={l.label}>
+              <a
+                href={l.href}
+                className="block w-full text-left text-sm py-1 text-white/60 hover:text-white"
+                onClick={() => setOpen(false)}
+              >
+                {l.label}
+              </a>
             </li>
           ))}
         </ul>
