@@ -8,7 +8,8 @@
       (function () {
         var target = window.location.pathname + window.location.search + window.location.hash;
         try { sessionStorage.setItem('spa-redirect', target); } catch (e) {}
-        window.location.replace('/');
+        // Cache-bust so we always fetch the latest index.html + JS bundle, not a stale copy.
+        window.location.replace('/?_spa_cb=' + Date.now());
       })();
     </script>
   </head>
