@@ -107,7 +107,7 @@ export default function Education() {
           inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
         }`}
       >
-        <h2 className="text-3xl md:text-4xl font-bold mb-10">{t('education', 'sectionTitle')}</h2>
+        <h2 className="text-xl sm:text-3xl md:text-4xl font-bold mb-10 whitespace-nowrap">{t('education', 'sectionTitle')}</h2>
 
         <div className="grid md:grid-cols-3 gap-12">
           <div>

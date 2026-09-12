@@ -46,28 +46,28 @@ const translations = {
   philosophy: {
     sectionTitle: { ja: '思想', en: 'Philosophy' } as T,
     sectionLead: {
-      ja: '日々の研究や開発、観察を通して、少しずつ形になってきた世界の見方と、いつか向かっていきたい方向についてのメモ。',
+      ja: '日々の研究や開発の中で少しずつ見えてきた、世界の見方と、向かいたい方向についてのメモ。',
       en: 'My evolving way of seeing the world and the future I want to move toward — shaped by everyday research, engineering, and observation.',
     } as T,
     visionTitle: { ja: '衣食住の自動化と World API', en: 'Automating the Essentials & the World API' } as T,
     visionBody: {
-      ja: '衣・食・住の手間を技術で少しずつ減らし、人がもっと「創ること」に時間を使える社会になればと願っています。生活の土台をプログラムから動かせる「World API」のような仕組みを、いつか手元で扱えるようになれたら嬉しいです。',
-      en: 'I want to use technology to automate life\'s essentials so that humans can focus on creative pursuits. My long-term goal is a "World API" that lets us orchestrate the foundations of living — clothing, food, and housing — as a first-class interface.',
+      ja: '衣・食・住を技術で軽くして、人がもっと「創ること」に時間を使える社会をつくりたい。',
+      en: 'Automate the essentials of daily life so people can spend more time creating.',
     } as T,
     worldviewTitle: { ja: 'SWE × DS × BIZ の三位一体', en: 'The SWE × DS × BIZ Trinity' } as T,
     worldviewBody: {
-      ja: 'ソフトウェアの世界は、おおまかに 3 つの職能で回っていると感じています。データを安全に動かすエンジニア、そこからモデルを生むデータサイエンティスト、出来上がったものを届けて声を拾うビジネスサイド。必要に応じて、ハードウェアやロボティクスが物理層として加わります。せめてエンジニアとサイエンティストの両輪くらいは、自分の手で回せる人になっていきたいです。',
-      en: 'I see the world running on three roles: software engineers who move data rule-based, data scientists who create models from that data, and business people who deliver the products and capture user needs. Physical domains (hardware/robotics) join when needed. I aim to be the kind of person who can personally cover both SWE and DS.',
+      ja: 'SWE・DS・BIZ の 3 職能が噛み合って初めてソフトウェアは動く。せめて SWE と DS の両輪くらいは自分で回したい。',
+      en: 'Software only runs when SWE, DS, and BIZ mesh together — I want to personally turn at least the SWE and DS wheels.',
     } as T,
     dreamTitle: { ja: '研究の先にある夢 — 個人の再現', en: 'A Dream Beyond Research — Recreating People' } as T,
     dreamBody: {
-      ja: 'Black Mirror が描いたように、人の声や人格をデジタルで写し取る技術に、ずっと惹かれています。全二重音声対話システムの研究の先に、いつか失われた人ともう一度話せる未来があれば、と思っています。',
-      en: 'Inspired by Black Mirror, I want to digitally recreate human voice conversations and personalities. Beyond my research on full-duplex spoken dialogue systems, I imagine a future where we can speak once more with those we have lost.',
+      ja: '音声対話研究の先に、いつか失われた人ともう一度話せる未来があればと願っています。',
+      en: 'Beyond spoken dialogue research, I hope for a future where we can speak once more with those we\'ve lost.',
     } as T,
     observationTitle: { ja: 'ブラックボックスでも、データが揃えば再現できてしまう', en: 'Black Box or Not — Enough Data Will Reproduce It' } as T,
     observationBody: {
-      ja: '音声対話と自動運転を近くで見ていて感じたことです。入力と出力さえ揃えば、たとえ中身がブラックボックスでも、ノイズの多い大量のデータと、少しの整ったデータを積むだけで、その振る舞いをかなり再現できてしまうようです。人間らしい対話や運転も、例外ではなさそうだと感じています。',
-      en: 'An observation from watching spoken dialogue research and self-driving closely: once you fix the input and output, even if the model itself is a black box, simply stacking massive noisy data together with clean data is enough to produce a model that — bittersweetly — reproduces the behavior (with some variance in quality). This applies to "intelligent-looking" behavior like conversation and driving too.',
+      ja: '入出力さえ揃えば、大量のノイズデータと少しの整ったデータで、人間らしい振る舞いは案外再現できてしまうらしい。',
+      en: 'Given inputs and outputs, massive noisy data plus a little clean data can reproduce human-like behavior — surprisingly well.',
     } as T,
     readMore: { ja: '続きを読む', en: 'Read more' } as T,
     close: { ja: '閉じる', en: 'Close' } as T,
@@ -184,6 +184,8 @@ This insight has become the foundation of my career. If the goal is "human-like 
   },
   experience: {
     sectionTitle: { ja: '職務経歴', en: 'Experience' } as T,
+    showMore: { ja: 'もっと見る', en: 'Show more' } as T,
+    showLess: { ja: '閉じる', en: 'Show less' } as T,
     abeja_company: { ja: '株式会社ABEJA', en: 'ABEJA, Inc.' } as T,
     abeja_role: { ja: 'ソフトウェアエンジニア（内定者インターン）', en: 'Software Engineer (Pre-Hire Intern)' } as T,
     tieriv_company: { ja: '株式会社ティアフォー', en: 'TIER IV, Inc.' } as T,

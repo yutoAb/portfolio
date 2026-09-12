@@ -1,5 +1,8 @@
+import { useState } from 'react'
 import { useInView } from './useInView'
 import { useT } from '../i18n/useT'
+
+const MOBILE_INITIAL = 5
 
 type ExpKey = keyof typeof import('../i18n/translations').default.experience
 
@@ -82,6 +85,8 @@ const experiences: ExperienceEntry[] = [
 export default function Experience() {
   const { ref, inView } = useInView()
   const t = useT()
+  const [expanded, setExpanded] = useState(false)
+  const hasOverflow = experiences.length > MOBILE_INITIAL
 
   return (
     <section className="bg-blue text-white px-6 py-20">
@@ -94,26 +99,42 @@ export default function Experience() {
         <h2 className="text-3xl md:text-4xl font-bold mb-10">{t('experience', 'sectionTitle')}</h2>
 
         <div className="space-y-8">
-          {experiences.map((exp, i) => (
-            <div
-              key={i}
-              className="relative pl-8 border-l-2 border-white/30"
-            >
-              <div className="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-white/90" />
-              <p className="text-sm text-white/60 mb-1">{exp.period}</p>
-              <h3 className="text-xl font-bold">{t('experience', exp.companyKey)}</h3>
-              <p className="text-white/80 mb-2">{t('experience', exp.roleKey)}</p>
-              <ul className="space-y-1 text-sm text-white/70">
-                {exp.descKeys.map((key) => (
-                  <li key={key} className="flex gap-2">
-                    <span className="shrink-0 mt-1.5 w-1.5 h-1.5 rounded-full bg-white/40" />
-                    {t('experience', key)}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+          {experiences.map((exp, i) => {
+            const hiddenOnMobile = hasOverflow && !expanded && i >= MOBILE_INITIAL
+            return (
+              <div
+                key={i}
+                className={`relative pl-8 border-l-2 border-white/30 ${hiddenOnMobile ? 'hidden md:block' : ''}`}
+              >
+                <div className="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-white/90" />
+                <p className="text-sm text-white/60 mb-1">{exp.period}</p>
+                <h3 className="text-xl font-bold">{t('experience', exp.companyKey)}</h3>
+                <p className="text-white/80 mb-2">{t('experience', exp.roleKey)}</p>
+                <ul className="space-y-1 text-sm text-white/70">
+                  {exp.descKeys.map((key) => (
+                    <li key={key} className="flex gap-2">
+                      <span className="shrink-0 mt-1.5 w-1.5 h-1.5 rounded-full bg-white/40" />
+                      {t('experience', key)}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )
+          })}
         </div>
+
+        {hasOverflow && (
+          <div className="md:hidden mt-8 flex justify-center">
+            <button
+              onClick={() => setExpanded((v) => !v)}
+              className="px-5 py-2 text-sm rounded-full bg-white/10 border border-white/20 hover:bg-white/15 transition-colors cursor-pointer"
+            >
+              {expanded
+                ? t('experience', 'showLess')
+                : `${t('experience', 'showMore')}（${experiences.length - MOBILE_INITIAL}）`}
+            </button>
+          </div>
+        )}
       </div>
     </section>
   )
