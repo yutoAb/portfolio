@@ -11,8 +11,6 @@ type Item = {
   image: string
 }
 
-const SLIDES_BASE = 'https://docs.google.com/presentation/d/1KSNXdhyXnUMRCfX_UZiUDMWcDih9wkvo-f69GzzJWbg'
-
 const items: Item[] = [
   {
     titleKey: 'kingdomTitle',
@@ -112,17 +110,6 @@ export default function Manga() {
           ))}
         </div>
 
-        <footer className="max-w-4xl mx-auto px-6 py-12 border-t border-white/10">
-          <p className="text-sm text-white/50 mb-3 leading-relaxed">{t('manga', 'credit')}</p>
-          <a
-            href={`${SLIDES_BASE}/edit`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm text-purple-300 hover:text-purple-200 inline-flex items-center gap-1 transition-colors"
-          >
-            {t('manga', 'viewSlides')} →
-          </a>
-        </footer>
       </main>
     </div>
   )

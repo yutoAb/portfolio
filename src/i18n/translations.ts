@@ -369,11 +369,6 @@ This insight has become the foundation of my career. If the goal is "human-like 
       en: "Grow by one thing each day — a new skill, a new experience, a new perspective. In other words, what matters is spinning the try-and-fail (experience) loop as fast as you can, with AI to accelerate it.",
     } as T,
 
-    credit: {
-      ja: '余談: 上の 3 作品は、音声×HCI 勉強会 #03 (2026-09-24) の LT でもまとめて紹介しました。',
-      en: 'Aside: The three works above were introduced together in an LT at Speech × HCI Study Group #03 (2026-09-24).',
-    } as T,
-    viewSlides: { ja: 'その LT スライドを見る', en: 'View those LT slides' } as T,
   },
 } as const
 
