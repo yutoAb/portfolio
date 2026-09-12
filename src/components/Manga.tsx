@@ -79,7 +79,6 @@ export default function Manga() {
           >
             {t('manga', 'pageTitle')}
           </h1>
-          <p className="text-white/70 leading-relaxed max-w-2xl">{t('manga', 'pageLead')}</p>
           <a
             href="/"
             className="sm:hidden inline-block mt-6 text-sm text-white/60 hover:text-white transition-colors"

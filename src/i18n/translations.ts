@@ -329,10 +329,6 @@ This insight has become the foundation of my career. If the goal is "human-like 
   },
   manga: {
     pageTitle: { ja: '日本の漫画は最高！', en: 'Japanese Manga Are the Best!' } as T,
-    pageLead: {
-      ja: '自分の思考のクセや、これから向かいたい方向を、自分の言葉より先に言い当ててくれた漫画たち。3 作品を紹介します。',
-      en: 'Manga that pinned down my way of thinking — and the direction I want to head — before I could put it into my own words. Three works I want to point to.',
-    } as T,
     backToPortfolio: { ja: '← ポートフォリオに戻る', en: '← Back to portfolio' } as T,
     imageAlt: { ja: '発表スライドの引用', en: 'Slide quoted from the talk' } as T,
 
