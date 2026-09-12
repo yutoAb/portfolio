@@ -9,7 +9,6 @@ type Item = {
   leadKey: MangaKey
   takeawayKey: MangaKey
   image: string
-  slidePage: number
 }
 
 const SLIDES_BASE = 'https://docs.google.com/presentation/d/1KSNXdhyXnUMRCfX_UZiUDMWcDih9wkvo-f69GzzJWbg'
@@ -21,7 +20,6 @@ const items: Item[] = [
     leadKey: 'kingdomLead',
     takeawayKey: 'kingdomTakeaway',
     image: `${import.meta.env.BASE_URL}manga/p24.png`,
-    slidePage: 24,
   },
   {
     titleKey: 'hiroakaTitle',
@@ -29,7 +27,6 @@ const items: Item[] = [
     leadKey: 'hiroakaLead',
     takeawayKey: 'hiroakaTakeaway',
     image: `${import.meta.env.BASE_URL}manga/p25.png`,
-    slidePage: 25,
   },
   {
     titleKey: 'wtriggerTitle',
@@ -37,7 +34,6 @@ const items: Item[] = [
     leadKey: 'wtriggerLead',
     takeawayKey: 'wtriggerTakeaway',
     image: `${import.meta.env.BASE_URL}manga/p26.png`,
-    slidePage: 26,
   },
 ]
 
@@ -102,19 +98,12 @@ export default function Manga() {
                 <h2 className="text-2xl md:text-3xl font-bold mt-1">{t('manga', item.titleKey)}</h2>
                 <p className="text-white/60 text-sm mt-1">{t('manga', item.metaKey)}</p>
               </div>
-              <a
-                href={`${SLIDES_BASE}/preview?slide=${item.slidePage}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block group"
-              >
-                <img
-                  src={item.image}
-                  alt={t('manga', 'imageAlt')}
-                  loading={i === 0 ? 'eager' : 'lazy'}
-                  className="w-full rounded-lg border border-white/10 shadow-xl group-hover:shadow-2xl group-hover:border-white/20 transition-all"
-                />
-              </a>
+              <img
+                src={item.image}
+                alt={t('manga', 'imageAlt')}
+                loading={i === 0 ? 'eager' : 'lazy'}
+                className="w-full rounded-lg border border-white/10 shadow-xl"
+              />
               <p className="text-purple-200 leading-relaxed italic border-l-2 border-purple-300/40 pl-4">
                 {t('manga', item.leadKey)}
               </p>

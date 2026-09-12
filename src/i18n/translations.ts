@@ -330,8 +330,8 @@ This insight has become the foundation of my career. If the goal is "human-like 
   manga: {
     pageTitle: { ja: '日本の漫画は最高！', en: 'Japanese Manga Are the Best!' } as T,
     pageLead: {
-      ja: '自分の思考のクセや、これから向かいたい方向を、自分の言葉より先に言い当ててくれた漫画たち。ある勉強会 LT で使ったスライドから、3 作品を紹介します。',
-      en: "Manga that pinned down my way of thinking — and the direction I want to head — before I could put it into my own words. Three works, drawn from slides I used at a study-group lightning talk.",
+      ja: '自分の思考のクセや、これから向かいたい方向を、自分の言葉より先に言い当ててくれた漫画たち。3 作品を紹介します。',
+      en: 'Manga that pinned down my way of thinking — and the direction I want to head — before I could put it into my own words. Three works I want to point to.',
     } as T,
     backToPortfolio: { ja: '← ポートフォリオに戻る', en: '← Back to portfolio' } as T,
     imageAlt: { ja: '発表スライドの引用', en: 'Slide quoted from the talk' } as T,
@@ -361,8 +361,8 @@ This insight has become the foundation of my career. If the goal is "human-like 
     wtriggerTitle: { ja: 'ワールドトリガー', en: 'World Trigger' } as T,
     wtriggerMeta: { ja: '葦原大介 著', en: 'Daisuke Ashihara' } as T,
     wtriggerLead: {
-      ja: '空閑「刻む…んだ」— 自分が登れる小さいステップを作り続けること、その行動を「努力」と呼ぶ。',
-      en: 'Kuga: "You carve it out." Keep making the smallest step you can actually climb — that is what we call effort.',
+      ja: 'ヒュース「刻む…んだ」— 自分が登れる小さいステップを作り続けること、その行動を「努力」と呼ぶ。',
+      en: 'Hyuse: "You carve it out." Keep making the smallest step you can actually climb — that is what we call effort.',
     } as T,
     wtriggerTakeaway: {
       ja: '昨日の自分より、なにか一つ成長 (新しいことを覚えた・経験した・価値観を得た) を続けていく。つまり「トライして、失敗する (経験) のループを、AI を使って回しまくること」が大事。',
@@ -370,10 +370,10 @@ This insight has become the foundation of my career. If the goal is "human-like 
     } as T,
 
     credit: {
-      ja: '出典: LT スライド「音声対話は「交互」をやめられるか」— 音声×HCI 勉強会 #03 (2026-09-24)、p24〜p26',
-      en: 'Source: LT slides "Can spoken dialogue stop being turn-taking?" — Speech × HCI Study Group #03 (2026-09-24), pp. 24–26',
+      ja: '余談: 上の 3 作品は、音声×HCI 勉強会 #03 (2026-09-24) の LT でもまとめて紹介しました。',
+      en: 'Aside: The three works above were introduced together in an LT at Speech × HCI Study Group #03 (2026-09-24).',
     } as T,
-    viewSlides: { ja: '発表スライド全体を見る', en: 'See the full presentation' } as T,
+    viewSlides: { ja: 'その LT スライドを見る', en: 'View those LT slides' } as T,
   },
 } as const
 
