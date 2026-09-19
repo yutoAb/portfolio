@@ -43,6 +43,8 @@ const translations = {
     education: { ja: '学歴', en: 'Education' } as T,
     contact: { ja: 'お問い合わせ', en: 'Contact' } as T,
     manga: { ja: '漫画', en: 'Manga' } as T,
+    aboutGroup: { ja: '自己紹介', en: 'About' } as T,
+    workGroup: { ja: '活動', en: 'Work' } as T,
   },
   philosophy: {
     sectionTitle: { ja: '思想', en: 'Philosophy' } as T,
