@@ -2,6 +2,8 @@ import { useState } from 'react'
 import { useInView } from './useInView'
 import { useT } from '../i18n/useT'
 
+const MOBILE_INITIAL = 5
+
 type Category = 'personal' | 'team' | 'research'
 
 type Project = {
@@ -148,53 +150,124 @@ const projects: Project[] = [
 export default function Projects() {
   const { ref, inView } = useInView()
   const [selected, setSelected] = useState<Project | null>(null)
+  const [expanded, setExpanded] = useState(false)
   const t = useT()
+  const hasOverflow = projects.length > MOBILE_INITIAL
 
   return (
     <section className="bg-blue text-white px-6 py-20">
       <div
         ref={ref}
-        className={`max-w-5xl mx-auto transition-all duration-700 ${
+        className={`max-w-5xl mx-auto w-full transition-all duration-700 ${
           inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
         }`}
       >
-        <h2 className="text-3xl md:text-4xl font-bold mb-10">{t('projects', 'sectionTitle')}</h2>
+        <div className="flex items-baseline justify-between mb-8">
+          <h2 className="text-3xl md:text-4xl font-bold">{t('projects', 'sectionTitle')}</h2>
+          <p className="hidden md:block text-xs text-white/50 font-mono">
+            {projects.length} · scroll →
+          </p>
+        </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projects.map((project) => (
-            <button
-              key={project.title}
-              onClick={() => setSelected(project)}
-              className="text-left p-5 rounded-xl bg-white/10 hover:bg-white/15 border border-white/10 transition-all cursor-pointer group"
-            >
-              <h3 className="text-lg font-bold mb-2 group-hover:text-purple-200 transition-colors">
-                {project.title}
-              </h3>
-              <div className="flex flex-wrap gap-1.5 mb-2">
-                <span className={`inline-block text-xs px-2 py-0.5 rounded-full ${categoryStyle[project.category].onDark}`}>
-                  {t('projects', categoryStyle[project.category].labelKey)}
-                </span>
-                {project.award && (
-                  <span className="inline-block text-xs px-2 py-0.5 rounded-full bg-yellow-500/20 text-yellow-200">
-                    {project.award}
-                  </span>
-                )}
-              </div>
-              <p className="text-sm text-white/60 line-clamp-2">{t('projects', project.descKey)}</p>
-              <div className="flex flex-wrap gap-1.5 mt-3 items-center">
-                {project.tech.slice(0, 3).map((tc) => (
-                  <span key={tc} className="text-xs px-2 py-0.5 rounded-full bg-white/10">
-                    {tc}
-                  </span>
-                ))}
-                {project.articles && (
-                  <span className="text-xs px-2 py-0.5 rounded-full bg-white/10 text-white/70">
-                    📝 {project.articles.length}
-                  </span>
-                )}
-              </div>
-            </button>
-          ))}
+        {/* Mobile: 1-col vertical grid with show-more */}
+        <div className="md:hidden">
+          <div className="grid grid-cols-1 gap-4">
+            {projects.map((project, i) => {
+              if (hasOverflow && !expanded && i >= MOBILE_INITIAL) return null
+              return (
+                <button
+                  key={project.title}
+                  onClick={() => setSelected(project)}
+                  className="text-left p-5 rounded-xl bg-white/10 hover:bg-white/15 border border-white/10 transition-all cursor-pointer group"
+                >
+                  <h3 className="text-lg font-bold mb-2 group-hover:text-purple-200 transition-colors">
+                    {project.title}
+                  </h3>
+                  <div className="flex flex-wrap gap-1.5 mb-2">
+                    <span className={`inline-block text-xs px-2 py-0.5 rounded-full ${categoryStyle[project.category].onDark}`}>
+                      {t('projects', categoryStyle[project.category].labelKey)}
+                    </span>
+                    {project.award && (
+                      <span className="inline-block text-xs px-2 py-0.5 rounded-full bg-yellow-500/20 text-yellow-200">
+                        {project.award}
+                      </span>
+                    )}
+                  </div>
+                  <p className="text-sm text-white/60 line-clamp-2">{t('projects', project.descKey)}</p>
+                  <div className="flex flex-wrap gap-1.5 mt-3 items-center">
+                    {project.tech.slice(0, 3).map((tc) => (
+                      <span key={tc} className="text-xs px-2 py-0.5 rounded-full bg-white/10">
+                        {tc}
+                      </span>
+                    ))}
+                    {project.articles && (
+                      <span className="text-xs px-2 py-0.5 rounded-full bg-white/10 text-white/70">
+                        📝 {project.articles.length}
+                      </span>
+                    )}
+                  </div>
+                </button>
+              )
+            })}
+          </div>
+          {hasOverflow && (
+            <div className="mt-8 flex justify-center">
+              <button
+                onClick={() => setExpanded((v) => !v)}
+                className="px-5 py-2 text-sm rounded-full bg-white/10 border border-white/20 hover:bg-white/15 transition-colors cursor-pointer"
+              >
+                {expanded
+                  ? t('experience', 'showLess')
+                  : `${t('experience', 'showMore')}（${projects.length - MOBILE_INITIAL}）`}
+              </button>
+            </div>
+          )}
+        </div>
+
+        {/* Desktop: 2-row horizontal scroll */}
+        <div className="hidden md:block -mx-6 px-6 overflow-x-auto snap-x snap-mandatory pb-4">
+          <ul
+            className="grid grid-flow-col grid-rows-2 gap-4 w-max"
+            style={{ gridAutoColumns: '280px' }}
+          >
+            {projects.map((project) => (
+              <li key={project.title} className="snap-start">
+                <button
+                  onClick={() => setSelected(project)}
+                  className="text-left w-full h-full p-5 rounded-xl bg-white/10 hover:bg-white/15 border border-white/10 transition-all cursor-pointer group flex flex-col"
+                >
+                  <h3 className="text-lg font-bold mb-2 group-hover:text-purple-200 transition-colors">
+                    {project.title}
+                  </h3>
+                  <div className="flex flex-wrap gap-1.5 mb-2">
+                    <span className={`inline-block text-xs px-2 py-0.5 rounded-full ${categoryStyle[project.category].onDark}`}>
+                      {t('projects', categoryStyle[project.category].labelKey)}
+                    </span>
+                    {project.award && (
+                      <span className="inline-block text-xs px-2 py-0.5 rounded-full bg-yellow-500/20 text-yellow-200">
+                        {project.award}
+                      </span>
+                    )}
+                  </div>
+                  <p className="text-sm text-white/60 line-clamp-2 mb-3">
+                    {t('projects', project.descKey)}
+                  </p>
+                  <div className="flex flex-wrap gap-1.5 mt-auto items-center">
+                    {project.tech.slice(0, 3).map((tc) => (
+                      <span key={tc} className="text-xs px-2 py-0.5 rounded-full bg-white/10">
+                        {tc}
+                      </span>
+                    ))}
+                    {project.articles && (
+                      <span className="text-xs px-2 py-0.5 rounded-full bg-white/10 text-white/70">
+                        📝 {project.articles.length}
+                      </span>
+                    )}
+                  </div>
+                </button>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
 
