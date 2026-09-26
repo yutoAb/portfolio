@@ -226,7 +226,7 @@ export default function Hero() {
             aria-label={ariaLabel}
           >
             <div
-              className="relative inline-block px-4 py-2.5 text-sm text-white"
+              className="relative inline-block px-4 py-2.5 text-sm text-white break-words"
               style={{
                 background: 'linear-gradient(135deg, rgb(120,100,220) 0%, rgb(94,66,166) 100%)',
                 borderRadius: '20px 20px 4px 20px',

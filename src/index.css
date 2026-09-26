@@ -15,6 +15,11 @@ html {
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  /* Safety net: any subtle horizontal overflow (from long JA strings, iOS Safari
+     quirks, etc.) gets clipped instead of causing a page-level horizontal scroll.
+     Inner containers that need their own horizontal scroll (Projects carousel etc.)
+     use `overflow-x-auto` on their own wrapper, unaffected by this. */
+  overflow-x: clip;
 }
 
 @keyframes slide-fade-in {
