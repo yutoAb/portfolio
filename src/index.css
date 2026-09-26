@@ -12,15 +12,25 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Match body bg so iOS-Safari's viewport background never shows around the page */
+html { background: rgb(94, 66, 166); /* purple */ }
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  /* Safety net: any subtle horizontal overflow (from long JA strings, iOS Safari
-     quirks, etc.) gets clipped instead of causing a page-level horizontal scroll.
-     Inner containers that need their own horizontal scroll (Projects carousel etc.)
-     use `overflow-x-auto` on their own wrapper, unaffected by this. */
-  overflow-x: clip;
+  /* Safety net: any subtle horizontal overflow (long unbreakable JA strings, iOS
+     shrink-to-fit quirks) gets clipped instead of causing a page-level scroll.
+     `overflow-x: hidden` is used on both html and body for maximum iOS Safari
+     compatibility (older iOS ignores `overflow-x: clip`). Inner containers that
+     legitimately need horizontal scrolling (Projects carousel) use their own
+     `overflow-x-auto` wrapper and keep working. */
+  overflow-x: hidden;
+  width: 100%;
 }
+html { overflow-x: hidden; }
+
+/* Simple theme should match its body bg */
+html.simple { background: #fbfaf7; }
 
 @keyframes slide-fade-in {
   from {
