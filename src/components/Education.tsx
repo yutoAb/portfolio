@@ -203,7 +203,7 @@ export default function Education() {
           inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
         }`}
       >
-        <h2 className="text-xl sm:text-3xl md:text-4xl font-bold mb-6 md:mb-10 whitespace-nowrap">
+        <h2 className="text-xl sm:text-3xl md:text-4xl font-bold mb-6 md:mb-10 break-keep">
           {t('education', 'sectionTitle')}
         </h2>
 
