@@ -19,8 +19,27 @@ export default function Nav({ entries }: { entries: NavEntry[] }) {
   const [activeRef, setActiveRef] = useState<RefObject<HTMLDivElement | null> | null>(null)
   const [open, setOpen] = useState(false)
   const [openGroup, setOpenGroup] = useState<string | null>(null)
+  const [theme, setTheme] = useState<'vivid' | 'simple'>(() => {
+    if (typeof document === 'undefined') return 'vivid'
+    return document.documentElement.classList.contains('simple') ? 'simple' : 'vivid'
+  })
   const { lang, toggleLang } = useLang()
   const navRef = useRef<HTMLElement>(null)
+
+  const toggleTheme = () => {
+    const next = theme === 'vivid' ? 'simple' : 'vivid'
+    setTheme(next)
+    if (next === 'simple') {
+      document.documentElement.classList.add('simple')
+    } else {
+      document.documentElement.classList.remove('simple')
+    }
+    try {
+      localStorage.setItem('theme', next)
+    } catch {
+      /* no-op */
+    }
+  }
 
   useEffect(() => {
     const handleScroll = () => {
@@ -173,7 +192,25 @@ export default function Nav({ entries }: { entries: NavEntry[] }) {
           })}
         </ul>
 
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2 sm:gap-3">
+          <button
+            onClick={toggleTheme}
+            aria-label={theme === 'vivid' ? 'Switch to simple theme' : 'Switch to vivid theme'}
+            title={theme === 'vivid' ? 'シンプル配色に切替' : 'カラフル配色に戻す'}
+            className="text-xs w-7 h-7 rounded-full border border-white/30 hover:border-white/50 transition-colors cursor-pointer flex items-center justify-center"
+          >
+            {theme === 'vivid' ? (
+              /* moon-ish = go simple */
+              <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="9" />
+              </svg>
+            ) : (
+              /* sparkle = go vivid */
+              <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2l2.09 5.26L20 8.27l-4 3.9.94 5.83L12 15.9 7.06 18l.94-5.83-4-3.9 5.91-1.01L12 2z" />
+              </svg>
+            )}
+          </button>
           <button
             onClick={toggleLang}
             className="text-xs px-2.5 py-1 rounded-full border border-white/30 hover:border-white/50 transition-colors cursor-pointer flex items-center gap-1"

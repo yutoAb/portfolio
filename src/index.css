@@ -67,3 +67,113 @@ body {
   .hero-bubble { animation: none !important; opacity: 1 !important; transform: none !important; }
   .hero-bubble-caret { animation: none !important; opacity: 0.5 !important; }
 }
+
+/* ─────────────────────────────────────────────────────
+ * Simple theme (html.simple)
+ * Palette inspired by Linear / Vercel / Josh Comeau
+ * - Warm off-white 2-tone section alternation for rhythm
+ * - Solid-white cards with visible warm-gray borders
+ * - High-contrast text hierarchy
+ * - Purple kept as single accent for brand identity
+ * ───────────────────────────────────────────────────── */
+html.simple body { background: #fbfaf7; color: #171717; }
+
+/* Section backgrounds: warm off-white 2-tone alternation
+   Purple/Blue-labelled sections → primary tone
+   Slate/Pink-labelled sections → secondary tone */
+html.simple .bg-purple,
+html.simple .bg-blue { background-color: #fbfaf7 !important; }
+html.simple .bg-slate-800,
+html.simple .bg-slate-900,
+html.simple .bg-pink { background-color: #f2efe8 !important; }
+
+/* Nav: opaque light with subtle divider */
+html.simple nav.bg-purple\/90 {
+  background-color: rgba(251, 250, 247, 0.92) !important;
+  border-bottom: 1px solid #e5e1d6;
+}
+html.simple nav .text-white { color: #171717 !important; }
+html.simple nav .text-white\/40 { color: #a3a3a3 !important; }
+html.simple nav .text-white\/30 { color: #d4d4d4 !important; }
+
+/* Nav dropdown panel */
+html.simple .bg-\[rgb\(74\,52\,140\)\] {
+  background-color: #ffffff !important;
+  color: #171717 !important;
+  border: 1px solid #e5e1d6 !important;
+  box-shadow: 0 8px 24px rgba(23, 23, 23, 0.08) !important;
+}
+
+/* Text hierarchy — high contrast, tuned separately per opacity level */
+html.simple .text-white,
+html.simple .text-white\/90,
+html.simple .text-white\/85 { color: #171717 !important; }
+html.simple .text-white\/80 { color: #262626 !important; }
+html.simple .text-white\/70 { color: #404040 !important; }
+html.simple .text-white\/60 { color: #525252 !important; }
+html.simple .text-white\/50 { color: #737373 !important; }
+html.simple .text-white\/40 { color: #a3a3a3 !important; }
+html.simple .text-white\/30 { color: #d4d4d4 !important; }
+
+/* Card backgrounds: solid white for lift against off-white sections */
+html.simple .bg-white\/\[0\.02\],
+html.simple .bg-white\/5,
+html.simple .bg-white\/10 {
+  background-color: #ffffff !important;
+}
+html.simple .bg-white\/15 { background-color: #f5f2ea !important; }
+
+/* Hover states — subtle warm gray */
+html.simple .hover\:bg-white\/10:hover,
+html.simple .hover\:bg-white\/15:hover,
+html.simple .hover\:bg-white\/20:hover { background-color: #f5f2ea !important; }
+
+/* Borders: visible warm gray */
+html.simple .border-white\/5 { border-color: #ece8de !important; }
+html.simple .border-white\/10 { border-color: #e5e1d6 !important; }
+html.simple .border-white\/20 { border-color: #d6d1c2 !important; }
+html.simple .border-white\/30 { border-color: #b8b1a0 !important; }
+
+/* Solid-white bullet dots become the purple accent */
+html.simple .bg-white\/90 { background-color: #5e42a6 !important; }
+html.simple .bg-white\/40 { background-color: #a3a3a3 !important; }
+
+/* Purple accent — stronger (purple-700) for readability on light bg */
+html.simple .text-purple-300,
+html.simple .text-purple-200,
+html.simple .text-purple-100 { color: #6d28d9 !important; }
+html.simple .text-purple-300\/70 { color: rgba(109, 40, 217, 0.7) !important; }
+html.simple .text-purple-300\/80 { color: rgba(109, 40, 217, 0.8) !important; }
+html.simple .bg-purple-500\/30 { background-color: rgba(109, 40, 217, 0.12) !important; }
+html.simple .text-purple-400 { color: #6d28d9 !important; }
+html.simple .border-purple-400\/30 { border-color: rgba(109, 40, 217, 0.3) !important; }
+html.simple .border-purple-300\/40 { border-color: rgba(109, 40, 217, 0.4) !important; }
+
+/* CTA and pills using bg-white as accent inverse */
+html.simple .bg-white { background-color: #5e42a6 !important; color: white !important; }
+html.simple .text-purple { color: white !important; }
+
+/* Chat bubble stays as-is (purple gradient with white text pops on light) */
+html.simple .hero-bubble > div { color: white !important; }
+
+/* Yellow award pills, blue certPlanned pills — dial down saturation */
+html.simple .bg-yellow-500\/20 { background-color: rgba(202, 138, 4, 0.15) !important; }
+html.simple .text-yellow-200 { color: #92400e !important; }
+html.simple .bg-blue-400\/20 { background-color: rgba(37, 99, 235, 0.12) !important; }
+html.simple .text-blue-100 { color: #1e40af !important; }
+
+/* /manga page: hero gradient text → solid purple */
+html.simple main h1[style*="linear-gradient"] {
+  background: none !important;
+  -webkit-background-clip: initial !important;
+  -webkit-text-fill-color: #5e42a6 !important;
+  background-clip: initial !important;
+  color: #5e42a6 !important;
+}
+
+/* Hide flashy elements that clash with neutral palette */
+html.simple canvas { display: none !important; }
+html.simple [aria-hidden="true"].rounded-full { opacity: 0 !important; }
+
+/* Nav bar bottom border for definition */
+html.simple .backdrop-blur-sm { backdrop-filter: blur(8px); }

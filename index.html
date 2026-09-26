@@ -70,6 +70,17 @@
       })();
     </script>
 
+    <!-- Theme init: apply saved theme before first paint to avoid flash -->
+    <script>
+      (function () {
+        try {
+          if (localStorage.getItem('theme') === 'simple') {
+            document.documentElement.classList.add('simple');
+          }
+        } catch (e) {}
+      })();
+    </script>
+
     <!-- Cloudflare Web Analytics -->
     <script defer type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "e4a855844fd84efaa7f7b627de8325ba"}'></script>
   </head>
