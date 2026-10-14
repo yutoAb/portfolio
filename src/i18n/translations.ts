@@ -13,6 +13,10 @@ const translations = {
       ja: 'DS = 部分最適 / SWE = 全体最適',
       en: 'DS = local optimization / SWE = global optimization',
     } as T,
+    statusData: {
+      ja: '振る舞いは、データで設計する',
+      en: 'Behavior is designed through data',
+    } as T,
     bio1: {
       ja: '早稲田大学 基幹理工学術院 修士2年。小林・小川研究室にて、全二重音声対話システムの研究に取り組んでいます。',
       en: "M2 at Waseda University, Graduate School of Fundamental Science and Engineering. Researching full-duplex spoken dialogue systems in Kobayashi-Ogawa Lab.",
@@ -165,7 +169,11 @@ Beyond researcher curiosity, I believe the feeling of "I want to talk to that pe
 
 もちろん、調子の波はありますし、エッジケースで派手に失敗することもあります。それでも平均的な振る舞いに限れば、十分なデータと計算資源さえあれば、近づけてしまえるようです。
 
-この感覚は、自分のキャリア選択の根っこになっています。もし「人間らしい振る舞い」に近づきたいなら、まずデータが集まり続ける場を整えるのが、いちばんの近道なのかもしれません。データエンジニアリングと MLOps に重心を置いているのは、そういう理由からです。`,
+この感覚は、自分のキャリア選択の根っこになっています。もし「人間らしい振る舞い」に近づきたいなら、まずデータが集まり続ける場を整えるのが、いちばんの近道なのかもしれません。データエンジニアリングと MLOps に重心を置いているのは、そういう理由からです。
+
+LLM のような巨大なパラメータの集合も、結局はデータドリブンです。だからこそ、モデルにどう振る舞ってほしいかから逆算して、合成データを作るべきだと考えています。Web 由来のデータはどうしてもノイジーなので、クリーンなデータを合成で増やせるなら、そちらを増やすのが筋です。
+
+そうなると、勝負は計算資源になります。データを合成すること、それを置いておくこと、そして学習すること。この 3 つを回し続けられる基盤を持てるかどうかが、そのまま差になるのだと思います。`,
       en: `Watching spoken dialogue research and the evolution of self-driving up close, I've arrived at an uncomfortable insight.
 
 "Once you fix the input and output, even if the model itself is a black box, simply stacking massive noisy data with clean data is enough to produce a model that reproduces the behavior."
@@ -176,7 +184,11 @@ It's an insight that makes me want to add "bittersweetly" — because it suggest
 
 Of course there's variance in quality, and edge cases fail. Still, the average behavior can be reproduced given enough data and compute.
 
-This insight has become the foundation of my career. If the goal is "human-like behavior," the shortest path is to first build the data infrastructure — create the place where massive amounts of data accumulate. That's why I put weight on data engineering and MLOps.`,
+This insight has become the foundation of my career. If the goal is "human-like behavior," the shortest path is to first build the data infrastructure — create the place where massive amounts of data accumulate. That's why I put weight on data engineering and MLOps.
+
+Even a massive set of parameters like an LLM is, in the end, data-driven. So I believe synthetic data should be designed backward from how you want the model to behave. Web-sourced data is inevitably noisy — if you can grow the clean data through synthesis, that is where the growth should go.
+
+Which turns it into a contest of compute: synthesizing the data, storing it, and training on it. Whether you have the infrastructure to keep those three turning is, I think, exactly what makes the difference.`,
     } as T,
   },
   profiles: {

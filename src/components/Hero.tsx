@@ -36,6 +36,15 @@ const JA_MESSAGES: Message[] = [
       { ime: 'zentaisaiteki', kana: '全体最適' },
     ],
   },
+  {
+    finalText: '振る舞いは、データで設計する',
+    chunks: [
+      { ime: 'furumaiha', kana: '振る舞いは' },
+      { direct: '、' },
+      { ime: 'de-tade', kana: 'データで' },
+      { ime: 'sekkeisuru', kana: '設計する' },
+    ],
+  },
 ]
 
 type Frame = { confirmed: string; romaji: string; delay: number }
@@ -158,15 +167,17 @@ export default function Hero() {
   const [enableBg, setEnableBg] = useState(false)
   const statusCareer = t('hero', 'status')
   const statusPhilosophy = t('hero', 'statusPhilosophy')
+  const statusData = t('hero', 'statusData')
   const enMessages = useMemo<Message[]>(
     () => [
       { finalText: statusCareer, chunks: [{ direct: statusCareer }] },
       { finalText: statusPhilosophy, chunks: [{ direct: statusPhilosophy }] },
+      { finalText: statusData, chunks: [{ direct: statusData }] },
     ],
-    [statusCareer, statusPhilosophy],
+    [statusCareer, statusPhilosophy, statusData],
   )
   const typed = useTypewriter(lang, enMessages)
-  const ariaLabel = `${statusCareer}. ${statusPhilosophy}.`
+  const ariaLabel = `${statusCareer}. ${statusPhilosophy}. ${statusData}.`
 
   useEffect(() => {
     if (typeof window === 'undefined') return
