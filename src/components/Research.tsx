@@ -20,7 +20,7 @@ const publications: Publication[] = [
     role: 'First Author',
     oral: true,
     links: [
-      { label: 'Live', href: 'https://speech-arena-next.vercel.app/' },
+      { label: 'Live', href: 'https://spoken-dialogue-arena.vercel.app/' },
     ],
   },
   {
@@ -29,6 +29,9 @@ const publications: Publication[] = [
     year: '2026',
     role: 'First Author',
     oral: true,
+    links: [
+      { label: 'Slides', href: 'https://2026-09-09-asj-2026-autumn.vercel.app/1' },
+    ],
   },
   {
     titleFixed: 'Effects of Dialogue Corpora Properties on Fine-Tuning a Moshi-Based Spoken Dialogue Model',

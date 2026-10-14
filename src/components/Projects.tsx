@@ -47,7 +47,7 @@ const projects: Project[] = [
     category: 'research',
     descKey: 'speechArena',
     tech: ['Next.js', 'PostgreSQL', 'Prisma', 'Cloudflare Tunnel', 'GPU Inference'],
-    link: 'https://speech-arena-next.vercel.app/',
+    link: 'https://spoken-dialogue-arena.vercel.app/',
   },
   {
     title: 'Changemakers',

@@ -204,7 +204,7 @@ Which turns it into a contest of compute: synthesizing the data, storing it, and
     abeja_company: { ja: '株式会社ABEJA', en: 'ABEJA, Inc.' } as T,
     abeja_role: { ja: 'ソフトウェアエンジニア（内定者インターン）', en: 'Software Engineer (Pre-Hire Intern)' } as T,
     threeshake_company: { ja: '株式会社スリーシェイク', en: '3-shake Inc.' } as T,
-    threeshake_role: { ja: 'SRE ワークショップ & 短期インターンシップ', en: 'SRE Workshop & Short-term Internship' } as T,
+    threeshake_role: { ja: 'SRE ワークショップ', en: 'SRE Workshop' } as T,
     tieriv_company: { ja: '株式会社ティアフォー', en: 'TIER IV, Inc.' } as T,
     tieriv_role: { ja: 'Autoware ワークショップ 2026 / MLOps・AI 系コース', en: 'Autoware Workshop 2026 / MLOps & AI Track' } as T,
     gmo_company: { ja: 'GMOインターネットグループ', en: 'GMO Internet Group' } as T,
