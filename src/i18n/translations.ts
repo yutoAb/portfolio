@@ -14,8 +14,8 @@ const translations = {
       en: 'DS = local optimization / SWE = global optimization',
     } as T,
     statusData: {
-      ja: '振る舞いは、データで設計する',
-      en: 'Behavior is designed through data',
+      ja: 'LLM ほどの巨大パラメータになると、振る舞いはアーキテクチャではなく、データで設計する',
+      en: 'At LLM-scale parameter counts, behavior is designed through data, not architecture',
     } as T,
     bio1: {
       ja: '早稲田大学 基幹理工学術院 修士2年。小林・小川研究室にて、全二重音声対話システムの研究に取り組んでいます。',

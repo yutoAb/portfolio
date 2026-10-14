@@ -37,9 +37,17 @@ const JA_MESSAGES: Message[] = [
     ],
   },
   {
-    finalText: '振る舞いは、データで設計する',
+    finalText: 'LLM ほどの巨大パラメータになると、振る舞いはアーキテクチャではなく、データで設計する',
     chunks: [
+      { direct: 'LLM ' },
+      { ime: 'hodono', kana: 'ほどの' },
+      { ime: 'kyodai', kana: '巨大' },
+      { ime: 'parame-ta', kana: 'パラメータ' },
+      { ime: 'ninaruto', kana: 'になると' },
+      { direct: '、' },
       { ime: 'furumaiha', kana: '振る舞いは' },
+      { ime: 'a-kitekutya', kana: 'アーキテクチャ' },
+      { ime: 'dehanaku', kana: 'ではなく' },
       { direct: '、' },
       { ime: 'de-tade', kana: 'データで' },
       { ime: 'sekkeisuru', kana: '設計する' },
