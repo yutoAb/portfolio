@@ -46,6 +46,7 @@ type AwardKeys = {
 }
 
 const awards: AwardKeys[] = [
+  { year: '2026', titleKey: 'award4Title', projectKey: 'award4Project', link: 'https://codex-student-hack-fes.openai.chatgpt.site/' },
   { year: '2026', titleKey: 'award3Title', projectKey: 'award3Project', link: 'https://x.com/yans_official/status/2089525184705294466' },
   { year: '2026', titleKey: 'award0Title', projectKey: 'award0Project', link: 'https://progate.connpass.com/event/386402/' },
   { year: '2025', titleKey: 'award1Title', projectKey: 'award1Project', link: 'https://pksha.notion.site/pksha-hackathon2025' },

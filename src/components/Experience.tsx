@@ -21,6 +21,12 @@ const experiences: ExperienceEntry[] = [
     descKeys: ['abeja_desc0'],
   },
   {
+    period: '2026 Oct (2 days)',
+    companyKey: 'threeshake_company',
+    roleKey: 'threeshake_role',
+    descKeys: ['threeshake_desc0'],
+  },
+  {
     period: '2026 Aug - Sep',
     companyKey: 'tieriv_company',
     roleKey: 'tieriv_role',

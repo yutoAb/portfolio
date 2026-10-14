@@ -8,10 +8,28 @@ type Publication = {
   venue: string
   year: string
   role: string
+  oral?: boolean
   links?: { label: string; href: string }[]
 }
 
 const publications: Publication[] = [
+  {
+    titleFixed: 'Spoken Dialogue Arena: A Live, Full-Duplex A/B Evaluation Platform for Spoken Dialogue Systems',
+    venue: 'RTCA @ NeurIPS 2026 (Real-Time Conversational Agents Workshop)',
+    year: '2026',
+    role: 'First Author',
+    oral: true,
+    links: [
+      { label: 'Live', href: 'https://speech-arena-next.vercel.app/' },
+    ],
+  },
+  {
+    titleKey: 'pub_asj_autumn_title',
+    venue: 'ASJ Autumn Meeting 2026 (日本音響学会 第156回 秋季研究発表会)',
+    year: '2026',
+    role: 'First Author',
+    oral: true,
+  },
   {
     titleFixed: 'Effects of Dialogue Corpora Properties on Fine-Tuning a Moshi-Based Spoken Dialogue Model',
     venue: 'IWSDS 2026 (International Workshop on Spoken Dialogue Systems)',
@@ -62,6 +80,11 @@ export default function Research() {
                     <span className="text-xs px-2 py-0.5 rounded-full bg-purple-500/30 text-purple-200">
                       {pub.role}
                     </span>
+                    {pub.oral && (
+                      <span className="text-xs px-2 py-0.5 rounded-full bg-yellow-500/20 text-yellow-200">
+                        Oral
+                      </span>
+                    )}
                     <span className="text-xs px-2 py-0.5 rounded-full bg-white/10 text-white/60">
                       {pub.year}
                     </span>
