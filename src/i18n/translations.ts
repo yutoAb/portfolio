@@ -47,6 +47,7 @@ const translations = {
     education: { ja: '学歴', en: 'Education' } as T,
     contact: { ja: 'お問い合わせ', en: 'Contact' } as T,
     manga: { ja: '漫画', en: 'Manga' } as T,
+    essay: { ja: 'エッセイ', en: 'Essay' } as T,
     aboutGroup: { ja: '自己紹介', en: 'About' } as T,
     workGroup: { ja: '活動', en: 'Work' } as T,
   },
@@ -385,6 +386,90 @@ Which turns it into a contest of compute: synthesizing the data, storing it, and
       en: "Grow by one thing each day — a new skill, a new experience, a new perspective. In other words, what matters is spinning the try-and-fail (experience) loop as fast as you can, with AI to accelerate it.",
     } as T,
 
+  },
+  essay: {
+    backToPortfolio: { ja: '← ポートフォリオに戻る', en: '← Back to portfolio' } as T,
+    pageTitle: {
+      ja: '研究者として、日本の20年を数字で見直した',
+      en: "Looking back at Japan's two decades, in numbers",
+    } as T,
+    meta: { ja: '2026年10月 / 阿部 雄斗', en: 'October 2026 / Yuto Abe' } as T,
+    intro: {
+      ja: '私は日本で音声対話AIを研究しています。日本を良くしたい、という気持ちから、2000〜2020年に日本が弱くなった理由を自分なりに調べ、約90秒の動画にまとめました。動画は短いぶん言い切っているので、その根拠と、反対の材料をこのページに書いておきます。',
+      en: 'I research spoken dialogue AI in Japan. Out of a wish to make Japan better, I looked into why the country weakened between 2000 and 2020, and turned it into a 90-second video. Because the video is short and blunt, this page lays out the evidence behind it — and the evidence against it.',
+    } as T,
+    note: {
+      ja: '数字はすべて一次資料で確認しています。③の後半は、データではなく私の実感です。',
+      en: 'Every figure is checked against a primary source. The second half of ③ is my own impression, not data.',
+    } as T,
+    videoNote: {
+      ja: '動画の音声は、2話者対話TTSで作った架空の設計音声です（実在の人物の声ではありません）。',
+      en: 'The narration uses a fictional designed voice from a two-speaker dialogue TTS (not a real person).',
+    } as T,
+
+    s0Title: { ja: '1989年と、いま', en: '1989 and now' } as T,
+    s0Body: {
+      ja: '1989年7月末、世界の時価総額上位10社のうち7社は日本企業でした。2026年10月時点では、上位10社に日本企業はありません。日本の最上位は三菱UFJフィナンシャル・グループで、世界72位です。',
+      en: 'At the end of July 1989, seven of the ten most valuable companies in the world were Japanese. As of October 2026, none are. The highest-ranked Japanese company, Mitsubishi UFJ Financial Group, is 72nd.',
+    } as T,
+
+    s1Title: { ja: '① 英語に弱い → ICTを「作る側」に回れない', en: '① Weak English → stuck on the "user" side of ICT' } as T,
+    s1Body1: {
+      ja: '日本の英語力は、EF EPI 2025で123か国・地域中96位でした。ただ、ここで言いたいのは英会話ではありません。インターネットの技術は英語で生まれ、仕様書もドキュメントも、開発者どうしの議論も英語で共有されます。技術の英語を読んで書く力が弱いと、ネットを「使う側」にはなれても、「作る側」にはなりにくい。',
+      en: "Japan ranked 96th of 123 countries and regions in the EF EPI 2025. But my point is not conversational English. Internet technology is born in English: specs, documentation and developer discussions are all shared in English. Without the ability to read and write technical English, a country can use the internet but struggles to build it.",
+    } as T,
+    s1Body2: {
+      ja: 'IMD世界デジタル競争力ランキングで、日本は2023年に調査開始以来最低の32位でした。2024年には「デジタル／技術的スキル」と「上級管理職の国際経験」が、67か国中最下位でした。',
+      en: "In the IMD World Digital Competitiveness Ranking, Japan fell to 32nd in 2023, its lowest since the ranking began. In 2024 it ranked last of 67 economies on both digital/technological skills and international experience of senior managers.",
+    } as T,
+    s1Caveat: {
+      ja: '注意：EF EPIは自分から受験した人のデータで、無作為抽出ではありません。',
+      en: 'Caveat: EF EPI is based on self-selected test takers, not a random sample.',
+    } as T,
+
+    s2Title: { ja: '② 才能を伸ばさず、そろえる社会', en: '② A society that evens out talent instead of growing it' } as T,
+    s2Body1: {
+      ja: '15歳の時点では、日本に突出した子がいないわけではありません。PISA 2022で、数学のトップ層（レベル5以上）は日本が23%、OECD平均は9%。約2.5倍です。',
+      en: 'At age 15, Japan does not lack standout students. In PISA 2022, 23% of Japanese students were top performers in mathematics (Level 5+), against an OECD average of 9% — about 2.5 times as many.',
+    } as T,
+    s2Body2: {
+      ja: 'ところが大人になると、GEM 2022で「起業に必要な知識・技能が自分にある」と答えた人は14.9%で、49か国中最下位でした。「良い起業の機会がある」（12.7%）と「最近起業した知人がいる」（20.4%）も最下位です。',
+      en: 'As adults, however, only 14.9% of Japanese respondents in GEM 2022 said they had the knowledge and skills to start a business — last of 49 economies. Japan was also last on seeing good opportunities (12.7%) and on knowing someone who recently started a business (20.4%).',
+    } as T,
+    s2Body3: {
+      ja: '一方で、「失敗が怖くて起業しない」は50.9%で、英国（52.9%）と同じくらいでした。怖がりなのではなく、挑戦が身近になく、自分にできると思えない。これが、私が「頑張る人の足を引っ張る社会」と感じていることの、数字で言える部分です。',
+      en: "Meanwhile, fear of failure (50.9%) is about the same as in the UK (52.9%). It is not that people are timid; it is that trying is not part of everyday life, and people don't believe they can. That is the part of my sense of a society that holds back people who try which numbers can support.",
+    } as T,
+
+    s3Title: { ja: '③ 否定から入り、自分からは動かない空気', en: '③ An air of starting with "no" and not taking the initiative' } as T,
+    s3Body1: {
+      ja: '日本財団の18歳意識調査（2019年、9か国の17〜19歳、各国1,000人）で、「自分で国や社会を変えられると思う」と答えた人は、日本が18.3%で最下位でした。次に低い韓国は39.6%です。「社会課題について、周りの人と積極的に議論している」も27.2%で最下位でした。',
+      en: "In the Nippon Foundation's 18-year-olds survey (2019; ages 17–19, 1,000 per country, 9 countries), only 18.3% of Japanese respondents believed they could change their country or society — last by a wide margin (South Korea, next lowest, was 39.6%). Japan was also last on actively discussing social issues with people around them (27.2%).",
+    } as T,
+    s3Body2: {
+      ja: 'ここからは実感です。新しい提案には、まず否定から入る。社会を良くすることより、「モテたい」「稼ぎたい」「飲みに行きたい」で動く大人が多い、と感じています。これを直接測った国際データは見つけられていないので、あくまで私の見方です。',
+      en: 'From here on, this is my impression. New proposals are met with "no" first. Many adults seem to act on wanting to be popular, to earn money, or to go out drinking, rather than on making society better. I have not found international data that measures this directly, so treat it as my view only.',
+    } as T,
+
+    counterTitle: { ja: '反対の材料と、変わり始めていること', en: 'Evidence against, and signs of change' } as T,
+    counter1: {
+      ja: '日本は開業率が3.9%と低い一方で、起業後5年の生存率は約80%と、諸外国より高い。始める人は少ないが、始めた会社は潰れにくい。',
+      en: "Japan's business start-up rate is low (3.9%), but about 80% of new businesses survive five years — higher than in other countries. Fewer people start, but those who do tend to last.",
+    } as T,
+    counter2: {
+      ja: '若者の「自分自身に満足している」は、45.1%（2018年度）から57.4%（2023年度）へ上がり、他国との差は縮まっています。',
+      en: 'Young people who are satisfied with themselves rose from 45.1% (FY2018) to 57.4% (FY2023), narrowing the gap with other countries.',
+    } as T,
+    counter3: {
+      ja: 'スタートアップは2021年の16,100社から2025年の25,000社へ増え、過去最多です。IMDの順位も2023年を底に上がっています。',
+      en: 'Startups grew from 16,100 in 2021 to 25,000 in 2025, a record. Japan has also climbed in the IMD ranking since bottoming out in 2023.',
+    } as T,
+
+    closing: {
+      ja: '才能は、ある。だから私は、技術の英語で発信し、挑戦する人を応援する側にいたいと思っています。研究も、そのひとつのつもりです。',
+      en: 'The talent is there. So I want to be on the side that shares work in technical English and cheers on people who try. My research is meant to be part of that.',
+    } as T,
+    sourcesTitle: { ja: '出典（一次資料）', en: 'Sources (primary)' } as T,
   },
 } as const
 
