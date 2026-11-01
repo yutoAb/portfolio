@@ -42,7 +42,7 @@ const experiences: ExperienceEntry[] = [
     period: '2025 - Present',
     companyKey: 'nii_company',
     roleKey: 'nii_role',
-    descKeys: ['nii_desc0', 'nii_desc1', 'nii_desc2'],
+    descKeys: ['nii_desc0', 'nii_desc3', 'nii_desc1', 'nii_desc2'],
   },
   {
     period: '2025 Oct',

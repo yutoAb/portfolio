@@ -47,7 +47,7 @@ const publications: Publication[] = [
   },
   {
     titleKey: 'pub_asj_title',
-    venue: 'ASJ Spring Meeting 2026 (日本音響学会 春季研究発表会)',
+    venue: 'ASJ Spring Meeting 2026 (日本音響学会 第155回 春季研究発表会)',
     year: '2026',
     role: 'First Author',
   },
@@ -74,7 +74,7 @@ const talks: Talk[] = [
   },
 ]
 
-const researchTopicKeys = ['topic1', 'topic2', 'topic3', 'topic4'] as const
+const researchTopicKeys = ['topic3', 'topic1', 'topic2', 'topic4'] as const
 
 export default function Research() {
   const { ref, inView } = useInView()
