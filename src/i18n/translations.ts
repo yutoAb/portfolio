@@ -247,6 +247,9 @@ Which turns it into a contest of compute: synthesizing the data, storing it, and
   research: {
     sectionTitle: { ja: '研究', en: 'Research' } as T,
     publicationsLabel: { ja: '論文発表', en: 'Publications' } as T,
+    talksLabel: { ja: '登壇', en: 'Talks' } as T,
+    talk_hci_title: { ja: '日本語 Full-duplex 音声対話モデルの現在地', en: 'Where Japanese Full-Duplex Spoken Dialogue Models Stand' } as T,
+    talk_hci_venue: { ja: '音声×HCI 勉強会 #03（LT）', en: 'Speech × HCI Study Group #03 (Lightning Talk)' } as T,
     pub_asj_autumn_title: { ja: 'Full-Duplex-Bench-JA：日本語フルデュプレックス音声対話モデル評価のためのベンチマーク構築', en: 'Full-Duplex-Bench-JA: Building a Benchmark for Evaluating Japanese Full-Duplex Spoken Dialogue Models' } as T,
     pub_asj_title: { ja: 'Moshiに基づく音声対話モデルの日本語ファインチューニングにおける対話データ特性の影響', en: 'Effects of Dialogue Corpora Properties on Fine-Tuning a Moshi-Based Spoken Dialogue Model in Japanese' } as T,
     bachelorThesisTitle: { ja: '卒業論文', en: "Bachelor's Thesis" } as T,

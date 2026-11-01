@@ -53,6 +53,27 @@ const publications: Publication[] = [
   },
 ]
 
+type ResearchKey = keyof typeof import('../i18n/translations').default.research
+
+type Talk = {
+  titleKey: ResearchKey
+  venueKey: ResearchKey
+  date: string
+  links: { label: string; href: string }[]
+}
+
+const talks: Talk[] = [
+  {
+    titleKey: 'talk_hci_title',
+    venueKey: 'talk_hci_venue',
+    date: '2026/09',
+    links: [
+      { label: 'Slides', href: 'https://2026-09-24-speech-hci-lt.vercel.app/1' },
+      { label: 'Event', href: 'https://speech-hci.connpass.com/event/395730/' },
+    ],
+  },
+]
+
 const researchTopicKeys = ['topic1', 'topic2', 'topic3', 'topic4'] as const
 
 export default function Research() {
@@ -113,6 +134,29 @@ export default function Research() {
                 </div>
               ))}
             </div>
+
+            <h3 className="text-lg font-bold mt-10 mb-4 text-purple-300">{t('research', 'talksLabel')}</h3>
+            <ul className="space-y-3">
+              {talks.map((talk, i) => (
+                <li key={i} className="text-sm">
+                  <p className="text-white/85">{t('research', talk.titleKey)}</p>
+                  <p className="text-white/50 text-xs mt-0.5">
+                    {t('research', talk.venueKey)} · {talk.date}
+                    {talk.links.map((link) => (
+                      <a
+                        key={link.label}
+                        href={link.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="ml-3 text-purple-300 hover:text-purple-100 underline underline-offset-2"
+                      >
+                        {link.label}
+                      </a>
+                    ))}
+                  </p>
+                </li>
+              ))}
+            </ul>
           </div>
 
           <div>
