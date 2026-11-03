@@ -48,10 +48,10 @@ export default function Manga() {
           </a>
           <div className="flex items-center gap-4">
             <a
-              href="/"
+              href="/blog"
               className="hidden sm:inline text-sm text-white/60 hover:text-white transition-colors"
             >
-              {t('manga', 'backToPortfolio')}
+              {t('blog', 'backToBlog')}
             </a>
             <button
               onClick={toggleLang}
@@ -80,10 +80,10 @@ export default function Manga() {
             {t('manga', 'pageTitle')}
           </h1>
           <a
-            href="/"
+            href="/blog"
             className="sm:hidden inline-block mt-6 text-sm text-white/60 hover:text-white transition-colors"
           >
-            {t('manga', 'backToPortfolio')}
+            {t('blog', 'backToBlog')}
           </a>
         </header>
 

@@ -46,10 +46,10 @@ export default function Essay() {
           </a>
           <div className="flex items-center gap-4">
             <a
-              href="/"
+              href="/blog"
               className="hidden sm:inline text-sm text-white/60 hover:text-white transition-colors"
             >
-              {t('essay', 'backToPortfolio')}
+              {t('blog', 'backToBlog')}
             </a>
             <button
               onClick={toggleLang}
@@ -69,10 +69,10 @@ export default function Essay() {
           <h1 className="text-3xl md:text-5xl font-bold mb-4 leading-tight">{t('essay', 'pageTitle')}</h1>
           <p className="text-white/50 text-sm">{t('essay', 'meta')}</p>
           <a
-            href="/"
+            href="/blog"
             className="sm:hidden inline-block mt-6 text-sm text-white/60 hover:text-white transition-colors"
           >
-            {t('essay', 'backToPortfolio')}
+            {t('blog', 'backToBlog')}
           </a>
         </header>
 

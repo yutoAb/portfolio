@@ -13,10 +13,14 @@ import Contact from './components/Contact'
 import Footer from './components/Footer'
 import Manga from './components/Manga'
 import Essay from './components/Essay'
+import Blog from './components/Blog'
 
 export default function App() {
   if (typeof window !== 'undefined') {
     const path = window.location.pathname.replace(/\/+$/, '')
+    if (path === '/blog') {
+      return <Blog />
+    }
     if (path === '/manga') {
       return <Manga />
     }
@@ -57,8 +61,7 @@ export default function App() {
         { kind: 'section', label: t('nav', 'projects'), ref: projectsRef },
       ],
     },
-    { kind: 'link', label: t('nav', 'manga'), href: '/manga' },
-    { kind: 'link', label: t('nav', 'essay'), href: '/essays/japan-20years' },
+    { kind: 'link', label: t('nav', 'blog'), href: '/blog' },
     { kind: 'section', label: t('nav', 'contact'), ref: contactRef },
   ]
 
