@@ -64,6 +64,14 @@ type Talk = {
 
 const talks: Talk[] = [
   {
+    titleKey: 'talk_s2s_title',
+    venueKey: 'talk_s2s_venue',
+    date: '2026/10',
+    links: [
+      { label: 'Slides', href: 'https://www.docswell.com/s/yuAbe/Z8N3D9-s2s-tool-vision-2026' },
+    ],
+  },
+  {
     titleKey: 'talk_hci_title',
     venueKey: 'talk_hci_venue',
     date: '2026/09',

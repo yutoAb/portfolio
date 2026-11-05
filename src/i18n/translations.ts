@@ -250,6 +250,8 @@ Which turns it into a contest of compute: synthesizing the data, storing it, and
     sectionTitle: { ja: '研究', en: 'Research' } as T,
     publicationsLabel: { ja: '論文発表', en: 'Publications' } as T,
     talksLabel: { ja: '登壇', en: 'Talks' } as T,
+    talk_s2s_title: { ja: 'Speech-to-Speech の次は tool 呼び出しと視覚 — 2026 年の動向', en: 'After Speech-to-Speech: Tool Calling and Vision — 2026 Trends' } as T,
+    talk_s2s_venue: { ja: '研究室 文献報告会（サーベイ）', en: 'Lab literature review (survey)' } as T,
     talk_hci_title: { ja: '日本語 Full-duplex 音声対話モデルの現在地', en: 'Where Japanese Full-Duplex Spoken Dialogue Models Stand' } as T,
     talk_hci_venue: { ja: '音声×HCI 勉強会 #03（LT）', en: 'Speech × HCI Study Group #03 (Lightning Talk)' } as T,
     pub_asj_autumn_title: { ja: 'Full-Duplex-Bench-JA：日本語フルデュプレックス音声対話モデル評価のためのベンチマーク構築', en: 'Full-Duplex-Bench-JA: Building a Benchmark for Evaluating Japanese Full-Duplex Spoken Dialogue Models' } as T,

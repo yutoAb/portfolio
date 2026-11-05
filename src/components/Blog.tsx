@@ -1,38 +1,48 @@
 import { useT } from '../i18n/useT'
 import { useLang } from '../i18n/LangContext'
+import translations, { type Lang } from '../i18n/translations'
+import { textEssays } from '../content/essays'
 
-type BlogKey = keyof typeof import('../i18n/translations').default.blog
+type BlogKey = keyof typeof translations.blog
 
 type Post = {
   href: string
   date: string
   typeKey: BlogKey
-  titleKey: BlogKey
-  summaryKey: BlogKey
-  image: string
+  title: Record<Lang, string>
+  summary: Record<Lang, string>
+  image?: string
 }
 
 const base = import.meta.env.BASE_URL
 
-// Newest first. Add a new post by adding one entry here.
-const posts: Post[] = [
+// Add a new post by adding one entry here (or to content/essays.ts for text essays).
+const posts: Post[] = ([
+  ...textEssays.map((e) => ({
+    href: `/essays/${e.slug}`,
+    date: e.date,
+    typeKey: 'typeEssay' as const,
+    title: e.title,
+    summary: e.summary,
+    image: `${base}${e.image}`,
+  })),
   {
     href: '/essays/japan-20years',
     date: '2026-10-30',
     typeKey: 'typeEssay',
-    titleKey: 'essayJapanTitle',
-    summaryKey: 'essayJapanSummary',
+    title: translations.blog.essayJapanTitle,
+    summary: translations.blog.essayJapanSummary,
     image: `${base}essays/japan-20years-poster.jpg`,
   },
   {
     href: '/manga',
     date: '2026-09-12',
     typeKey: 'typeManga',
-    titleKey: 'mangaTitle',
-    summaryKey: 'mangaSummary',
+    title: translations.blog.mangaTitle,
+    summary: translations.blog.mangaSummary,
     image: `${base}manga/p24.png`,
   },
-]
+] satisfies Post[]).sort((a, b) => b.date.localeCompare(a.date))
 
 export default function Blog() {
   const t = useT()
@@ -85,12 +95,18 @@ export default function Blog() {
               className="group block rounded-lg overflow-hidden bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-colors"
             >
               <div className="aspect-[16/9] overflow-hidden bg-black/20">
-                <img
-                  src={post.image}
-                  alt=""
-                  loading="lazy"
-                  className="w-full h-full object-cover object-top group-hover:scale-[1.02] transition-transform duration-300"
-                />
+                {post.image ? (
+                  <img
+                    src={post.image}
+                    alt=""
+                    loading="lazy"
+                    className="w-full h-full object-cover object-top group-hover:scale-[1.02] transition-transform duration-300"
+                  />
+                ) : (
+                  <div className="w-full h-full flex items-end p-5 bg-gradient-to-br from-purple-500/40 via-slate-800 to-amber-500/20">
+                    <span className="text-white/90 font-bold text-lg leading-snug line-clamp-3">{post.title[lang]}</span>
+                  </div>
+                )}
               </div>
               <div className="p-5">
                 <div className="flex items-center gap-2 mb-2">
@@ -100,9 +116,9 @@ export default function Blog() {
                   <span className="text-xs text-white/50">{post.date.replace(/-/g, '/')}</span>
                 </div>
                 <h2 className="text-lg font-bold mb-2 group-hover:text-purple-200 transition-colors">
-                  {t('blog', post.titleKey)}
+                  {post.title[lang]}
                 </h2>
-                <p className="text-sm text-white/70 leading-relaxed">{t('blog', post.summaryKey)}</p>
+                <p className="text-sm text-white/70 leading-relaxed">{post.summary[lang]}</p>
               </div>
             </a>
           ))}

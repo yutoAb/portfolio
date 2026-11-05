@@ -14,6 +14,8 @@ import Footer from './components/Footer'
 import Manga from './components/Manga'
 import Essay from './components/Essay'
 import Blog from './components/Blog'
+import TextEssayPage from './components/TextEssayPage'
+import { textEssays } from './content/essays'
 
 export default function App() {
   if (typeof window !== 'undefined') {
@@ -26,6 +28,10 @@ export default function App() {
     }
     if (path === '/essays/japan-20years') {
       return <Essay />
+    }
+    const textEssay = textEssays.find((e) => path === `/essays/${e.slug}`)
+    if (textEssay) {
+      return <TextEssayPage essay={textEssay} />
     }
   }
 
