@@ -1,6 +1,6 @@
 import Breadcrumbs from './Breadcrumbs'
 import SiteNav from './SiteNav'
-import { useState } from 'react'
+import { useState, type ComponentType } from 'react'
 import { useT } from '../i18n/useT'
 import { useLang } from '../i18n/LangContext'
 import translations, { type Lang } from '../i18n/translations'
@@ -16,6 +16,7 @@ type Post = {
   title: Record<Lang, string>
   summary: Record<Lang, string>
   image?: string
+  Diagram?: ComponentType
 }
 
 const base = import.meta.env.BASE_URL
@@ -29,6 +30,7 @@ const posts: Post[] = ([
     title: translations.philosophy[p.titleKey] as Record<Lang, string>,
     summary: translations.philosophy[p.bodyKey] as Record<Lang, string>,
     image: p.image?.src,
+    Diagram: p.diagram?.Component,
   })),
   ...textEssays.map((e) => ({
     href: `/essays/${e.slug}`,
@@ -100,7 +102,7 @@ export default function Blog() {
       <SiteNav active="blog" />
 
       <main className="pt-16">
-        <header className="max-w-4xl mx-auto px-6 pt-16 pb-10">
+        <header className="max-w-4xl mx-auto px-6 pt-8 md:pt-16 pb-10">
           <Breadcrumbs />
           <h1 className="text-4xl md:text-5xl font-bold mb-4">{t('blog', 'pageTitle')}</h1>
           <div className="flex items-end justify-between gap-4">
@@ -126,7 +128,8 @@ export default function Blog() {
         </header>
 
         {view === 'list' ? (
-          <ul className="max-w-4xl mx-auto px-6 pb-20 divide-y divide-white/10 border-y border-white/10">
+          <div className="max-w-4xl mx-auto px-6 pb-20">
+          <ul className="divide-y divide-white/10 border-y border-white/10">
             {posts.map((post) => (
               <li key={post.href}>
                 <a href={post.href} className="group block py-4">
@@ -142,6 +145,7 @@ export default function Blog() {
               </li>
             ))}
           </ul>
+          </div>
         ) : (
         <div className="max-w-4xl mx-auto px-6 pb-20 grid gap-6 sm:grid-cols-2">
           {posts.map((post) => (
@@ -158,6 +162,12 @@ export default function Blog() {
                     loading="lazy"
                     className="w-full h-full object-cover object-top group-hover:scale-[1.02] transition-transform duration-300"
                   />
+                ) : post.Diagram ? (
+                  <div className="w-full h-full flex items-center justify-center bg-slate-800">
+                    <div className="h-full aspect-[800/560]">
+                      <post.Diagram />
+                    </div>
+                  </div>
                 ) : (
                   <div className="w-full h-full flex items-end p-5 bg-gradient-to-br from-purple-500/40 via-slate-800 to-amber-500/20">
                     <span className="text-white/90 font-bold text-lg leading-snug line-clamp-3">{post.title[lang]}</span>

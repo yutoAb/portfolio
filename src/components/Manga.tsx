@@ -44,7 +44,7 @@ export default function Manga() {
       <SiteNav active="blog" />
 
       <main className="pt-16">
-        <header className="max-w-4xl mx-auto px-6 pt-16 pb-14">
+        <header className="max-w-4xl mx-auto px-6 pt-8 md:pt-16 pb-14">
           <Breadcrumbs current={t('manga', 'pageTitle')} />
           <h1
             className="text-4xl md:text-6xl font-bold mb-5 leading-tight"

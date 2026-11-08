@@ -42,7 +42,7 @@ export default function Essay() {
       <SiteNav active="blog" />
 
       <main className="pt-16">
-        <header className="max-w-3xl mx-auto px-6 pt-16 pb-10">
+        <header className="max-w-3xl mx-auto px-6 pt-8 md:pt-16 pb-10">
           <Breadcrumbs current={t('essay', 'pageTitle')} />
           <h1 className="text-3xl md:text-5xl font-bold mb-4 leading-tight">{t('essay', 'pageTitle')}</h1>
           <p className="text-white/50 text-sm">{t('essay', 'meta')}</p>

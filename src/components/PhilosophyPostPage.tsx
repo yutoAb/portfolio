@@ -20,7 +20,7 @@ export default function PhilosophyPostPage({ post }: { post: PhilosophyPost }) {
       <SiteNav active="blog" />
 
       <main className="pt-16">
-        <header className="max-w-3xl mx-auto px-6 pt-16 pb-10">
+        <header className="max-w-3xl mx-auto px-6 pt-8 md:pt-16 pb-10">
           <Breadcrumbs parent="philosophy" current={t('philosophy', post.titleKey)} />
           <h1 className="text-3xl md:text-5xl font-bold mb-4 leading-tight">{t('philosophy', post.titleKey)}</h1>
           <p className="text-white/60 leading-relaxed">{t('philosophy', post.bodyKey)}</p>
