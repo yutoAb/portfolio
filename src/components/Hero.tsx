@@ -210,7 +210,8 @@ export default function Hero() {
         />
         <div className="animate-[slide-fade-in_1s_ease-out]">
           <h1 className="text-3xl md:text-5xl font-bold mb-2">
-            Yuto Abe / 阿部 雄斗
+            Yuto Abe / <ruby>阿部<rt className="text-[0.35em] font-normal text-white/60">あべ</rt></ruby>{' '}
+            <ruby>雄斗<rt className="text-[0.35em] font-normal text-white/60">ゆうと</rt></ruby>
           </h1>
           <p className="text-lg text-white/70 mb-6">{t('hero', 'subtitle')}</p>
           <div className="mb-6 flex items-center gap-4">

@@ -25,7 +25,7 @@ function pageMetaHtml(): Plugin {
       for (const m of pageMetas) {
         const url = `${SITE}${m.path}`
         const image = `${SITE}/${m.image}`
-        const title = `${m.title} | Yuto Abe`
+        const title = `${m.title} | 阿部 雄斗（Yuto Abe）`
         const set = (html: string, re: RegExp, value: string) => {
           if (!re.test(html)) throw new Error(`page-meta-html: no match for ${re}`)
           return html.replace(re, `$1${esc(value)}$2`)
