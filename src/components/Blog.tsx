@@ -1,7 +1,11 @@
+import Breadcrumbs from './Breadcrumbs'
+import SiteNav from './SiteNav'
+import { useState } from 'react'
 import { useT } from '../i18n/useT'
 import { useLang } from '../i18n/LangContext'
 import translations, { type Lang } from '../i18n/translations'
 import { textEssays } from '../content/essays'
+import { philosophyPosts } from '../content/philosophy'
 
 type BlogKey = keyof typeof translations.blog
 
@@ -18,6 +22,14 @@ const base = import.meta.env.BASE_URL
 
 // Add a new post by adding one entry here (or to content/essays.ts for text essays).
 const posts: Post[] = ([
+  ...philosophyPosts.map((p) => ({
+    href: `/philosophy/${p.slug}`,
+    date: p.date,
+    typeKey: 'typePhilosophy' as const,
+    title: translations.philosophy[p.titleKey] as Record<Lang, string>,
+    summary: translations.philosophy[p.bodyKey] as Record<Lang, string>,
+    image: p.image?.src,
+  })),
   ...textEssays.map((e) => ({
     href: `/essays/${e.slug}`,
     date: e.date,
@@ -44,49 +56,93 @@ const posts: Post[] = ([
   },
 ] satisfies Post[]).sort((a, b) => b.date.localeCompare(a.date))
 
+type View = 'cards' | 'list'
+const VIEW_KEY = 'blogView'
+
+function readView(): View {
+  try {
+    return localStorage.getItem(VIEW_KEY) === 'list' ? 'list' : 'cards'
+  } catch {
+    return 'cards'
+  }
+}
+
 export default function Blog() {
   const t = useT()
-  const { lang, toggleLang } = useLang()
+  const { lang } = useLang()
+  const [view, setView] = useState<View>(readView)
+
+  const changeView = (next: View) => {
+    setView(next)
+    try {
+      localStorage.setItem(VIEW_KEY, next)
+    } catch {
+      /* no-op */
+    }
+  }
+
+  const toggleBtn = (v: View, label: string, icon: React.ReactNode) => (
+    <button
+      onClick={() => changeView(v)}
+      aria-pressed={view === v}
+      aria-label={label}
+      title={label}
+      className={`w-8 h-8 flex items-center justify-center rounded-md transition-colors cursor-pointer ${
+        view === v ? 'bg-white/15 text-white' : 'text-white/50 hover:text-white'
+      }`}
+    >
+      {icon}
+    </button>
+  )
 
   return (
     <div className="min-h-screen bg-slate-900 text-white">
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-slate-900/85 backdrop-blur-sm border-b border-white/5">
-        <div className="max-w-5xl mx-auto flex items-center justify-between px-6 py-3">
-          <a href="/" className="text-white font-bold text-lg hover:text-white/80 transition-colors">
-            yutoAb
-          </a>
-          <div className="flex items-center gap-4">
-            <a
-              href="/"
-              className="hidden sm:inline text-sm text-white/60 hover:text-white transition-colors"
-            >
-              {t('blog', 'backToPortfolio')}
-            </a>
-            <button
-              onClick={toggleLang}
-              className="text-xs px-2.5 py-1 rounded-full border border-white/30 hover:border-white/50 transition-colors cursor-pointer flex items-center gap-1"
-            >
-              <span className={lang === 'ja' ? 'text-white font-bold' : 'text-white/40'}>JA</span>
-              <span className="text-white/30">/</span>
-              <span className={lang === 'en' ? 'text-white font-bold' : 'text-white/40'}>EN</span>
-            </button>
-          </div>
-        </div>
-      </nav>
+      <SiteNav active="blog" />
 
       <main className="pt-16">
         <header className="max-w-4xl mx-auto px-6 pt-16 pb-10">
-          <p className="text-sm text-purple-300/80 font-mono mb-3">/ blog</p>
+          <Breadcrumbs />
           <h1 className="text-4xl md:text-5xl font-bold mb-4">{t('blog', 'pageTitle')}</h1>
-          <p className="text-white/60">{t('blog', 'pageLead')}</p>
-          <a
-            href="/"
-            className="sm:hidden inline-block mt-6 text-sm text-white/60 hover:text-white transition-colors"
-          >
-            {t('blog', 'backToPortfolio')}
-          </a>
+          <div className="flex items-end justify-between gap-4">
+            <p className="text-white/60">{t('blog', 'pageLead')}</p>
+            <div className="shrink-0 flex gap-1 p-1 rounded-lg border border-white/10">
+              {toggleBtn(
+                'cards',
+                t('blog', 'viewCards'),
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                  <rect x="3" y="3" width="7" height="7" rx="1" /><rect x="14" y="3" width="7" height="7" rx="1" />
+                  <rect x="3" y="14" width="7" height="7" rx="1" /><rect x="14" y="14" width="7" height="7" rx="1" />
+                </svg>,
+              )}
+              {toggleBtn(
+                'list',
+                t('blog', 'viewList'),
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>,
+              )}
+            </div>
+          </div>
         </header>
 
+        {view === 'list' ? (
+          <ul className="max-w-4xl mx-auto px-6 pb-20 divide-y divide-white/10 border-y border-white/10">
+            {posts.map((post) => (
+              <li key={post.href}>
+                <a href={post.href} className="group block py-4">
+                  <div className="flex items-center gap-2 mb-1">
+                    <span className="text-xs px-2 py-0.5 rounded-full bg-purple-500/30 text-purple-200">
+                      {t('blog', post.typeKey)}
+                    </span>
+                    <span className="text-xs text-white/50">{post.date.replace(/-/g, '/')}</span>
+                  </div>
+                  <h2 className="font-bold group-hover:text-purple-200 transition-colors">{post.title[lang]}</h2>
+                  <p className="text-sm text-white/60 mt-1 line-clamp-1">{post.summary[lang]}</p>
+                </a>
+              </li>
+            ))}
+          </ul>
+        ) : (
         <div className="max-w-4xl mx-auto px-6 pb-20 grid gap-6 sm:grid-cols-2">
           {posts.map((post) => (
             <a
@@ -123,6 +179,7 @@ export default function Blog() {
             </a>
           ))}
         </div>
+        )}
       </main>
     </div>
   )

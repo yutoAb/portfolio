@@ -2,7 +2,7 @@ import { useState, useEffect, useRef, type RefObject } from 'react'
 import { useLang } from '../i18n/LangContext'
 
 type NavSection = { kind: 'section'; label: string; ref: RefObject<HTMLDivElement | null> }
-type NavLink = { kind: 'link'; label: string; href: string }
+type NavLink = { kind: 'link'; label: string; href: string; active?: boolean }
 type NavGroup = { kind: 'group'; label: string; children: (NavSection | NavLink)[] }
 export type NavEntry = NavSection | NavLink | NavGroup
 
@@ -86,7 +86,7 @@ export default function Nav({ entries }: { entries: NavEntry[] }) {
   return (
     <nav ref={navRef} className="fixed top-0 left-0 right-0 z-50 bg-purple/90 backdrop-blur-sm">
       <div className="max-w-5xl mx-auto flex items-center justify-between px-6 py-3">
-        <span className="text-white font-bold text-lg">yutoAb</span>
+        <a href="/" className="text-white font-bold text-lg hover:text-white/80 transition-colors">yutoAb</a>
 
         {/* Desktop */}
         <ul className="hidden md:flex gap-6 items-center">
@@ -112,7 +112,9 @@ export default function Nav({ entries }: { entries: NavEntry[] }) {
                 <li key={e.label}>
                   <a
                     href={e.href}
-                    className="text-sm text-white/60 hover:text-white transition-colors"
+                    className={`text-sm transition-colors ${
+                      e.active ? 'text-white font-semibold' : 'text-white/60 hover:text-white'
+                    }`}
                   >
                     {e.label}
                   </a>
@@ -258,7 +260,9 @@ export default function Nav({ entries }: { entries: NavEntry[] }) {
                 <li key={e.label}>
                   <a
                     href={e.href}
-                    className="block w-full text-left text-sm py-1.5 text-white/60"
+                    className={`block w-full text-left text-sm py-1.5 ${
+                      e.active ? 'text-white font-semibold' : 'text-white/60'
+                    }`}
                     onClick={() => setOpen(false)}
                   >
                     {e.label}

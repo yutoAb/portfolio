@@ -79,6 +79,8 @@ const translations = {
       en: 'Given inputs and outputs, massive noisy data plus a little clean data can reproduce human-like behavior — surprisingly well.',
     } as T,
     readMore: { ja: '続きを読む', en: 'Read more' } as T,
+    relatedEssays: { ja: '関連するエッセイ', en: 'Related essays' } as T,
+    backToPhilosophy: { ja: '← 思想の一覧に戻る', en: '← Back to Philosophy' } as T,
     close: { ja: '閉じる', en: 'Close' } as T,
     visionArticle: {
       ja: `長期的に向き合いたいのは、衣・食・住という生きるための土台を、もう少し技術で軽くすることだと思っています。生まれてから死ぬまで避けて通れない営みに、いまも本当に膨大な人手が注がれています。服を縫う人、食事を作る人、家を建てる人、それらを届ける物流。どれも欠かせない営みですが、AI とロボティクスの進歩で、機械に任せられる範囲は静かに広がってきています。
@@ -362,6 +364,9 @@ Which turns it into a contest of compute: synthesizing the data, storing it, and
     backToBlog: { ja: '← ブログ一覧', en: '← All posts' } as T,
     typeEssay: { ja: 'エッセイ', en: 'Essay' } as T,
     typeManga: { ja: '漫画', en: 'Manga' } as T,
+    typePhilosophy: { ja: '思想', en: 'Philosophy' } as T,
+    viewCards: { ja: 'サムネイルあり', en: 'With thumbnails' } as T,
+    viewList: { ja: 'サムネイルなし', en: 'Without thumbnails' } as T,
     essayJapanTitle: { ja: '研究者として、日本の20年を数字で見直した', en: "Looking back at Japan's two decades, in numbers" } as T,
     essayJapanSummary: { ja: '2000〜2020年に日本が弱くなった理由を約90秒の動画にまとめ、その根拠と反対の材料を一次資料で整理しました。', en: 'A 90-second video on why Japan weakened from 2000 to 2020, with the evidence behind it — and against it — checked against primary sources.' } as T,
     mangaTitle: { ja: '日本の漫画は最高！', en: 'Japanese Manga Are the Best!' } as T,

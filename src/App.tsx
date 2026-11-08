@@ -1,6 +1,5 @@
-import { useRef } from 'react'
-import { useT } from './i18n/useT'
-import Nav, { type NavEntry } from './components/Nav'
+import { useEffect, useRef } from 'react'
+import SiteNav, { type SectionId } from './components/SiteNav'
 import Hero from './components/Hero'
 import Philosophy from './components/Philosophy'
 import Skills from './components/Skills'
@@ -16,6 +15,8 @@ import Essay from './components/Essay'
 import Blog from './components/Blog'
 import TextEssayPage from './components/TextEssayPage'
 import { textEssays } from './content/essays'
+import PhilosophyPostPage from './components/PhilosophyPostPage'
+import { philosophyPosts } from './content/philosophy'
 
 export default function App() {
   if (typeof window !== 'undefined') {
@@ -33,6 +34,10 @@ export default function App() {
     if (textEssay) {
       return <TextEssayPage essay={textEssay} />
     }
+    const philosophyPost = philosophyPosts.find((p) => path === `/philosophy/${p.slug}`)
+    if (philosophyPost) {
+      return <PhilosophyPostPage post={philosophyPost} />
+    }
   }
 
   const heroRef = useRef<HTMLDivElement>(null)
@@ -44,46 +49,39 @@ export default function App() {
   const projectsRef = useRef<HTMLDivElement>(null)
   const educationRef = useRef<HTMLDivElement>(null)
   const contactRef = useRef<HTMLDivElement>(null)
-  const t = useT()
+  const refs: Record<SectionId, typeof heroRef> = {
+    top: heroRef,
+    philosophy: philosophyRef,
+    profiles: profilesRef,
+    skills: skillsRef,
+    education: educationRef,
+    experience: experienceRef,
+    research: researchRef,
+    projects: projectsRef,
+    contact: contactRef,
+  }
 
-  const entries: NavEntry[] = [
-    { kind: 'section', label: t('nav', 'top'), ref: heroRef },
-    {
-      kind: 'group',
-      label: t('nav', 'aboutGroup'),
-      children: [
-        { kind: 'section', label: t('nav', 'philosophy'), ref: philosophyRef },
-        { kind: 'section', label: t('nav', 'profiles'), ref: profilesRef },
-        { kind: 'section', label: t('nav', 'skills'), ref: skillsRef },
-        { kind: 'section', label: t('nav', 'education'), ref: educationRef },
-      ],
-    },
-    {
-      kind: 'group',
-      label: t('nav', 'workGroup'),
-      children: [
-        { kind: 'section', label: t('nav', 'experience'), ref: experienceRef },
-        { kind: 'section', label: t('nav', 'research'), ref: researchRef },
-        { kind: 'section', label: t('nav', 'projects'), ref: projectsRef },
-      ],
-    },
-    { kind: 'link', label: t('nav', 'blog'), href: '/blog' },
-    { kind: 'section', label: t('nav', 'contact'), ref: contactRef },
-  ]
+  // Arriving from a sub-page via /#<section>: scroll once the sections exist.
+  useEffect(() => {
+    const id = window.location.hash.slice(1) as SectionId
+    const el = refs[id]?.current
+    if (el) requestAnimationFrame(() => el.scrollIntoView())
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   return (
     <>
-      <Nav entries={entries} />
+      <SiteNav refs={refs} />
       <main>
-        <div ref={heroRef}><Hero /></div>
-        <div ref={philosophyRef}><Philosophy /></div>
-        <div ref={skillsRef}><Skills /></div>
-        <div ref={profilesRef}><Profiles /></div>
-        <div ref={experienceRef}><Experience /></div>
-        <div ref={researchRef}><Research /></div>
-        <div ref={projectsRef}><Projects /></div>
-        <div ref={educationRef}><Education /></div>
-        <div ref={contactRef}><Contact /></div>
+        <div id="top" ref={heroRef}><Hero /></div>
+        <div id="philosophy" ref={philosophyRef}><Philosophy /></div>
+        <div id="skills" ref={skillsRef}><Skills /></div>
+        <div id="profiles" ref={profilesRef}><Profiles /></div>
+        <div id="experience" ref={experienceRef}><Experience /></div>
+        <div id="research" ref={researchRef}><Research /></div>
+        <div id="projects" ref={projectsRef}><Projects /></div>
+        <div id="education" ref={educationRef}><Education /></div>
+        <div id="contact" ref={contactRef}><Contact /></div>
       </main>
       <Footer />
     </>
