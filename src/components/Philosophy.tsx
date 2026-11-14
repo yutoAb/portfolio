@@ -2,8 +2,8 @@ import { useInView } from './useInView'
 import { useT } from '../i18n/useT'
 import { philosophyPosts } from '../content/philosophy'
 
-const visionValue = [
-  { label: 'Vision', key: 'visionStatement' },
+const missionValue = [
+  { label: 'Mission', key: 'mvvMission' },
   { label: 'Value', key: 'valueBody' },
 ] as const
 
@@ -23,14 +23,14 @@ export default function Philosophy() {
           {t('philosophy', 'sectionTitle')}
         </h2>
 
-        {/* Mission is the headline; Vision and Value sit under it */}
-        <p className="text-xs font-bold tracking-[0.2em] uppercase text-white/40 mb-3">Mission</p>
+        {/* Vision is the headline; Mission and Value sit under it */}
+        <p className="text-xs font-bold tracking-[0.2em] uppercase text-white/40 mb-3">Vision</p>
         <p className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug md:leading-snug max-w-4xl break-keep [overflow-wrap:anywhere]">
-          {t('philosophy', 'missionBody')}
+          {t('philosophy', 'mvvVision')}
         </p>
 
         <dl className="mt-10 grid md:grid-cols-2 gap-x-12 gap-y-6 border-t border-white/10 pt-8">
-          {visionValue.map((m) => (
+          {missionValue.map((m) => (
             <div key={m.label}>
               <dt className="text-xs font-bold tracking-[0.2em] uppercase text-white/40 mb-2">{m.label}</dt>
               <dd className="text-white/85 leading-relaxed">{t('philosophy', m.key)}</dd>
