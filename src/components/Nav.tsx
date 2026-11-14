@@ -74,7 +74,13 @@ export default function Nav({ entries }: { entries: NavEntry[] }) {
   }, [openGroup])
 
   const scrollTo = (ref: RefObject<HTMLDivElement | null>) => {
-    ref.current?.scrollIntoView({ behavior: 'smooth' })
+    const el = ref.current
+    if (el) {
+      // Give the jump its own history entry so the URL can be shared and Back returns here.
+      const url = el.id && el.id !== 'top' ? `#${el.id}` : window.location.pathname
+      window.history.pushState(null, '', url)
+      el.scrollIntoView({ behavior: 'smooth' })
+    }
     setOpen(false)
     setOpenGroup(null)
   }

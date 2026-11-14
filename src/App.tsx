@@ -69,6 +69,39 @@ export default function App() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
+  // Keep the address bar in step with the section on screen, and follow Back/Forward.
+  useEffect(() => {
+    const sections = () =>
+      Object.values(refs)
+        .map((r) => r.current)
+        .filter((el): el is HTMLDivElement => !!el)
+        .sort((a, b) => a.offsetTop - b.offsetTop)
+    let frame = 0
+    const onScroll = () => {
+      cancelAnimationFrame(frame)
+      frame = requestAnimationFrame(() => {
+        const line = window.innerHeight * 0.35
+        const current = sections().filter((el) => el.getBoundingClientRect().top <= line).pop()
+        const hash = current && current.id !== 'top' ? `#${current.id}` : ''
+        if (hash !== window.location.hash) {
+          window.history.replaceState(null, '', hash || window.location.pathname)
+        }
+      })
+    }
+    const onPop = () => {
+      const id = window.location.hash.slice(1) || 'top'
+      document.getElementById(id)?.scrollIntoView()
+    }
+    window.addEventListener('scroll', onScroll, { passive: true })
+    window.addEventListener('popstate', onPop)
+    return () => {
+      cancelAnimationFrame(frame)
+      window.removeEventListener('scroll', onScroll)
+      window.removeEventListener('popstate', onPop)
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
   return (
     <>
       <SiteNav refs={refs} />
