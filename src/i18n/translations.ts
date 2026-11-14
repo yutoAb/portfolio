@@ -287,6 +287,8 @@ Which turns it into a contest of compute: synthesizing the data, storing it, and
   },
   projects: {
     sectionTitle: { ja: 'プロジェクト', en: 'Projects' } as T,
+    filterAll: { ja: 'すべて', en: 'All' } as T,
+    articlesShort: { ja: '記事', en: 'Posts' } as T,
     categoryPersonal: { ja: '個人開発', en: 'Personal' } as T,
     categoryTeam: { ja: 'チーム開発', en: 'Team' } as T,
     categoryResearch: { ja: '研究', en: 'Research' } as T,

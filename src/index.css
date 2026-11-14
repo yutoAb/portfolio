@@ -157,6 +157,9 @@ html.simple .bg-white\/40 { background-color: #a3a3a3 !important; }
 html.simple .text-purple-300,
 html.simple .text-purple-200,
 html.simple .text-purple-100 { color: #6d28d9 !important; }
+html.simple .group:hover .group-hover\:text-purple-200,
+html.simple .hover\:text-purple-200:hover,
+html.simple .hover\:text-purple-100:hover { color: #6d28d9 !important; }
 html.simple .text-purple-300\/70 { color: rgba(109, 40, 217, 0.7) !important; }
 html.simple .text-purple-300\/80 { color: rgba(109, 40, 217, 0.8) !important; }
 html.simple .bg-purple-500\/30 { background-color: rgba(109, 40, 217, 0.12) !important; }
