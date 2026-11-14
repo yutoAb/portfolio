@@ -91,7 +91,7 @@ export default function Essay() {
 
           <section className="space-y-3">
             <h2 className="text-base font-bold text-white/70">{t('essay', 'sourcesTitle')}</h2>
-            <ol className="space-y-1.5 list-decimal pl-5 text-sm text-white/55">
+            <ol className="space-y-1.5 list-decimal pl-5 text-sm text-white/60">
               {sources.map((src) => (
                 <li key={src.url}>
                   <a href={src.url} target="_blank" rel="noopener noreferrer" className="hover:text-white underline-offset-2 hover:underline break-all">

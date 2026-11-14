@@ -50,7 +50,7 @@ export default function Philosophy() {
                   <span className="block font-bold group-hover:text-purple-200 transition-colors">
                     {t('philosophy', b.titleKey)}
                   </span>
-                  <span className="block mt-1 text-sm text-white/55 leading-relaxed">{t('philosophy', b.bodyKey)}</span>
+                  <span className="block mt-1 text-sm text-white/60 leading-relaxed">{t('philosophy', b.bodyKey)}</span>
                 </span>
                 <svg
                   className="w-4 h-4 shrink-0 self-center text-white/30 group-hover:text-purple-200 group-hover:translate-x-1 transition-all"
