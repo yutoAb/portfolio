@@ -78,6 +78,18 @@ const translations = {
       ja: '入出力さえ揃えば、大量のノイズデータと少しの整ったデータで、人間らしい振る舞いは案外再現できてしまうらしい。',
       en: 'Given inputs and outputs, massive noisy data plus a little clean data can reproduce human-like behavior — surprisingly well.',
     } as T,
+    missionBody: {
+      ja: '人間がやりたくない仕事で働かず、創造的な活動に集中できる世の中にする。',
+      en: 'Build a world where people are free from work they do not want to do and can focus on creative activity.',
+    } as T,
+    visionStatement: {
+      ja: '衣食住の自動化。家庭の単位ではなく、社会全体のインフラから各家庭の食卓まで。',
+      en: 'Automate food, clothing, and shelter — not one household at a time, but from society-wide infrastructure down to every family table.',
+    } as T,
+    valueBody: {
+      ja: '自分の属する組織・人々に良い影響を与える。それによって、改善のループが素早く回る。',
+      en: 'Have a positive influence on the organizations and people I belong to — which makes the improvement loop turn faster.',
+    } as T,
     readMore: { ja: '続きを読む', en: 'Read more' } as T,
     relatedEssays: { ja: '関連するエッセイ', en: 'Related essays' } as T,
     backToPhilosophy: { ja: '← 思想の一覧に戻る', en: '← Back to Philosophy' } as T,
