@@ -62,13 +62,13 @@ type Community = {
 
 const communities: Community[] = [
   {
-    period: '2025 Dec - Present',
+    period: '2025 Dec - 2026 Nov',
     nameKey: 'communityMirai',
     descKey: 'communityMiraiDesc',
     href: 'https://github.com/team-mirai-students',
   },
   {
-    period: '2025 Aug - Present',
+    period: '2025 Aug - 2026 Jun',
     nameKey: 'communityRecursion',
     descKey: 'communityRecursionDesc',
     href: 'https://recursionist.io/',

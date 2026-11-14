@@ -31,6 +31,8 @@ const publications: Publication[] = [
     oral: true,
     links: [
       { label: 'Slides', href: 'https://2026-09-09-asj-2026-autumn.vercel.app/1' },
+      { label: 'Code', href: 'https://github.com/llm-jp/full-duplex-bench-ja' },
+      { label: 'Leaderboard', href: 'https://llm-jp.github.io/full-duplex-bench-ja/' },
     ],
   },
   {
