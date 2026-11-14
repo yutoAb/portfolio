@@ -8,19 +8,19 @@ const skillCategories = [
   },
   {
     title: 'Data Science / ML',
-    skills: ['PyTorch', 'Hugging Face', 'MLflow', 'scikit-learn', 'pandas', 'Speech Tokenization'],
+    skills: ['PyTorch', 'Hugging Face', 'Accelerate', 'DeepSpeed', 'MLflow', 'scikit-learn', 'pandas', 'Speech Tokenization'],
   },
   {
     title: 'Data Engineering',
-    skills: ['PostgreSQL', 'MySQL', 'Elasticsearch', 'Prisma', 'ETL Pipeline', 'Data Visualization'],
+    skills: ['PostgreSQL', 'MySQL', 'Elasticsearch', 'Prisma', 'Apache Airflow', 'ETL Pipeline', 'Data Visualization'],
   },
   {
     title: 'Web / Infra',
-    skills: ['React', 'Next.js', 'Node.js', 'Docker', 'Terraform', 'GCP', 'AWS', 'GitHub Actions'],
+    skills: ['React', 'Next.js', 'Node.js', 'Docker', 'Kubernetes', 'Terraform', 'GCP', 'AWS', 'GitHub Actions'],
   },
 ]
 
-const learningTools = ['Go', 'Rust', 'Kubernetes', 'Accelerate', 'DeepSpeed']
+const learningTools = ['Go', 'Rust']
 const learningTopicKeys = ['topicMLOps', 'topicDistributed', 'topicRealtime'] as const
 
 export default function Skills() {

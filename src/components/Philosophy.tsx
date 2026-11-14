@@ -19,13 +19,13 @@ export default function Philosophy() {
           inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
         }`}
       >
-        <h2 className="text-sm font-bold tracking-[0.25em] uppercase text-purple-300 mb-8">
+        <h2 className="text-3xl md:text-4xl font-bold mb-10">
           {t('philosophy', 'sectionTitle')}
         </h2>
 
         {/* Mission is the headline; Vision and Value sit under it */}
         <p className="text-xs font-bold tracking-[0.2em] uppercase text-white/40 mb-3">Mission</p>
-        <p className="text-xl sm:text-2xl md:text-4xl font-bold leading-snug md:leading-snug max-w-4xl break-keep [overflow-wrap:anywhere]">
+        <p className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug md:leading-snug max-w-4xl break-keep [overflow-wrap:anywhere]">
           {t('philosophy', 'missionBody')}
         </p>
 

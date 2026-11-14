@@ -236,8 +236,14 @@ export default function Hero() {
               <a href="https://aclanthology.org/2026.iwsds-1.10/" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-white">IWSDS 2026</a>
               {t('hero', 'bio2_suffix')}
             </p>
+            <p>
+              {t('hero', 'bio2b_prefix')}{' '}
+              <a href="https://llm-jp.github.io/full-duplex-bench-ja/" target="_blank" rel="noopener noreferrer" className="font-semibold underline underline-offset-2 hover:text-white">Full-Duplex-Bench-JA</a>{' '}
+              {t('hero', 'bio2b_and')}{' '}
+              <a href="https://spoken-dialogue-arena.vercel.app/" target="_blank" rel="noopener noreferrer" className="font-semibold underline underline-offset-2 hover:text-white">Spoken Dialogue Arena</a>
+              {t('hero', 'bio2b_suffix')}
+            </p>
             <p>{t('hero', 'bio3')}</p>
-            <p>{t('hero', 'bio4')}</p>
           </div>
 
           <div

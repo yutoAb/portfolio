@@ -27,13 +27,15 @@ const translations = {
     } as T,
     bio2_mid: { ja: 'を筆頭開発。', en: '.' } as T,
     bio2_suffix: { ja: 'にて筆頭著者として発表。', en: ' — presented as first author.' } as T,
+    bio2b_prefix: { ja: '評価基盤として', en: 'I also built its evaluation infrastructure:' } as T,
+    bio2b_and: { ja: 'と', en: 'and' } as T,
+    bio2b_suffix: {
+      ja: 'を構築し、Arena は NeurIPS 2026 のワークショップ (RTCA) に口頭発表として採択。',
+      en: '. The Arena paper was accepted as an oral at the RTCA workshop at NeurIPS 2026.',
+    } as T,
     bio3: {
       ja: 'データ基盤を設計・構築するソフトウェアエンジニアリングと、データからモデルを生み出すデータサイエンスの両軸で、人とAIの自然なコミュニケーションの実現を目指しています。',
       en: 'Bridging software engineering for data infrastructure and data science for model building, I aim to realize natural communication between humans and AI.',
-    } as T,
-    bio4: {
-      ja: '将来のビジョンとして、AIとテクノロジーの力で「衣食住の自動化」を実現し、誰もが生活の基盤を気にせず創造的な活動に集中できる社会をつくりたいと考えています。',
-      en: 'My long-term vision is to automate the essentials of daily life — clothing, food, and housing — through AI and technology, creating a society where everyone can focus on creative pursuits.',
     } as T,
   },
   nav: {
@@ -241,7 +243,7 @@ Which turns it into a contest of compute: synthesizing the data, storing it, and
     jus_role: { ja: 'ソフトウェアエンジニア', en: 'Software Engineer' } as T,
     carrot_company: { ja: '株式会社キャロットソフトウェア', en: 'Carrot Software Co., Ltd.' } as T,
     carrot_role: { ja: 'アルバイトエンジニア', en: 'Part-time Engineer' } as T,
-    abeja_desc0: { ja: '内定者インターンとして、卒業後の入社に向けてソフトウェアエンジニア業務に従事', en: 'Joined as a pre-hire intern, building software engineering experience ahead of full-time start after graduation' } as T,
+    abeja_desc0: { ja: '内定者インターンとして、Next.js と FastAPI による認証付きの社内向けプロダクト管理アプリケーションを開発', en: 'As a pre-hire intern, building internal product management applications with Next.js and FastAPI, including authentication' } as T,
     threeshake_desc0: { ja: 'コンテナ・Kubernetes の基礎から GitOps によるデプロイ自動化、監視・信頼性設計まで SRE の実践を体験', en: 'Hands-on SRE practice from container and Kubernetes fundamentals to GitOps deployment automation, monitoring, and reliability' } as T,
     tieriv_desc0: { ja: '自動運転 OS Autoware・AWSIM を用いた End-to-End 運転モデルの開発', en: 'Developed an end-to-end driving model using the Autoware autonomous-driving OS and AWSIM' } as T,
     gmo_desc0: { ja: '2週間の集中プログラムで「天秤AI」（AI比較ツール）をエンドツーエンドで実装', en: 'Built "Tenbin AI" (AI comparison tool) end-to-end in a 2-week intensive program' } as T,
@@ -371,7 +373,7 @@ Which turns it into a contest of compute: synthesizing the data, storing it, and
   },
   blog: {
     pageTitle: { ja: 'ブログ', en: 'Blog' } as T,
-    pageLead: { ja: '研究や開発の外側で考えたことを、漫画やエッセイの形で残しています。', en: 'Things I think about outside research and engineering, written up as manga picks and essays.' } as T,
+    pageLead: { ja: '研究や開発の中で考えたことを、思想・エッセイ・漫画の形で残しています。', en: 'Things I think about in and around research and engineering, written up as philosophy notes, essays, and manga picks.' } as T,
     backToPortfolio: { ja: '← ポートフォリオに戻る', en: '← Back to portfolio' } as T,
     backToBlog: { ja: '← ブログ一覧', en: '← All posts' } as T,
     typeEssay: { ja: 'エッセイ', en: 'Essay' } as T,
