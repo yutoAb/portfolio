@@ -82,6 +82,14 @@ const talks: Talk[] = [
       { label: 'Event', href: 'https://speech-hci.connpass.com/event/395730/' },
     ],
   },
+  {
+    titleKey: 'talk_sdm_title',
+    venueKey: 'talk_s2s_venue',
+    date: '2026/01',
+    links: [
+      { label: 'Slides', href: 'https://www.docswell.com/s/yuAbe/Z8W7GY-2026-01-29-120501' },
+    ],
+  },
 ]
 
 const researchTopicKeys = ['topic3', 'topic1', 'topic2', 'topic4'] as const
