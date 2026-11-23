@@ -66,6 +66,15 @@ const projects: Project[] = [
     link: 'https://spoken-dialogue-arena.vercel.app/',
   },
   {
+    title: 'ことばリンク',
+    image: 'projects/kotoba-link.jpg',
+    category: 'team',
+    descKey: 'kotobaLink',
+    tech: ['React', 'FastAPI', 'WebRTC', 'MediaPipe', 'ONNX', 'faster-whisper'],
+    link: 'https://kotoba.yutoabe.com/',
+    repo: 'https://github.com/Qutalize/openAI_hackathon',
+  },
+  {
     title: 'Changemakers',
     category: 'team',
     award: 'PKSHA Hackathon Grand Prize',
