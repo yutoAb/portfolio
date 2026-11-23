@@ -69,6 +69,7 @@ const projects: Project[] = [
     title: 'ことばリンク',
     image: 'projects/kotoba-link.jpg',
     category: 'team',
+    award: 'OpenAI Codex Student Builder Fest 2026 Top 4',
     descKey: 'kotobaLink',
     tech: ['React', 'FastAPI', 'WebRTC', 'MediaPipe', 'ONNX', 'faster-whisper'],
     link: 'https://kotoba.yutoabe.com/',
