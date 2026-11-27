@@ -16,6 +16,85 @@ export type TextEssay = {
 // Text-only essays served at /essays/<slug>. Newest first.
 export const textEssays: TextEssay[] = [
   {
+    slug: 'loops-without-answers',
+    date: '2026-11-27',
+    image: 'essays/loops-without-answers.svg',
+    title: {
+      ja: '正解のない場で、負ける経験を積む',
+      en: 'Losing where there is no right answer',
+    },
+    summary: {
+      ja: '日本はスポーツでは強いのに、IT では弱い。その差は、正解のない課題で作って、見せて、負けて、直すループを回した回数にあると考えています。',
+      en: 'Japan is strong in sports and weak in IT. I think the gap comes from how many times people have gone through the loop of making, showing, losing, and improving on problems with no right answer.',
+    },
+    lead: {
+      ja: '日本はスポーツでは合理化が進み、世界で勝てるようになりました。一方で、IT（インターネット、Web 開発、研究）は弱いままだと感じています。その理由と、日本のエンジニアについて思うことを書きます。',
+      en: 'Japanese sports have become rational and now win on the world stage. IT — the internet, web development, research — still feels weak to me. Here is why I think that is, and what I think about engineers in Japan.',
+    },
+    sections: [
+      {
+        heading: { ja: '受験は、正解を詰め込めば受かる', en: 'Entrance exams reward memorising the right answers' },
+        paragraphs: [
+          {
+            ja: '理由は、インプットを重視する教育にあると考えています。受験では、正解があるもの（いわば正解データ）をとりあえず詰め込みます。それを適切に出力できれば、受かってしまいます。',
+            en: 'I think the reason is an education that puts input first. For entrance exams, you cram things that have a right answer — labelled data, so to speak. If you can output them properly, you pass.',
+          },
+          {
+            ja: 'この仕組みでは、正解がない課題に向き合う練習を、ほとんど積めません。',
+            en: 'In that system, you get almost no practice at facing problems that have no right answer.',
+          },
+        ],
+      },
+      {
+        heading: { ja: '大事なのは、正解のない場で負ける経験', en: 'What matters is losing where there is no right answer' },
+        paragraphs: [
+          {
+            ja: 'ハッカソンやワークショップには、正解がありません。自分で考えて何かを表現し、それを改善する。このループを回したうえで、採点するのはほかの人間です。だから、力を尽くしても勝てないことがあります。',
+            en: 'Hackathons and workshops have no right answer. You think for yourself, express something, and improve it. After going through that loop, the ones who score you are other people. So even when you give it everything, sometimes you do not win.',
+          },
+          {
+            ja: 'この「勝てなかった」という経験を経ることが大事だと考えています。正解と照らし合わせるのではなく、人に見せて、届かなかった理由を自分で考える。そこから次の改善が始まります。',
+            en: 'I think going through that experience of not winning is what matters. Instead of checking against an answer key, you show your work to people and work out for yourself why it did not land. The next improvement starts there.',
+          },
+        ],
+      },
+      {
+        heading: { ja: 'ループを多く回せるエンジニアは、成長が速い', en: 'Engineers who run the loop more often grow faster' },
+        paragraphs: [
+          {
+            ja: 'この経験を多く積めるのがエンジニアです。作って、見せて、反応を受けて、直す。1 回のループが短いので、成長のスピードが速くなります。',
+            en: 'Engineers get to have this experience many times. Build, show, take the reaction, fix. Each loop is short, so they grow quickly.',
+          },
+          {
+            ja: '研究者は、改善のループが遅くなりがちです。論文にまとめて、査読を待って、発表する。1 回に数か月かかります。ただ、成果を論文にまとめること自体が減ってきていて、個人や企業のブログで十分な場面が増えています。研究でも、ループを速く回せる人が強くなっていくと思います。',
+            en: 'Researchers tend to have a slower loop. Write the paper, wait for review, present. One round takes months. But writing results up as papers is itself becoming less common, and a personal or company blog is increasingly enough. In research too, I think the people who can run the loop quickly will be the strong ones.',
+          },
+        ],
+      },
+      {
+        heading: { ja: '日本のエンジニア事情', en: 'Engineers in Japan' },
+        paragraphs: [
+          {
+            ja: '世代ごとに見ると、50 代以上には、そもそもエンジニアという文化がなかったと感じています。',
+            en: 'Looking by generation, I feel that for people in their fifties and older, there simply was no engineering culture to begin with.',
+          },
+          {
+            ja: '30〜40 代で、AI コーディングがない時代に、人事やほかの部署に移らず、こつこつ手でプログラムを書いてきた人は、めちゃくちゃ優秀です。20 代にもちらほらいらっしゃって、尊敬しています。バイブコーディングが広まる前から、プログラミングをしていた方々です。',
+            en: 'People in their thirties and forties who, in the days before AI coding, did not move to HR or other departments and kept writing programs by hand are extraordinarily good. There are some in their twenties too, and I respect them: they were programming before vibe coding spread.',
+          },
+          {
+            ja: '逆に、バイブコーディングだけをして、その中身（システム構成）を勉強しない人は、強くなれないと思っています。動くものが出てきても、なぜ動くのかを説明できなければ、改善のループを自分で回せないからです。',
+            en: 'Conversely, I do not think people who only vibe code, without studying what is inside — the system architecture — can become strong. Even when something that works comes out, if you cannot explain why it works, you cannot run the improvement loop yourself.',
+          },
+        ],
+      },
+    ],
+    closing: {
+      ja: '正解を覚えることより、正解のない場に作ったものを出して、負けて、直すこと。その回数が、人も国も強くすると考えています。私自身も、作って見せる回数を増やしていきます。',
+      en: 'More than memorising right answers, what counts is putting your work out where there is no right answer, losing, and fixing it. I think the number of times you do that is what makes people, and countries, strong. I intend to keep making and showing more myself.',
+    },
+  },
+  {
     slug: 'what-only-humans-can-do',
     date: '2026-11-05',
     image: 'essays/what-only-humans-can-do.svg',
