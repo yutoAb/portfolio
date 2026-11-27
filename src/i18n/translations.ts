@@ -420,7 +420,7 @@ Which turns it into a contest of compute: synthesizing the data, storing it, and
     wtriggerTitle: { ja: 'ワールドトリガー', en: 'World Trigger' } as T,
     wtriggerMeta: { ja: '葦原大介 著', en: 'Daisuke Ashihara' } as T,
     wtriggerLead: {
-      ja: 'ヒュース「刻む…んだ」— 自分が登れる小さいステップを作り続けること、その行動を「努力」と呼ぶ。',
+      ja: 'ヒュース「刻むんだ」— 自分が登れる小さいステップを作り続けること、その行動を「努力」と呼ぶ。',
       en: 'Hyuse: "You carve it out." Keep making the smallest step you can actually climb — that is what we call effort.',
     } as T,
     wtriggerTakeaway: {

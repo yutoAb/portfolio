@@ -71,7 +71,7 @@ export default function Manga() {
                 src={item.image}
                 alt={t('manga', 'imageAlt')}
                 loading={i === 0 ? 'eager' : 'lazy'}
-                className="w-full rounded-lg border border-white/10 shadow-xl"
+                className="block mx-auto w-auto max-w-full max-h-[calc(100dvh-5.5rem)] scroll-mt-[4.75rem] rounded-lg border border-white/10 shadow-xl"
               />
               <p className="text-purple-200 leading-relaxed italic border-l-2 border-purple-300/40 pl-4">
                 {t('manga', item.leadKey)}
