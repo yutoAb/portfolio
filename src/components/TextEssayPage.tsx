@@ -13,7 +13,12 @@ export default function TextEssayPage({ essay }: { essay: TextEssay }) {
       <main className="pt-16">
         <header className="max-w-3xl mx-auto px-6 pt-8 md:pt-16 pb-10">
           <Breadcrumbs current={essay.title[lang]} />
-          <h1 className="text-3xl md:text-5xl font-bold mb-4 leading-tight">{essay.title[lang]}</h1>
+          <h1
+            className="text-3xl md:text-5xl font-bold mb-4 leading-tight"
+            style={{ wordBreak: 'keep-all', overflowWrap: 'anywhere', textWrap: 'balance' }}
+          >
+            {essay.title[lang]}
+          </h1>
           <p className="text-white/50 text-sm">
             {essay.date.replace(/-/g, '/')} / {lang === 'ja' ? '阿部 雄斗' : 'Yuto Abe'}
           </p>
