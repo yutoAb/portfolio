@@ -9,10 +9,10 @@ function Heart({ filled, className }: { filled: boolean; className: string }) {
   )
 }
 
-/** Count only, for lists where the whole row is already a link. Hidden until there is at least one like. */
+/** Count only, for lists where the whole row is already a link. Shown as soon as the count has loaded, zero included. */
 export function LikeCount({ id }: { id: string }) {
   const { count, liked } = useLike(id)
-  if (!count) return null
+  if (count === undefined) return null
   return (
     <span className={`inline-flex items-center gap-1 text-xs tabular-nums ${liked ? 'text-pink-300' : 'text-white/50'}`}>
       <Heart filled={liked} className="w-3.5 h-3.5" />
