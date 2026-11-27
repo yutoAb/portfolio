@@ -1,0 +1,11 @@
+name = "yutoabe-likes"
+main = "src/index.js"
+compatibility_date = "2026-11-01"
+workers_dev = false
+
+routes = [{ pattern = "likes.yutoabe.com", custom_domain = true }]
+
+[[d1_databases]]
+binding = "DB"
+database_name = "yutoabe-likes"
+database_id = "6d193819-922a-45b8-b412-e2af02b4b76f"

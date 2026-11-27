@@ -1,6 +1,7 @@
 import Breadcrumbs from './Breadcrumbs'
 import SiteNav from './SiteNav'
 import { useT } from '../i18n/useT'
+import LikeButton from './LikeButton'
 
 type MangaKey = keyof typeof import('../i18n/translations').default.manga
 
@@ -79,6 +80,7 @@ export default function Manga() {
               <p className="text-white/85 leading-[1.9]">{t('manga', item.takeawayKey)}</p>
             </article>
           ))}
+          <LikeButton id="manga" />
         </div>
 
       </main>

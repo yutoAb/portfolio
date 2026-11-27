@@ -2,6 +2,7 @@ import Breadcrumbs from './Breadcrumbs'
 import SiteNav from './SiteNav'
 import { useLang } from '../i18n/LangContext'
 import type { TextEssay } from '../content/essays'
+import LikeButton from './LikeButton'
 
 export default function TextEssayPage({ essay }: { essay: TextEssay }) {
   const { lang } = useLang()
@@ -42,6 +43,7 @@ export default function TextEssayPage({ essay }: { essay: TextEssay }) {
           ))}
 
           <p className="text-lg text-white leading-[1.9] border-l-2 border-amber-300/60 pl-4">{essay.closing[lang]}</p>
+          <LikeButton id={`essays/${essay.slug}`} />
         </div>
       </main>
     </div>

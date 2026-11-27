@@ -1,6 +1,7 @@
 import Breadcrumbs from './Breadcrumbs'
 import SiteNav from './SiteNav'
 import { useT } from '../i18n/useT'
+import LikeButton from './LikeButton'
 
 type EssayKey = keyof typeof import('../i18n/translations').default.essay
 
@@ -101,6 +102,7 @@ export default function Essay() {
               ))}
             </ol>
           </section>
+          <LikeButton id="essays/japan-20years" />
         </div>
       </main>
     </div>

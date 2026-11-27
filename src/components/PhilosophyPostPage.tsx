@@ -5,6 +5,7 @@ import { useLang } from '../i18n/LangContext'
 import type { PhilosophyPost } from '../content/philosophy'
 import { philosophyPosts } from '../content/philosophy'
 import { textEssays } from '../content/essays'
+import LikeButton from './LikeButton'
 
 export default function PhilosophyPostPage({ post }: { post: PhilosophyPost }) {
   const t = useT()
@@ -70,6 +71,8 @@ export default function PhilosophyPostPage({ post }: { post: PhilosophyPost }) {
               </ul>
             </section>
           )}
+
+          <LikeButton id={`philosophy/${post.slug}`} />
 
           <nav className="pt-6 border-t border-white/10 space-y-4">
             <div className="grid grid-cols-2 gap-4 text-sm">

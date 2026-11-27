@@ -6,6 +6,7 @@ import { useLang } from '../i18n/LangContext'
 import translations, { type Lang } from '../i18n/translations'
 import { textEssays } from '../content/essays'
 import { philosophyPosts } from '../content/philosophy'
+import { LikeCount } from './LikeButton'
 
 type BlogKey = keyof typeof translations.blog
 
@@ -138,6 +139,7 @@ export default function Blog() {
                       {t('blog', post.typeKey)}
                     </span>
                     <span className="text-xs text-white/50">{post.date.replace(/-/g, '/')}</span>
+                    <LikeCount id={post.href.slice(1)} />
                   </div>
                   <h2 className="font-bold group-hover:text-purple-200 transition-colors">{post.title[lang]}</h2>
                   <p className="text-sm text-white/60 mt-1 line-clamp-1">{post.summary[lang]}</p>
@@ -180,6 +182,7 @@ export default function Blog() {
                     {t('blog', post.typeKey)}
                   </span>
                   <span className="text-xs text-white/50">{post.date.replace(/-/g, '/')}</span>
+                  <LikeCount id={post.href.slice(1)} />
                 </div>
                 <h2 className="text-lg font-bold mb-2 group-hover:text-purple-200 transition-colors">
                   {post.title[lang]}
